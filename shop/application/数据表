@@ -1,0 +1,9 @@
+数据表
+
+栏目类型 cate_type 1:系统分类   2:帮助分类  3:网店帮助  4:网店信息  5:普通分类
+
+文章字段
+id  title   keywords    description     author     thumb    content     addtime     updatetime    status  cate_id
+
+配置
+id  配置项英文名:ename   站点名称:cname   表单类型:form_type   配置类型:conf_type    可选项:values   默认值:value
