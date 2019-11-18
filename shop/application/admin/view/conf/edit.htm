@@ -92,7 +92,7 @@
                                             <div class="col-sm-6">
                                                 <select name="conf_type" style="width: 100%">
                                                     <option {if condition="$confInfo['conf_type'] eq 1"} selected="selected" {/if} value="1">店铺配置</option>
-                                                    <option {if condition="$confInfo['conf_type'] eq 2"} selected="selected" {/if} value="2">网店信息</option>
+                                                    <option {if condition="$confInfo['conf_type'] eq 2"} selected="selected" {/if} value="2">商品配置</option>
                                                 </select>
                                             </div>
                                             <p class="help-block col-sm-4 red">* 必填</p>
@@ -139,11 +139,11 @@
 
 <!--Basic Scripts-->
 {include file="common/js" /}
-<script src="__js__/ueditor/ueditor.config.js"></script>
-<script src="__js__/ueditor/ueditor.all.js"></script>
+<script src="__plus__/ueditor/ueditor.config.js"></script>
+<script src="__plus__/ueditor/ueditor.all.js"></script>
 <script>
     $(function () {
-        UE.getEditor('brand_description');
+        // UE.getEditor('brand_description');
 
 
         // $('#brandEdit').click(function () {

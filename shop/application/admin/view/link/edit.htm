@@ -152,39 +152,12 @@
 
 <!--Basic Scripts-->
 {include file="common/js" /}
-<script src="__js__/ueditor/ueditor.config.js"></script>
-<script src="__js__/ueditor/ueditor.all.js"></script>
+<script src="__plus__/ueditor/ueditor.config.js"></script>
+<script src="__plus__/ueditor/ueditor.all.js"></script>
 <script>
     $(function () {
-        UE.getEditor('brand_description');
+        // UE.getEditor('brand_description');
 
-
-        // $('#brandEdit').click(function () {
-        //     $.ajax({
-        //         url:"{:url('admin/brand/edit')}",
-        //         type:'post',
-        //         data:$('form').serialize(),
-        //         dataType:'json',
-        //         success:function (data) {
-        //             if (data.code == 1) {
-        //                 layer.msg(data.msg, {
-        //                     icon:6,
-        //                     time:2000
-        //                 }, function () {
-        //                     location.href = data.url;
-        //                 });
-        //             }else {
-        //                 layer.open({
-        //                     title:"商品修改失败!",
-        //                     content:data.msg,
-        //                     icon:5,
-        //                     anim:6
-        //                 });
-        //             }
-        //         }
-        //     });
-        //     return false;
-        // });
     });
 
 

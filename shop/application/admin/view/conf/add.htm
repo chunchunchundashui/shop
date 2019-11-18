@@ -75,7 +75,7 @@
                         <div class="form-group">
                             <label for="brand_name" class="col-sm-2 control-label no-padding-right">表单类型</label>
                             <div class="col-sm-6">
-                                <select name="form_type" style="width: 100%">
+                                <select id="select" name="form_type" style="width: 100%">
                                     <option value="input">input</option>
                                     <option value="radio">radio</option>
                                     <option value="checkbox">checkbox</option>
@@ -91,18 +91,18 @@
                             <div class="col-sm-6">
                                 <select name="conf_type" style="width: 100%">
                                     <option value="1">店铺配置</option>
-                                    <option value="2">网店信息</option>
+                                    <option value="2">商品配置</option>
                                 </select>
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
-                        <div class="form-group">
+                        <div  class="form-group hid">
                             <label for="values" class="col-sm-2 control-label no-padding-right">可选值</label>
                             <div class="col-sm-6">
                                 <textarea name="values" class="form-control" style="width: 100%;"></textarea>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group hid">
                             <label for="value" class="col-sm-2 control-label no-padding-right">默认值</label>
                             <div class="col-sm-6">
                                 <input class="form-control" id="value" placeholder="" name="value" type="text">
@@ -137,11 +137,20 @@
 
 	    <!--Basic Scripts-->
     {include file="common/js" /}
-    <script src="__js__/ueditor/ueditor.config.js"></script>
-    <script src="__js__/ueditor/ueditor.all.js"></script>
+    <script src="__plus__/ueditor/ueditor.config.js"></script>
+    <script src="__plus__/ueditor/ueditor.all.js"></script>
     <script>
         $(function () {
-            UE.getEditor('brand_description');
+            // UE.getEditor('brand_description');
+
+        });
+
+        $("#select").change(function (e) {
+            if(e.target.value === 'file') {
+                $(".hid").hide()
+            } else {
+                $(".hid").show()
+            }
         });
         // //实现回车提交
         // window.onload = function(){
