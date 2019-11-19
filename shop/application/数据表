@@ -11,3 +11,22 @@ id  配置项英文名:ename   站点名称:cname   表单类型:form_type   配
 分类
 id cate_name cate_img sort pid
 
+商品类型    type
+id type_name/类型名称
+
+商品属性
+id  attr_name/属性名称    attr_type/类型单一或者唯一  attr_values/属性值  type_id
+
+
+
+        颜色
+        尺寸
+女装    衣长
+        面料
+
+            颜色
+            屏幕尺寸
+笔记本      内存大小   属性
+(商品类型)  生产商家
+
+

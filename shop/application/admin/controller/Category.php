@@ -39,10 +39,10 @@ class Category extends Controller
                 $data['cate_img'] = $this->upload();
             }
 //            验证器
-//            $validate = validate('Category');
-//            if (!$validate->check($data)) {
-//                $this->error($validate->getError());
-//            }
+            $validate = validate('Category');
+            if (!$validate->check($data)) {
+                $this->error($validate->getError());
+            }
             $add = $CategoryObj->insert($data);
             if ($add) {
                 $this->success('添加分类成功!', 'admin/Category/lst');
@@ -65,8 +65,18 @@ class Category extends Controller
         $Category = new Catetree();
         $CategoryObj = model('Category');
         if (request()->isPost()) {
-
             $data = input('post.');
+            //处理图片上传
+            if ($_FILES['cate_img']['tmp_name']) {
+                $data['cate_img'] = $this->upload();
+                $category = $CategoryObj->field('cate_img')->find($data['id']);
+                if ($category['cate_img']) {
+                    $imgSrc = IMG_UPLOADS.$category['cate_img'];
+                    if (file_exists($imgSrc)) {        /*file_exists检查文件或目录是否存在*/
+                        @unlink($imgSrc);                 /*  删除缩略图  */
+                    }
+                }
+            }
             //            验证器
             $validate = validate('Category');
             if (!$validate->check($data)) {
@@ -101,23 +111,18 @@ class Category extends Controller
         $Catetree = new Catetree();
         $sonids = $Catetree->childrenids($id,$Category);
         $sonids[] = intval($id);
-        $arrSys = [1,2,3];
-        $arrRes = array_intersect($arrSys,$sonids);
-        if ($arrRes) {
-            $this->error('系统内置文章分类不允许删除!');
-        }
         //删除分类前判断该分类下的文章和文章相关的缩略图
-        $article = db('article');
-        foreach($sonids as $k => $v) {
-            $artRes = $article->field('id,thumb')->where(array('Category_id'=>$v))->select();
-            foreach ($artRes as $k1 => $v1) {
-                $thumbSrc = IMG_UPLOADS.$v1['thumb'];
-                if (file_exists($thumbSrc)) {        /*file_exists检查文件或目录是否存在*/
-                    @unlink($thumbSrc);                 /*  删除缩略图  */
-                }
-                $article->delete($v1['id']);
-            }
-        }
+//        $article = db('article');
+//        foreach($sonids as $k => $v) {
+//            $artRes = $article->field('id,thumb')->where(array('Category_id'=>$v))->select();
+//            foreach ($artRes as $k1 => $v1) {
+//                $thumbSrc = IMG_UPLOADS.$v1['thumb'];
+//                if (file_exists($thumbSrc)) {        /*file_exists检查文件或目录是否存在*/
+//                    @unlink($thumbSrc);                 /*  删除缩略图  */
+//                }
+//                $article->delete($v1['id']);
+//            }
+//        }
         $sonids=implode(',',$sonids);       /*   转换为字符串     */
         $result = $Category->where("id in ($sonids)")->delete();
 
