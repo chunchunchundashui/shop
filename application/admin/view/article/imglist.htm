@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title>长春THinkPHP5第四季 实战开发大型B2C商城项目</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__admin__/style/bootstrap.css" rel="stylesheet">
+    <link href="__admin__/style/font-awesome.css" rel="stylesheet">
+    <link href="__admin__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__admin__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__admin__/style/demo.css" rel="stylesheet">
+    <link href="__admin__/style/typicons.css" rel="stylesheet">
+    <link href="__admin__/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+	<!-- 头部 -->
+	{include file="common/top" /}
+
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+            {include file="common/left" /}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="{:url('admin/index/index')}">系统</a>
+                    </li>
+                                        <li class="active">图片管理</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<!--<button type="button" tooltip="添加品牌"  class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '{:url('add')}'"> <i class="fa fa-plus"></i> Add-->
+<!--</button>-->
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                        <tr>
+                            <th>图片</th>
+                            <th class="text-center" width="10%">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="imgRes" id="vo"}
+                        <tr>
+                            <th><img src="{$vo}" height="100"></th>
+                            <td align="center">
+                                <a href="javascript:;" class="btn btn-danger article_del btn-sm shiny" dataid="{$vo}">删除</a>
+                            </td>
+                        </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+
+                </div>
+                    <div style="padding-top: 10px; text-align: right;">
+                        <!--分页-->
+                    </div>
+                <div>
+                	                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    {include file="common/js" /}
+    <script>
+        $(function () {
+           $('.article_del').click(function () {
+               var imgsrc = $(this).attr('dataid');
+               layer.confirm('确定要删除吗?', {
+                   title:'删除图片',
+                   icon:3,
+               }, function (index) {
+                   layer.close(index);
+                   $.ajax({
+                       url:"{:url('article/delimg')}",
+                       type:'post',
+                       data:{imgsrc:imgsrc},
+                       dataType:'json',
+                       success:function (data) {
+                           if (data.code == 1) {
+                               $(this).parent().parent().remove();
+                               layer.msg(data.msg , {
+                                   icon:6,      /* 6笑脸 */
+                                   time:2000
+                               }, function () {
+                                   location.href = data.url;
+                               });
+                           }else if (data.code == 2) {
+                               layer.open({
+                                   title:"图片删除失败!",
+                                   content:data.msg,
+                                   icon:5,  /* 5哭脸 */
+                                   anim:6
+                               });
+                           }else {
+                               layer.open({
+                                   title:"图片不存在!",
+                                   content:data.msg,
+                                   icon:8,      /* 8感叹号 */
+                                   anim:6
+                               });
+                           }
+                       }
+                   });
+               });
+               return false;
+           });
+        });
+    </script>
+
+
+</body></html>

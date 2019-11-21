@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title>长春THinkPHP5第四季 实战开发大型B2C商城项目</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__admin__/style/bootstrap.css" rel="stylesheet">
+    <link href="__admin__/style/font-awesome.css" rel="stylesheet">
+    <link href="__admin__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__admin__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__admin__/style/demo.css" rel="stylesheet">
+    <link href="__admin__/style/typicons.css" rel="stylesheet">
+    <link href="__admin__/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+	<!-- 头部 -->
+	{include file="common/top" /}
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+            <!--公共左侧-->
+            {include file="common/left" /}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="{:url('index/index')}">系统</a>
+                    </li>
+                                        <li>
+                        <a href="{:url('conf/lst')}">配置管理</a>
+                    </li>
+                                        <li class="active">添加配置</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">新增配置</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action=""  method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="cname" class="col-sm-2 control-label no-padding-right">中文名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="cname" placeholder="" name="cname" required="" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="ename" class="col-sm-2 control-label no-padding-right">英文名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="ename" placeholder="" name="ename" required="" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="brand_name" class="col-sm-2 control-label no-padding-right">表单类型</label>
+                            <div class="col-sm-6">
+                                <select id="select" name="form_type" style="width: 100%">
+                                    <option value="input">input</option>
+                                    <option value="radio">radio</option>
+                                    <option value="checkbox">checkbox</option>
+                                    <option value="select">select</option>
+                                    <option value="textarea">textarea</option>
+                                    <option value="file" id="6">file</option>
+                                </select>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="brand_name" class="col-sm-2 control-label no-padding-right">配置类型</label>
+                            <div class="col-sm-6">
+                                <select name="conf_type" style="width: 100%">
+                                    <option value="1">店铺配置</option>
+                                    <option value="2">商品配置</option>
+                                </select>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+                        <div  class="form-group hid">
+                            <label for="values" class="col-sm-2 control-label no-padding-right">可选值</label>
+                            <div class="col-sm-6">
+                                <textarea name="values" class="form-control" style="width: 100%;"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group hid">
+                            <label for="value" class="col-sm-2 control-label no-padding-right">默认值</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="value" placeholder="" name="value" type="text">
+                            </div>
+                        </div>
+                        <!--<div class="form-group">-->
+                            <!--<label for="group_id" class="col-sm-2 control-label no-padding-right">配置角色</label>-->
+                            <!--<div class="col-sm-6">-->
+                                <!--<select name="group_id" style="width: 100%;">-->
+                                                                        <!--<option selected="selected" value="8">测试</option>-->
+                                                                    <!--</select>-->
+                            <!--</div>-->
+                        <!--</div>  -->
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" id="brandAdd" class="btn brand_Add btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    {include file="common/js" /}
+    <script src="__plus__/ueditor/ueditor.config.js"></script>
+    <script src="__plus__/ueditor/ueditor.all.js"></script>
+    <script>
+        $(function () {
+            // UE.getEditor('brand_description');
+
+        });
+
+        $("#select").change(function (e) {
+            if(e.target.value === 'file') {
+                $(".hid").hide()
+            } else {
+                $(".hid").show()
+            }
+        });
+        // //实现回车提交
+        // window.onload = function(){
+        //     $(document).keydown(function (e) {
+        //         if (e.keyCode === 13) {
+        //             $("#brand_Add").trigger("click");
+        //         }
+        //     });
+        // };
+
+    </script>
+
+</body></html>
