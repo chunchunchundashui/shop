@@ -40,3 +40,9 @@ id  goods_name  goods_num   og_thumb    sm_thumb        mid_thumb    big_thumb  
     商品类型    商品详情页   商品重量        重量单位
 
 
+会员级别    member_level
+id  level_name  bom_point   top_point   rate
+    级别名称    积分下限    积分上限    折扣率
+
+
+

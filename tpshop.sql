@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 21/11/2019 17:31:37
+ Date: 21/11/2019 21:14:41
 */
 
 SET NAMES utf8mb4;
@@ -230,6 +230,27 @@ CREATE TABLE `tp_link`  (
 -- ----------------------------
 INSERT INTO `tp_link` VALUES (1, '长春个人博客', 'http://122.51.158.157', NULL, '长春个人博客', 1, 1);
 INSERT INTO `tp_link` VALUES (2, '百度', 'http://baidu.com', NULL, '百度百度', 1, 1);
+
+-- ----------------------------
+-- Table structure for tp_member_level
+-- ----------------------------
+DROP TABLE IF EXISTS `tp_member_level`;
+CREATE TABLE `tp_member_level`  (
+  `id` smallint(6) NOT NULL AUTO_INCREMENT,
+  `level_name` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '级别名称',
+  `bom_point` int(11) NOT NULL COMMENT '积分下限',
+  `top_point` int(11) NOT NULL COMMENT '积分上限',
+  `rate` tinyint(3) UNSIGNED NOT NULL DEFAULT 100 COMMENT '折扣略',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tp_member_level
+-- ----------------------------
+INSERT INTO `tp_member_level` VALUES (2, '注册会员', 0, 10000, 100);
+INSERT INTO `tp_member_level` VALUES (3, '中级会员', 10001, 20000, 90);
+INSERT INTO `tp_member_level` VALUES (4, '高级会员', 20001, 30000, 80);
+INSERT INTO `tp_member_level` VALUES (5, 'VIP会员', 30001, 50000, 70);
 
 -- ----------------------------
 -- Table structure for tp_type

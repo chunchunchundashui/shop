@@ -4,93 +4,84 @@ namespace app\admin\controller;
 use Boris\DumpInspector;
 use think\Controller;
 
-class Goods extends Controller
+class MemberLevel extends Controller
 {
 
-//商品类型列表
+//会员级别列表
     public function lst()
     {
-        $lst = model('goods')->order('id desc')->paginate(10);
+        $mlRes = model('MemberLevel')->order('id desc')->paginate(10);
         $viewData = [
-            'lst' => $lst
+            'mlRes' => $mlRes
         ];
         $this->assign($viewData);
         return view();
     }
 
-//商品类型添加
+//会员级别添加
     public function add()
     {
         if (request()->isPost()) {
-            $data = [
-                'goods_name' => input('post.goods_name'),
-            ];
+            $data = input('post.');
 //            验证器
-//            $validate = validate('goods');
+//            $validate = validate('Type');
 //            if (!$validate->check($data)) {
 //                $this->error($validate->getError());
 //            }
-            $add = db('goods')->insert($data);
+            $add = db('MemberLevel')->insert($data);
             if ($add) {
-                $this->success('商品类型添加成功!', 'admin/goods/lst');
+                $this->success('会员级别添加成功!', 'admin/MemberLevel/lst');
             }else {
-                $this->error("商品类型添加失败!");
+                $this->error("会员级别添加失败!");
             }
         }
-        //会员级别数据
-        $mlRes = db('memberLevel')->field('id,level_name')->select();
-        $this->assign([
-            'mlRes' => $mlRes,
-        ]);
         return view();
     }
 
-//商品类型修改
+//会员级别修改
     public function edit()
     {
         if (request()->isPost()) {
 
             $data = input('post.');
             //            验证器
-//            $validate = validate('goods');
+//            $validate = validate('Type');
 //            if (!$validate->check($data)) {
 //                $this->error($validate->getError());
 //            }
-            $save = db('goods')->update($data);
+            $save = db('MemberLevel')->update($data);
             if ($save !== false) {
-                $this->success('修改商品类型成功!', 'admin/goods/lst');
+                $this->success('修改会员级别成功!', 'admin/MemberLevel/lst');
             }else {
-                $this->error("修改商品类型失败!");
+                $this->error("修改会员级别失败!");
             }
         }
         $id = input('id');
-        $goodsInfo = model('goods')->find($id);
+        $memberL = model('MemberLevel')->find($id);
         $viewData = [
-            'goodsInfo' => $goodsInfo
+            'memberL' => $memberL
         ];
         $this->assign($viewData);
         return view();
 
     }
 
-//    商品类型删除
+//    会员级别删除
     public function del()
     {
-        $goodsInfo = model('goods')->find(input('post.id'));
-        $result = $goodsInfo->delete();
-        //删除商品类型下面的商品属性
-        db('attr')->where(array('goods_id'=>input('post.id')))->delete();
+        $TypeInfo = model('MemberLevel')->find(input('post.id'));
+        $result = $TypeInfo->delete();
         if ($result == 1 ) {
-            $this->success('商品类型删除成功!', 'admin/goods/lst');
+            $this->success('会员级别删除成功!', 'admin/MemberLevel/lst');
         }else {
-            $this->error('商品类型删除失败!');
+            $this->error('会员级别删除失败!');
         }
     }
 
     //上传图片
     public function upload(){
         // 获取表单上传文件 例如上传了001.jpg
-        $file = request()->file('goods_img');
+        $file = request()->file('Type_img');
         // 移动到框架应用根目录/public/uploads/ 目录下
         if($file){
             $info = $file->move(ROOT_PATH . 'public' . DS . 'static' . DS  . 'uploads');

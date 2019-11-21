@@ -179,7 +179,16 @@
                                                 </div>
 
                                                 <div id="mbprice" class="tab-pane">
-                                                    <p>会员价格</p>
+                                                    {volist name="mlRes" id="vo"}
+                                                    <div class="form-group">
+                                                        <label for="cname"
+                                                               class="col-sm-2 control-label no-padding-right">{$vo.level_name}</label>
+                                                        <div class="col-sm-6">
+                                                            <input class="form-control" id="cname" placeholder=""
+                                                                   name="markte_price" required="" type="text">
+                                                        </div>
+                                                    </div>
+                                                    {/volist}
                                                 </div>
 
                                                 <div id="goodsAttr" class="tab-pane">
