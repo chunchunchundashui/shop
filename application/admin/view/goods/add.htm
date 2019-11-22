@@ -18,7 +18,12 @@
     <link href="__admin__/style/demo.css" rel="stylesheet">
     <link href="__admin__/style/typicons.css" rel="stylesheet">
     <link href="__admin__/style/animate.css" rel="stylesheet">
-
+    <style type="text/css">
+        .price{
+            width: 250px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 <!-- 头部 -->
@@ -166,7 +171,7 @@
                                                         <div class="col-sm-6">
                                                             <input class="form-control" style="width: 654px; display: inline-block;" id="cname" placeholder=""
                                                                    name="goods_weight" required="" type="text">
-                                                            <select name="weight_unit" style="width: 100px;">
+                                                            <select name="weight_unit" style="width: 109px;">
                                                                 <option value="kg">kg</option>
                                                                 <option value="g">g</option>
                                                             </select>
@@ -192,7 +197,49 @@
                                                 </div>
 
                                                 <div id="goodsAttr" class="tab-pane">
-                                                    <p>商品属性</p>
+                                                    <div class="form-group">
+                                                        <label for="cname"
+                                                               class="col-sm-2 control-label no-padding-right">商品类型</label>
+                                                        <div class="col-sm-6">
+                                                            <select name="type_id" class="form-control">
+                                                                <option value="">请选择</option>
+                                                                {volist name="typeView" id="vo"}
+                                                                <option value="{$vo.id}">{$vo.type_name}</option>
+                                                                {/volist}
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div id="attr_list">
+                                                        <!--<div class="form-group">-->
+                                                            <!--<label for="cname"-->
+                                                                   <!--class="col-sm-2 control-label no-padding-right">颜色</label>-->
+                                                            <!--<div class="col-sm-6">-->
+                                                                <!--<a href="#">[+]</a>-->
+                                                                <!--<select name="brand_id" style="width: 494px">-->
+                                                                    <!--<option value="">黑色</option>-->
+                                                                    <!--<option value="">白色</option>-->
+                                                                <!--</select>-->
+                                                                <!--<input type="text" class="form-control price" placeholder="填写价格">-->
+                                                            <!--</div>-->
+                                                        <!--</div>-->
+                                                        <!--<div class="form-group">-->
+                                                            <!--<label for="cname"-->
+                                                                   <!--class="col-sm-2 control-label no-padding-right">材质</label>-->
+                                                            <!--<div class="col-sm-6">-->
+                                                                <!--<select name="brand_id" class="form-control">-->
+                                                                    <!--<option value="">羊毛</option>-->
+                                                                    <!--<option value="">纯棉</option>-->
+                                                                <!--</select>-->
+                                                            <!--</div>-->
+                                                        <!--</div>-->
+                                                        <!--<div class="form-group">-->
+                                                            <!--<label for="cname"-->
+                                                                   <!--class="col-sm-2 control-label no-padding-right">材质</label>-->
+                                                            <!--<div class="col-sm-6">-->
+                                                                <!--<input type="text" class="form-control">-->
+                                                            <!--</div>-->
+                                                        <!--</div>-->
+                                                    </div>
                                                 </div>
 
                                                 <div id="goodsphoto" class="tab-pane">
@@ -231,6 +278,35 @@
         $(function () {
             UE.getEditor('goods_des',{initialFrameWidth:1550,initialFrameHeight:800,toolbars: [['fullscreen', 'source', 'undo', 'redo','bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript','removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist','selectall', 'cleardoc']]});
         });
+</script>
+
+<script type="text/javascript">
+    // "select[name=type_id]"  获取到select下面的name等于type_id
+    $("select[name=type_id]").change(function () {
+        // var type_id = $(this).val();     获取当前属性下面的值
+        var type_id = $(this).val();
+        $.ajax({
+            type:"post",
+            url:"{:url('Attr/ajaxGetAttr')}",
+            // data:{type_id:type_id},     第一个type_id发送过去的参数,第二个type_id上面给的值
+            data:{type_id:type_id},
+            dataType:'json',
+            success:function (data) {
+                var html ="";
+                // $(data).each(function (k,v)     jq的循环
+                $(data).each(function (k,v) {
+                   if (v.attr_type == 1) {
+                       html += v.attr_name;
+                       // 拆分数组
+
+                   } else {
+
+                   }
+                });
+                $("#attr_list").html(html);
+            }
+        });
+    });
 </script>
 
 </body>

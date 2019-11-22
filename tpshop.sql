@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 21/11/2019 21:14:41
+ Date: 22/11/2019 12:39:02
 */
 
 SET NAMES utf8mb4;
@@ -58,13 +58,16 @@ CREATE TABLE `tp_attr`  (
   `type_id` smallint(6) NOT NULL COMMENT '所属类型',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `type_id`(`type_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tp_attr
 -- ----------------------------
 INSERT INTO `tp_attr` VALUES (1, '颜色', 1, '黑色,白色,银色', 1);
 INSERT INTO `tp_attr` VALUES (2, '衣长', 1, '1,2,3', 2);
+INSERT INTO `tp_attr` VALUES (3, '内存', 1, '80G,100G,500G', 1);
+INSERT INTO `tp_attr` VALUES (4, '厂家', 2, '', 1);
+INSERT INTO `tp_attr` VALUES (5, 'CPU', 2, 'Internet,奔腾', 1);
 
 -- ----------------------------
 -- Table structure for tp_brand
@@ -251,6 +254,18 @@ INSERT INTO `tp_member_level` VALUES (2, '注册会员', 0, 10000, 100);
 INSERT INTO `tp_member_level` VALUES (3, '中级会员', 10001, 20000, 90);
 INSERT INTO `tp_member_level` VALUES (4, '高级会员', 20001, 30000, 80);
 INSERT INTO `tp_member_level` VALUES (5, 'VIP会员', 30001, 50000, 70);
+
+-- ----------------------------
+-- Table structure for tp_member_price
+-- ----------------------------
+DROP TABLE IF EXISTS `tp_member_price`;
+CREATE TABLE `tp_member_price`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `mprice` decimal(10, 2) NOT NULL COMMENT '会员价',
+  `mlevel_id` smallint(6) NOT NULL COMMENT '会员级别',
+  `goods_id` int(11) NOT NULL COMMENT '商品Id',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
 
 -- ----------------------------
 -- Table structure for tp_type

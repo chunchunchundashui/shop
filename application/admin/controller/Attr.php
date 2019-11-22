@@ -94,4 +94,12 @@ class Attr extends Controller
             $this->error('商品类型删除失败!');
         }
     }
+
+    //异步获取指定类型下的属性
+    public function ajaxGetAttr()
+    {
+        $typeId = input('type_id');         /*  input('type_id')获取前台传输过来的值  */
+        $attrRes = db('attr')->where(array("type_id"=>$typeId))->select();
+        echo json_encode($attrRes);
+    }
 }

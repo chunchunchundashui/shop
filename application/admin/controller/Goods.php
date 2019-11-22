@@ -39,8 +39,11 @@ class Goods extends Controller
         }
         //会员级别数据
         $mlRes = db('memberLevel')->field('id,level_name')->select();
+        //获取商品类型
+        $typeView = db('type')->select();
         $this->assign([
             'mlRes' => $mlRes,
+            'typeView' => $typeView,
         ]);
         return view();
     }

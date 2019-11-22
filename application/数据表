@@ -44,5 +44,9 @@ id  goods_name  goods_num   og_thumb    sm_thumb        mid_thumb    big_thumb  
 id  level_name  bom_point   top_point   rate
     级别名称    积分下限    积分上限    折扣率
 
+会员价格    member_price
+id  mprice  mlevel_id       goods_id
+    会员价  会员级别Id        对商品设定的
+
 
 
