@@ -49,4 +49,9 @@ id  mprice  mlevel_id       goods_id
     会员价  会员级别Id        对商品设定的
 
 
+商品相册    goods_photo
+id  goods_id    sm_photo      mid_photo     big_photo
+    商品ID        小图      中图          大图
+
+
 

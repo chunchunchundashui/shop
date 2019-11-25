@@ -23,6 +23,9 @@
             width: 250px;
             display: inline-block;
         }
+        .abtn{
+            padding-right: 10px;
+        };
     </style>
 </head>
 <body>
@@ -210,40 +213,26 @@
                                                         </div>
                                                     </div>
                                                     <div id="attr_list">
-                                                        <!--<div class="form-group">-->
-                                                            <!--<label for="cname"-->
-                                                                   <!--class="col-sm-2 control-label no-padding-right">颜色</label>-->
-                                                            <!--<div class="col-sm-6">-->
-                                                                <!--<a href="#">[+]</a>-->
-                                                                <!--<select name="brand_id" style="width: 494px">-->
-                                                                    <!--<option value="">黑色</option>-->
-                                                                    <!--<option value="">白色</option>-->
-                                                                <!--</select>-->
-                                                                <!--<input type="text" class="form-control price" placeholder="填写价格">-->
-                                                            <!--</div>-->
-                                                        <!--</div>-->
-                                                        <!--<div class="form-group">-->
-                                                            <!--<label for="cname"-->
-                                                                   <!--class="col-sm-2 control-label no-padding-right">材质</label>-->
-                                                            <!--<div class="col-sm-6">-->
-                                                                <!--<select name="brand_id" class="form-control">-->
-                                                                    <!--<option value="">羊毛</option>-->
-                                                                    <!--<option value="">纯棉</option>-->
-                                                                <!--</select>-->
-                                                            <!--</div>-->
-                                                        <!--</div>-->
-                                                        <!--<div class="form-group">-->
-                                                            <!--<label for="cname"-->
-                                                                   <!--class="col-sm-2 control-label no-padding-right">材质</label>-->
-                                                            <!--<div class="col-sm-6">-->
-                                                                <!--<input type="text" class="form-control">-->
-                                                            <!--</div>-->
-                                                        <!--</div>-->
+                                                        <!-- 属性显示 -->
                                                     </div>
                                                 </div>
 
                                                 <div id="goodsphoto" class="tab-pane">
-                                                    <p>商品相册</p>
+                                                    <div class="form-group">
+                                                        <label for="cname"
+                                                               class="col-sm-2 control-label no-padding-right">商品相册</label>
+                                                        <div class="col-sm-6"></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="cname"
+                                                               class="col-sm-2 control-label no-padding-right"></label>
+                                                        <div class="col-sm-6">
+                                                            <a href="#" onclick="addrow(this);">[+]</a><input class="form-control" id="cname"
+                                                                   style="border:none; box-shadow: none; display: inline-block;width: 50%"
+                                                                   name="og_thumb" type="file">
+                                                        </div>
+                                                    </div>
+                                                    <div id="goods_photo"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -296,17 +285,66 @@
                 // $(data).each(function (k,v)     jq的循环
                 $(data).each(function (k,v) {
                    if (v.attr_type == 1) {
-                       html += v.attr_name;
+                       // 单选处理
+                       html+="<div class='form-group\'>";
+                       html+="<label class=\'col-sm-2 control-label no-padding-right\'>"+v.attr_name+"</label>";
                        // 拆分数组
-
+                       var attrValuesArr = v.attr_values.split(",");
+                       html+="<div class=\'col-sm-6\'><a class=\'abtn\' onclick='addrow(this);' href=\'#\'>[+]</a>";
+                       html+="<select>";
+                       html+="<option>请选择</option>";
+                       for (var i=0; i<attrValuesArr.length; i++) {
+                           html+="<option value='\"+attrValuesArr[i]+\"'>"+attrValuesArr[i]+"</option>";
+                       }
+                       html+="</select>";
+                       html+="<input type=\'text\' class=\'form-control price\' placeholder=\'填写价格\'>";
+                       html+="</div></div>";
                    } else {
-
+                       // 唯一处理
+                       if (v.attr_values) {
+                           html+="<div class='form-group\'>";
+                           html+="<label class=\'col-sm-2 control-label no-padding-right\'>"+v.attr_name+"</label>";
+                           // 拆分数组
+                           var attrValuesArr = v.attr_values.split(",");
+                           html+="<div class=\'col-sm-6\'>";
+                           html+="<select>";
+                           html+="<option>请选择</option>";
+                           for (var i=0; i<attrValuesArr.length; i++) {
+                               html+="<option value='\"+attrValuesArr[i]+\"'>"+attrValuesArr[i]+"</option>";
+                           }
+                           html+="</select>";
+                           html+="</div></div>";
+                       } else {
+                           html+="<div class='form-group\'>";
+                           html+="<label class=\'col-sm-2 control-label no-padding-right\'>"+v.attr_name+"</label>";
+                           // 拆分数组
+                           var attrValuesArr = v.attr_values.split(",");
+                           html+="<div class=\'col-sm-6\'>";
+                           html+="<input type=\'text\' class=\'form-control\'>";
+                           html+="</div></div>";
+                       }
                    }
                 });
                 $("#attr_list").html(html);
             }
         });
     });
+
+    //商品属性的添加或者多个添加    //上传图片或者多个图片
+    function addrow(obj) {
+        //获取一个a标签的onclick事件.
+        //获取到$(obj).parent().parent()子元素
+        var div = $(obj).parent().parent();
+        //判断对象下面的值是不是+如果是就上一个div,不是就减去一个
+        if ($(obj).html() == '[+]') {
+            //把上面的值从新克隆一份给divnew
+            var divnew = div.clone();
+            divnew.find('a').html('[-]');
+            div.after(divnew);
+        }else {
+            div.remove();
+        }
+    }
 </script>
 
 </body>
