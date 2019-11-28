@@ -3,6 +3,7 @@ namespace app\admin\controller;
 
 use Boris\DumpInspector;
 use think\Controller;
+use Catetree\Catetree;
 
 class Goods extends Controller
 {
@@ -22,28 +23,36 @@ class Goods extends Controller
     public function add()
     {
         if (request()->isPost()) {
-            $data = [
-                'goods_name' => input('post.goods_name'),
-            ];
+            $data = input('post.');
+//            dump($data);die;
 //            验证器
 //            $validate = validate('goods');
 //            if (!$validate->check($data)) {
 //                $this->error($validate->getError());
 //            }
-            $add = db('goods')->insert($data);
+            $add = model('goods')->save($data);
             if ($add) {
-                $this->success('商品类型添加成功!', 'admin/goods/lst');
+                $this->success('商品添加成功!', 'admin/goods/lst');
             }else {
-                $this->error("商品类型添加失败!");
+                $this->error("商品添加失败!");
             }
         }
         //会员级别数据
         $mlRes = db('memberLevel')->field('id,level_name')->select();
         //获取商品类型
         $typeView = db('type')->select();
+        //品牌分类
+        $brandRes = db('brand')->field('id,brand_name')->select();
+        //商品分类
+        $Category = new Catetree();
+        $CategoryObj = model('Category');
+        $CategoryRes = $CategoryObj->order('sort DESC')->select();
+        $CategoryRes = $Category->Catetree($CategoryRes);
         $this->assign([
             'mlRes' => $mlRes,
             'typeView' => $typeView,
+            'brandRes' => $brandRes,
+            'Category' => $CategoryRes,
         ]);
         return view();
     }

@@ -61,7 +61,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-xs-12">
                         <div class="widget">
-                            <form class="form-horizontal" role="form" action="" method="post">
+                            <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                                 <!--商品信息开始-->
                                 <div class="widget-body">
                                     <div class="widget-main">
@@ -77,21 +77,21 @@
                                                         描述信息
                                                     </a>
                                                 </li>
-                                                <li class="">
-                                                    <a href="#mbprice" data-toggle="tab">
-                                                        会员价格
-                                                    </a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#goodsAttr" data-toggle="tab">
-                                                        商品属性
-                                                    </a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#goodsphoto" data-toggle="tab">
-                                                        商品相册
-                                                    </a>
-                                                </li>
+                                                <!--<li class="">-->
+                                                    <!--<a href="#mbprice" data-toggle="tab">-->
+                                                        <!--会员价格-->
+                                                    <!--</a>-->
+                                                <!--</li>-->
+                                                <!--<li class="">-->
+                                                    <!--<a href="#goodsAttr" data-toggle="tab">-->
+                                                        <!--商品属性-->
+                                                    <!--</a>-->
+                                                <!--</li>-->
+                                                <!--<li class="">-->
+                                                    <!--<a href="#goodsphoto" data-toggle="tab">-->
+                                                        <!--商品相册-->
+                                                    <!--</a>-->
+                                                <!--</li>-->
                                             </ul>
                                             <div class="tab-content tabs-flat">
                                                 <div id="baseInfo" class="tab-pane active">
@@ -138,6 +138,9 @@
                                                         <div class="col-sm-6">
                                                             <select name="category_id" class="form-control">
                                                                 <option value="">请选择</option>
+                                                                {volist name="Category" id="vo"}
+                                                                <option value="{$vo.id}"><?php echo str_repeat('-', $vo['level']*8)?>{$vo.cate_name}</option>
+                                                                {/volist}
                                                             </select>
                                                         </div>
                                                     </div>
@@ -147,6 +150,9 @@
                                                         <div class="col-sm-6">
                                                             <select name="brand_id" class="form-control">
                                                                 <option value="">请选择</option>
+                                                                {volist name="brandRes" id="vo"}
+                                                                    <option value="{$vo.id}">{$vo.brand_name}</option>
+                                                                {/volist}
                                                             </select>
                                                         </div>
                                                     </div>
@@ -186,55 +192,55 @@
                                                     <textarea name="goods_des" id="goods_des"></textarea>
                                                 </div>
 
-                                                <div id="mbprice" class="tab-pane">
-                                                    {volist name="mlRes" id="vo"}
-                                                    <div class="form-group">
-                                                        <label for="cname"
-                                                               class="col-sm-2 control-label no-padding-right">{$vo.level_name}</label>
-                                                        <div class="col-sm-6">
-                                                            <input class="form-control" id="cname" placeholder=""
-                                                                   name="markte_price" required="" type="text">
-                                                        </div>
-                                                    </div>
-                                                    {/volist}
-                                                </div>
+                                                <!--<div id="mbprice" class="tab-pane">-->
+                                                    <!--{volist name="mlRes" id="vo"}-->
+                                                    <!--<div class="form-group">-->
+                                                        <!--<label for="cname"-->
+                                                               <!--class="col-sm-2 control-label no-padding-right">{$vo.level_name}</label>-->
+                                                        <!--<div class="col-sm-6">-->
+                                                            <!--<input class="form-control" id="cname" placeholder=""-->
+                                                                   <!--name="markte_price" required="" type="text">-->
+                                                        <!--</div>-->
+                                                    <!--</div>-->
+                                                    <!--{/volist}-->
+                                                <!--</div>-->
 
-                                                <div id="goodsAttr" class="tab-pane">
-                                                    <div class="form-group">
-                                                        <label for="cname"
-                                                               class="col-sm-2 control-label no-padding-right">商品类型</label>
-                                                        <div class="col-sm-6">
-                                                            <select name="type_id" class="form-control">
-                                                                <option value="">请选择</option>
-                                                                {volist name="typeView" id="vo"}
-                                                                <option value="{$vo.id}">{$vo.type_name}</option>
-                                                                {/volist}
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div id="attr_list">
-                                                        <!-- 属性显示 -->
-                                                    </div>
-                                                </div>
+                                                <!--<div id="goodsAttr" class="tab-pane">-->
+                                                    <!--<div class="form-group">-->
+                                                        <!--<label for="cname"-->
+                                                               <!--class="col-sm-2 control-label no-padding-right">商品类型</label>-->
+                                                        <!--<div class="col-sm-6">-->
+                                                            <!--<select name="type_id" class="form-control">-->
+                                                                <!--<option value="">请选择</option>-->
+                                                                <!--{volist name="typeView" id="vo"}-->
+                                                                <!--<option value="{$vo.id}">{$vo.type_name}</option>-->
+                                                                <!--{/volist}-->
+                                                            <!--</select>-->
+                                                        <!--</div>-->
+                                                    <!--</div>-->
+                                                    <!--<div id="attr_list">-->
+                                                        <!--&lt;!&ndash; 属性显示 &ndash;&gt;-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
 
-                                                <div id="goodsphoto" class="tab-pane">
-                                                    <div class="form-group">
-                                                        <label for="cname"
-                                                               class="col-sm-2 control-label no-padding-right">商品相册</label>
-                                                        <div class="col-sm-6"></div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="cname"
-                                                               class="col-sm-2 control-label no-padding-right"></label>
-                                                        <div class="col-sm-6">
-                                                            <a href="#" onclick="addrow(this);">[+]</a><input class="form-control" id="cname"
-                                                                   style="border:none; box-shadow: none; display: inline-block;width: 50%"
-                                                                   name="og_thumb" type="file">
-                                                        </div>
-                                                    </div>
-                                                    <div id="goods_photo"></div>
-                                                </div>
-                                            </div>
+                                                <!--<div id="goodsphoto" class="tab-pane">-->
+                                                    <!--<div class="form-group">-->
+                                                        <!--<label for="cname"-->
+                                                               <!--class="col-sm-2 control-label no-padding-right">商品相册</label>-->
+                                                        <!--<div class="col-sm-6"></div>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="form-group">-->
+                                                        <!--<label for="cname"-->
+                                                               <!--class="col-sm-2 control-label no-padding-right"></label>-->
+                                                        <!--<div class="col-sm-6">-->
+                                                            <!--<a href="#" onclick="addrow(this);">[+]</a><input class="form-control" id="cname"-->
+                                                                   <!--style="border:none; box-shadow: none; display: inline-block;width: 50%"-->
+                                                                   <!--name="og_thumb" type="file">-->
+                                                        <!--</div>-->
+                                                    <!--</div>-->
+                                                    <!--<div id="goods_photo"></div>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-2 col-sm-10">
