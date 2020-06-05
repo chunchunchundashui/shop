@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>长春THinkPHP5第四季 实战开发大型B2C商城项目</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__admin__/style/bootstrap.css" rel="stylesheet">
+    <link href="__admin__/style/font-awesome.css" rel="stylesheet">
+    <link href="__admin__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__admin__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__admin__/style/demo.css" rel="stylesheet">
+    <link href="__admin__/style/typicons.css" rel="stylesheet">
+    <link href="__admin__/style/animate.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- 头部 -->
+{include file="common/top" /}
+
+<!-- /头部 -->
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        {include file="common/left" /}
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Breadcrumb -->
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="{:url('admin/index/index')}">系统</a>
+                    </li>
+                    <li class="active">商品库存管理</li>
+                </ul>
+            </div>
+            <!-- /Page Breadcrumb -->
+
+            <!-- Page Body -->
+            <div class="page-body">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <div class="widget-body">
+                                <form action="" method="post" accept-charset="utf-8">
+                                <div class="flip-scroll">
+                                    <table class="table table-bordered table-hover">
+                                        <thead class="">
+                                        <tr>
+                                            {volist name="radioAttrRes" id="vo"}
+                                            <th class="text-center">{$key}</th>
+                                            {/volist}
+                                            <th class="text-center" width="10%">库存量</th>
+                                            <th class="text-center">操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <!-- 判断库存是否有值  -->
+                                        {if condition="!empty($goodsProRes)"}
+                                        {volist name="goodsProRes" id="vo2"}
+                                        <?php
+                                            $keys = $key;
+                                        ?>
+                                            <tr>
+                                                {volist name="radioAttrRes" id="vo"}
+                                                <td align="center">
+                                                    <select name="goods_attr[{$key}][]">
+                                                        <option value="">请选择</option>
+                                                        {volist name="vo" id="vo1"}
+                                                        <!-- 拆分数组 -->
+                                                        <?php
+                                                        $arr = explode(',', $vo2['goods_attr']);
+                                                        ?>
+                                                        <option {if condition="in_array($vo1['id'], $arr)"} selected="selected" {else /} {/if}  value="{$vo1.id}">{$vo1.attr_value}</option>
+                                                        {/volist}
+                                                    </select>
+                                                </td>
+                                                {/volist}
+                                                <td align="center">
+                                                    <input name="goods_num[]" type="text" style="text-align: center;" value="{$vo2.goods_number}"></td>
+                                                <td align="center"><a onclick="addtr(this);" class="btn btn-sm btn-azure btn-addon" href="javascript:;">{if condition="$keys eq 0"}+{else /}-{/if}</a></td>
+                                            </tr>
+                                        {/volist}
+                                        {else /}
+                                            <tr>
+                                                {volist name="radioAttrRes" id="vo"}
+                                                <td align="center">
+                                                    <select name="goods_attr[{$key}][]">
+                                                        <option value="">请选择</option>
+                                                        {volist name="vo" id="vo1"}
+                                                        <option value="{$vo1.id}">{$vo1.attr_value}</option>
+                                                        {/volist}
+                                                    </select>
+                                                </td>
+                                                {/volist}
+                                                <td align="center">
+                                                    <input name="goods_num[]" type="text" style="text-align: center;" value=""></td>
+                                                <td align="center"><a onclick="addtr(this);" class="btn btn-sm btn-azure btn-addon" href="javascript:;">+</a></td>
+                                            </tr>
+                                        {/if}
+                                        </tbody>
+                                    </table>
+                                    <button type="submit" class="btn brand_Add btn-default">保存信息</button>
+                                    <button type="button" id="back" class="btn btn-default">返回列表</button>
+                                </div>
+                                </form>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+</div>
+
+<!--Basic Scripts-->
+{include file="common/js" /}
+<script>
+
+  //商品属性的添加或者多个添加    //上传图片或者多个图片
+  function addtr(obj) {
+    //获取一个a标签的onclick事件.
+    //获取到$(obj).parent().parent()子元素
+    var tr = $(obj).parent().parent();
+    //判断对象下面的值是不是+如果是就上一个div,不是就减去一个
+    if ($(obj).html() == '+') {
+      //把上面的值从新克隆一份给divnew
+      var divnew = tr.clone();
+      divnew.find('a').html('-');
+      tr.after(divnew);
+    }else {
+      tr.remove();
+    }
+  }
+
+  $('#back').click(function () {
+    window.history.go(-1);
+    // alert(132);return false;
+  });
+</script>
+
+
+</body>
+</html>

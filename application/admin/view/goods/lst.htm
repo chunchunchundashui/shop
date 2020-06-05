@@ -48,7 +48,7 @@
             <div class="page-body">
 
                 <button type="button" tooltip="添加商品类型" class="btn btn-sm btn-azure btn-addon"
-                        onClick="javascript:window.location.href = '{:url('Type/add')}'"><i class="fa fa-plus"></i> Add
+                        onClick="javascript:window.location.href = '{:url('Goods/add')}'"><i class="fa fa-plus"></i> Add
                 </button>
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-xs-12">
@@ -58,8 +58,19 @@
                                     <table class="table table-bordered table-hover">
                                         <thead class="">
                                         <tr>
-                                            <th class="text-center" width="8%">ID</th>
-                                            <th>商品类型名称</th>
+                                            <th class="text-center" width="4%">ID</th>
+                                            <th>名称</th>
+                                            <th width="10%">编号</th>
+                                            <th width="6%">缩略图</th>
+                                            <th width="6%">市场价</th>
+                                            <th width="6%">本店价</th>
+                                            <th width="4%">上架</th>
+                                            <th width="6%">栏目</th>
+                                            <th width="6%">品牌</th>
+                                            <th width="6%">类型</th>
+                                            <th width="4%">重量</th>
+                                            <th width="4%">单位</th>
+                                            <th width="4%">库存量</th>
                                             <th class="text-center" width="18%">操作</th>
                                         </tr>
                                         </thead>
@@ -67,11 +78,24 @@
                                         {volist name="lst" id="vo"}
                                         <tr>
                                             <td align="center">{$vo.id}</td>
-                                            <td>{$vo.type_name}</td>
+                                            <!-- 限制显示长度调用common下面的函数 -->
+                                            <td>{$vo.goods_name|cut_str=###,10}</td>
+                                            <td>{$vo.goods_code}</td>
+                                            <!-- 显示商品中的图片,定义了一个函数在入口文件中,这儿使用的是config下面设置的变量 -->
+                                            <td>{if condition="$vo['sm_thumb'] neq '' "}<img src="__uploads__/{$vo.sm_thumb}" alt="">{else /}暂无主图{/if}</td>
+                                            <td>{$vo.markte_price}</td>
+                                            <td>{$vo.shop_price}</td>
+                                            <td>{if condition="$vo['on_sale'] eq 1"}已上架{else /}已下架{/if}</td>
+                                            <td>{$vo.cate_name}</td>
+                                            <td>{if condition="$vo['brand_name']"}{$vo.brand_name}{else /}未设置{/if}</td>
+                                            <td>{if condition="$vo['type_name']"}{$vo.type_name}{else /}未设置{/if}</td>
+                                            <td>{$vo.goods_weight}</td>
+                                            <td>{$vo.weight_unit}</td>
+                                            <td>{if condition="$vo['gn']"}{$vo.gn}{else /}0{/if}</td>
                                             <td align="center">
-                                                <a href="{:url('attr/lst', ['type_id' => $vo.id])}"
-                                                   class="fa fa-list btn btn-darkorange btn-sm shiny"> 属性列表</a>
-                                                <a href="{:url('type/edit', ['id' => $vo.id])}"
+                                                <a href="{:url('goods/product', array('id'=>$vo['id']))}"
+                                                   class="fa fa-list btn btn-darkorange btn-sm shiny"> 库存</a>
+                                                <a href="{:url('goods/edit', ['id' => $vo.id])}"
                                                    class="fa fa-edit btn btn-primary btn-sm shiny"> 编辑</a>
                                                 <a href="javascript:;" class="fa fa-trash-o btn btn-danger Type_del btn-sm shiny"
                                                    dataid="{$vo.id}"> 删除</a>
@@ -106,12 +130,12 @@
         $('.Type_del').click(function () {
             var id = $(this).attr('dataid');
             layer.confirm('确定要删除吗?', {
-                title: '删除文章',
+                title: '删除商品',
                 icon: 3,
             }, function (index) {
                 layer.close(index);
                 $.ajax({
-                    url: "{:url('Type/del')}",
+                    url: "{:url('goods/del')}",
                     type: 'post',
                     data: {id: id},
                     dataType: 'json',

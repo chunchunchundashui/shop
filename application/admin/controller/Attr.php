@@ -16,7 +16,7 @@ class Attr extends Controller
         }else {
             $map = 1;
         }
-        $lst = model('attr')->alias('a')->field('a.*,t.type_name')->join('type t',"a.type_id = t.id")->where($map)->order('a.id desc')->paginate(10);
+            $lst = model('attr')->alias('a')->field('a.*,t.type_name')->join('type t',"a.type_id = t.id")->where($map)->order('a.id desc')->paginate(10);
         $viewData = [
             'lst' => $lst
         ];

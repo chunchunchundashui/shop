@@ -1,0 +1,34 @@
+{volist name="mlRes" id="vo"}
+                                                    <!-- 使用原生循环  -->
+                                                    <?php
+                                                    $price = '';
+                                                    foreach($mpRes as $k => $v) {
+                                                        if($v['mlevel_id'] == $vo['id']) {
+                                                            $price = $v['mprice'];
+                                                            break;
+                                                        }
+                                                    }?>
+                                                    <div class="form-group">
+                                                        <label for="cname"
+                                                               class="col-sm-2 control-label no-padding-right">{$vo.level_name}</label>
+                                                        <div class="col-sm-6">
+                                                            <input class="form-control" name="mp[{$vo.id}]" value="{$price}" type="text">
+                                                        </div>
+                                                    </div>
+                                                    {/volist}
+
+
+
+
+
+
+<div class="form-group"><label class="col-sm-2 control-label no-padding-right">颜色</label><div class="col-sm-6"><a class="abtn" onclick="addrow(this);" href="#">[+]</a>
+    <select name=""><option value="">请选择</option><option value="黑色">黑色</option><option value="白色">白色</option><option value="银色">银色</option></select>
+    <input type="text" class="form-control price" name="" placeholder="填写价格"></div></div>
+
+
+    <div class="form-group"><label class="col-sm-2 control-label no-padding-right">厂家</label><div class="col-sm-6">
+        <input type="text" name="goods_attr[4]" class="form-control"></div></div>
+
+    <div class="form-group"><label class="col-sm-2 control-label no-padding-right">CPU</label><div class="col-sm-6">
+        <select name="goods_attr[5]"><option value="">请选择</option><option value="Internet">Internet</option><option value="奔腾">奔腾</option></select></div></div>
