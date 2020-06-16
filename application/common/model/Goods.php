@@ -42,11 +42,11 @@ class Goods extends Model
         Goods::beforeUpdate(function ($goods) {
             // 商品的id
             $goodsId = $goods->id;
-            //          处理商品属性
+            //          新增商品属性
 //            只添加新加的数据,跟前台js做上配合
             $goodsData = input('post.');
-            $i = 0;
             if (isset($goodsData['goods_attr'])) {
+                $i = 0;
                 foreach ($goodsData['goods_attr'] as $k => $v) {
                     if(is_array($v)) {
                         if (!empty($v)) {
@@ -62,6 +62,35 @@ class Goods extends Model
                     }else {
 //                   处理唯一属性类型
                         db('goods_attr')->insert(['attr_id' => $k, 'attr_value' => $v, 'goods_id' => $goodsId]);
+                    }
+                }
+            }
+//            修改商品属性
+            if (isset($goodsData['old_goods_attr'])) {
+                $attrPrice = $goodsData['old_attr_price'];
+//                取数组下面的键
+                $idArr = array_keys($attrPrice);
+//                取数组下面的值
+                $idValue = array_values($attrPrice);
+//                dump($idArr);
+//                dump($idValue);die;
+                $i = 0;
+                foreach ($goodsData['old_goods_attr'] as $k => $v) {
+                    if(is_array($v)) {
+                        if (!empty($v)) {
+                            foreach ($v as $k1 => $v1) {
+                                if (!$v1) {
+                                    $i++;
+                                    continue;       // 如果为空继续,执行,为空的数据不加入到数据库
+                                }
+                                db('goods_attr')->where('id',$idArr[$i])->update(['attr_value' => $v1, 'attr_price'=>$idValue[$i]]);
+                                $i++;
+                            }
+                        }
+                    }else {
+//                   处理唯一属性类型
+                        db('goods_attr')->where('id',$idArr[$i])->update(['attr_value' => $v, 'attr_price'=>$idValue[$i]]);
+                        $i++;
                     }
                 }
             }

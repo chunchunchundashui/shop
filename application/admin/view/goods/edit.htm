@@ -249,13 +249,14 @@
                                                                     <option <?php if($v1 == $v0['attr_value']) { echo 'selected="selected"'; }?> value="<?php echo $v1;?>"><?php echo $v1;?></option>
                                                                     <?php endforeach;?>
                                                                 </select>
-                                                                 <input type="text" class="form-control price" name="old_attr_price[]" value="<?php echo $v0['attr_price']; ?>" placeholder="填写价格"></div></div>
+                                                                 <input type="text" class="form-control price" name="old_attr_price[<?php echo $v0['id']?>]" value="<?php echo $v0['attr_price']; ?>" placeholder="填写价格"></div></div>
                                                         <?php endforeach;?>
                                                             <?php else:?>
                                                             <!-- 唯一 如果有值就显示一个单行文本框-->
                                                             <?php if(!$v['attr_values']):?>
                                                                     <div class="form-group"><label class="col-sm-2 control-label no-padding-right"><?php echo $v['attr_name']?></label><div class="col-sm-6">
-        <input type="text" name='old_goods_attr[<?php echo $v['id']?>]' class="form-control" value="<?php echo $gattrRes[$v['id']][0]['attr_value']; ?>"></div></div>
+        <input type="text" name='old_goods_attr[<?php echo $v['id']?>]' class="form-control" value="<?php echo $gattrRes[$v['id']][0]['attr_value']; ?>"><input
+                                                                        type="hidden" name="old_attr_price[<?php echo $gattrRes[$v['id']][0]['id']; ?>]"></div></div>
                                                              <?php else:
                                                                 $arrSelect = explode(',', $v['attr_values']);
                                                              ?>
@@ -266,6 +267,8 @@
                                                                     <option <?php if($v1 == $gattrRes[$v['id']][0]['attr_value']) { echo 'selected="selected"'; }?> value="<?php echo $v1;?>"><?php echo $v1;?></option>
                                                                     <?php endforeach;?>
                                                                 </select>
+                                                                 <input
+                                                                     type="hidden" name="old_attr_price[<?php echo $gattrRes[$v['id']][0]['id']; ?>]">
                                                                 </div></div>
                                                                 <?php endif;?>
                                                             <?php endif;?>
