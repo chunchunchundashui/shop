@@ -15,6 +15,7 @@ header("Content-type:text/html;charset=utf-8");
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/application/');
 define('IMG_UPLOADS', __DIR__ . '/public/static/uploads/');      /*定义的一个常量*/
+define('IMG_UPLOADS_PRO_IMG', __DIR__ . '/public/static/pro_img/');      /*定义的一个常量*/
 define('UEDITOR', __DIR__ . '/../ueditor');          /*  定义一个ueditor常量在www目录下存放图片   */
 define('HTTP_UEDITOR', '/ueditor');
 define('DEL_UEDITOR', __DIR__ . '/../.');           /*  获取到图片地址设置一个常量准备删除   */

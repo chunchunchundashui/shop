@@ -20,6 +20,16 @@ class Base extends Controller
         $this->_getFooterArts();    // 获取并分配底部帮助信息
         $this->_getNav();       //获取并分配导航
         $this->_getConfs();       //获取并分配配置项  为config赋值
+        $this->_getCates();       //获取顶级栏目和二级栏目
+    }
+
+//    顶级栏目和二级栏目
+    private function _getCates()
+    {
+        $cateRes = model('Category')->getCates();
+        $this->assign([
+            'cateRes' => $cateRes,
+        ]);
     }
 
 //    这个方法只供当前类使用

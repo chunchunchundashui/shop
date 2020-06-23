@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <title>长春THinkPHP5第四季 实战开发大型B2C商城项目</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__admin__/style/bootstrap.css" rel="stylesheet">
+    <link href="__admin__/style/font-awesome.css" rel="stylesheet">
+    <link href="__admin__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__admin__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__admin__/style/demo.css" rel="stylesheet">
+    <link href="__admin__/style/typicons.css" rel="stylesheet">
+    <link href="__admin__/style/animate.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- 头部 -->
+{include file="common/top" /}
+<!-- /头部 -->
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        <!--公共左侧-->
+        {include file="common/left" /}
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Breadcrumb -->
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="{:url('index/index')}">系统</a>
+                    </li>
+                    <li>
+                        <a href="{:url('categoryBrands/lst')}">品牌管理</a>
+                    </li>
+                    <li class="active">修改关联品牌</li>
+                </ul>
+            </div>
+            <!-- /Page Breadcrumb -->
+
+            <!-- Page Body -->
+            <div class="page-body">
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <div class="widget-header bordered-bottom bordered-blue">
+                                <span class="widget-caption">修改品牌</span>
+                            </div>
+                            <div class="widget-body">
+                                <div id="horizontal-form">
+                                    <form class="form-horizontal" role="form" action=""  method="post" enctype="multipart/form-data">
+                                        <input type="hidden" name="id" value="{$CategoryBrands.id}">
+                                        <div class="form-group">
+                                            <label for="category_id" class="col-sm-2 control-label no-padding-right">关联栏目名称</label>
+                                            <div class="col-sm-6">
+                                                <select name="category_id" id="category_id">
+                                                    <option value="">请选择</option>
+                                                    {volist name="cateRes" id="cate"}
+                                                    <option {if condition="$CategoryBrands['category_id'] eq $cate['id']"} selected="selected" {/if} value="{$cate.id}">{$cate.cate_name}</option>
+                                                    {/volist}
+                                                </select>
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="brands_id" class="col-sm-2 control-label no-padding-right">关联品牌名称</label>
+                                            <div class="col-sm-6">
+                                                <div class="checkbox">
+                                                    <?php
+                                                        $arr = explode(',', $CategoryBrands['brands_id']);
+                                                    ?>
+                                                    {volist name="brands" id="brand"}
+                                                    <?php
+                                                        if(in_array($brand['id'], $arr)) {
+                                                            $checked = 'checked="checked"';
+                                                        }else {
+                                                            $checked = '';
+                                                        }
+                                                     ?>
+                                                    <label style="margin-right: 15px;">
+                                                        <input {$checked} name="brands_id[]" value="{$brand.id}" type="checkbox" class="colored-blue">
+                                                        <span class="text">{$brand.brand_name}</span>
+                                                    </label>
+                                                    {/volist}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pro_img" class="col-sm-2 control-label no-padding-right">推广图</label>
+                                            <div class="col-sm-6">
+                                                <input  placeholder="" id="pro_img" name="pro_img"  type="file">
+                                                {if condition="$CategoryBrands['pro_img']"}
+                                                <img src="__pro__/{$CategoryBrands['pro_img']}">
+                                                {else /}
+                                                无缩略图
+                                                {/if}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pro_url" class="col-sm-2 control-label no-padding-right">推广地址</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" id="pro_url" placeholder="" name="pro_url" value="{$CategoryBrands.pro_url}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" id="brandAdd" class="btn brand_Add btn-default">保存信息</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+</div>
+
+<!--Basic Scripts-->
+{include file="common/js" /}
+<script src="__plus__/ueditor/ueditor.config.js"></script>
+<script src="__plus__/ueditor/ueditor.all.js"></script>
+<script>
+  $(function () {
+    // UE.getEditor('description');
+
+  });
+  // //实现回车提交
+  // window.onload = function(){
+  //     $(document).keydown(function (e) {
+  //         if (e.keyCode === 13) {
+  //             $("#brand_Add").trigger("click");
+  //         }
+  //     });
+  // };
+
+</script>
+
+</body></html>

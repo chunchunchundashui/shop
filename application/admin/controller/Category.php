@@ -31,7 +31,7 @@ class Category extends Controller
     public function add()
     {
         $Category = new Catetree();
-        $CategoryObj = model('Category');
+        $CategoryObj = model('category');
         if (request()->isPost()) {
             $data = input('post.');
             //处理图片上传
@@ -43,17 +43,20 @@ class Category extends Controller
             if (!$validate->check($data)) {
                 $this->error($validate->getError());
             }
-            $add = $CategoryObj->insert($data);
+            $add = $CategoryObj->save($data);
             if ($add) {
                 $this->success('添加分类成功!', 'admin/Category/lst');
             }else {
                 $this->error("添加分类失败!");
             }
         }
+        //        商品分类推荐位
+        $categoryRecpos = db('recpos')->where('rec_type', 2)->select();
         $CategoryRes = $CategoryObj->order('sort DESC')->select();
         $CategoryRes = $Category->Catetree($CategoryRes);
         $viewData = [
             'Category' => $CategoryRes,
+            'categoryRecpos' => $categoryRecpos,
         ];
         $this->assign($viewData);
         return view();
@@ -63,7 +66,7 @@ class Category extends Controller
     public function edit()
     {
         $Category = new Catetree();
-        $CategoryObj = model('Category');
+        $CategoryObj = model('category');
         if (request()->isPost()) {
             $data = input('post.');
             //处理图片上传
@@ -89,12 +92,23 @@ class Category extends Controller
                 $this->error("修改品牌失败!");
             }
         }
+        //        商品分类推荐位
+        $categoryRecpos = db('recpos')->where('rec_type', 2)->select();
+        //        当前商品相关推荐位
+        $_myCategoryRecpos = db('rec_item')->where(array('value_type' => 2, 'value_id' => input('id')))->select();
+//        将二维数组改写为以为数组
+        $myCategoryRecpos = array();
+        foreach($_myCategoryRecpos as $k => $v) {
+            $myCategoryRecpos[] = $v['recpos_id'];
+        }
         $Categorys = $CategoryObj->find(input('id'));
         $CategoryRes = $CategoryObj->order('sort DESC')->select();
         $CategoryRes = $Category->Catetree($CategoryRes);
         $viewData = [
             'Category' => $CategoryRes,
             'Categorys' => $Categorys,
+            'categoryRecpos' => $categoryRecpos,
+            'myCategoryRecpos' => $myCategoryRecpos,
         ];
         $this->assign($viewData);
         return view();

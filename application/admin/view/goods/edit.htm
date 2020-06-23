@@ -111,6 +111,26 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="cname"
+                                                               class="col-sm-2 control-label no-padding-right">推荐位</label>
+                                                        <div class="col-sm-6">
+                                                            <div class="checkbox">
+                                                                {volist name='goodsRecpos' id='recpos'}
+                                                                <label style="margin-right: 15px;">
+                                                                    <?php if(in_array($recpos['id'], $myGoodsRecpos)) {
+                                                                                $checked = 'checked="checked"';
+                                                                            }else{
+                                                                                $checked = '';
+                                                                            }
+                                                                      ?>
+                                                                    <input <?php echo $checked;?> type="checkbox" value="{$recpos.id}" name="recpos[]" class="colored-blue">
+                                                                    <span class="text">{$recpos.rec_name}</span>
+                                                                </label>
+                                                                {/volist}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="cname"
                                                                class="col-sm-2 control-label no-padding-right">商品主图</label>
                                                         <div class="col-sm-6">
                                                             <input class="form-control" id="cname"
@@ -225,8 +245,8 @@
                                                         <label for="cname"
                                                                class="col-sm-2 control-label no-padding-right">商品类型</label>
                                                         <div class="col-sm-6">
-                                                            <select name="type_id" class="form-control" disabled="disabled">
-                                                                <option value="">请选择</option>
+                                                            <select name="type_id" class="form-control" {if condition="$goods['type_id'] neq 0"} disabled="disabled" {/if}>
+                                                                <option value="0">请选择</option>
                                                                 {volist name="typeView" id="vo"}
                                                                 <option {if condition="$goods['type_id'] eq $vo['id']"} selected="selected" {/if} value="{$vo.id}">{$vo.type_name}</option>
                                                                 {/volist}
@@ -296,7 +316,7 @@
                                                         <label for="cname"
                                                                class="col-sm-2 control-label no-padding-right"></label>
                                                         <div class="col-sm-6">
-                                                            <a href="#" onclick="addrow(this);">[+]</a><input class="form-control" id="cname" style="border:none; box-shadow: none; display: inline-block;width: 50%" name="goods_photo[]" type="file">
+                                                            <a href="#" onclick="addphoto(this);">[+]</a><input class="form-control" id="cname" style="border:none; box-shadow: none; display: inline-block;width: 50%" name="goods_photo[]" type="file">
                                                         </div>
                                                     </div>
                                                     <div id="goods_photo"></div>
@@ -436,7 +456,21 @@
       return false;
     }
   }
-
+  //商品属性的添加或者多个添加    //上传图片或者多个图片
+  function addphoto(obj) {
+    //获取一个a标签的onclick事件.
+    //获取到$(obj).parent().parent()子元素
+    var div = $(obj).parent().parent();
+    //判断对象下面的值是不是+如果是就上一个div,不是就减去一个
+    if ($(obj).html() == '[+]') {
+      //把上面的值从新克隆一份给divnew
+      var divnew = div.clone();
+      divnew.find('a').html('[-]');
+      div.after(divnew);
+    }else {
+      div.remove();
+    }
+  }
   // 图片的删除
   function delrow(obj,id){
         layer.confirm('确认要删除吗？',function(index){

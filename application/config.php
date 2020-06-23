@@ -148,6 +148,7 @@ return [
         '__index__' => '/shop/public/static/index',
         '__js__' => '/shop/public/static/lib',
         '__uploads__' => '/shop/public/static/uploads',
+        '__pro__' => '/shop/public/static/pro_img',
         '__plus__' => '/shop/public/static/plus'
     ],
     // 默认跳转页面对应的模板文件

@@ -79,6 +79,26 @@
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
                                         <div class="form-group">
+                                            <label for="cname"
+                                                   class="col-sm-2 control-label no-padding-right">推荐位</label>
+                                            <div class="col-sm-6">
+                                                <div class="checkbox">
+                                                    {volist name='categoryRecpos' id='recpos'}
+                                                    <label style="margin-right: 15px;">
+                                                        <?php if(in_array($recpos['id'], $myCategoryRecpos)) {
+                                                                $checked = 'checked="checked"';
+                                                            }else{
+                                                                $checked = '';
+                                                            }
+                                                        ?>
+                                                        <input <?php echo $checked;?> type="checkbox" value="{$recpos.id}" name="recpos[]" class="colored-blue">
+                                                        <span class="text">{$recpos.rec_name}</span>
+                                                    </label>
+                                                    {/volist}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="show_nav" class="col-sm-2 control-label no-padding-right">显示到导航</label>
                                             <div class="col-sm-6">
                                                 <div class="radio" style="float:left; padding-right: 10px;">

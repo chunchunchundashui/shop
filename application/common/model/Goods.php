@@ -26,9 +26,9 @@ class Goods extends Model
 
                 $image = \think\Image::open(IMG_UPLOADS.$ogThumb);
                 // 按照原图的比例生成一个最大为150*150的缩略图并保存为thumb.png
-                $image->thumb(800, 800)->save(IMG_UPLOADS.$bigThumb);
-                $image->thumb(400, 400)->save(IMG_UPLOADS.$midThumb);
-                $image->thumb(200, 200)->save(IMG_UPLOADS.$smhumb);
+                $image->thumb(500, 500)->save(IMG_UPLOADS.$bigThumb);
+                $image->thumb(240, 240)->save(IMG_UPLOADS.$midThumb);
+                $image->thumb(58, 58)->save(IMG_UPLOADS.$smhumb);
                 $goods->og_thumb = $ogThumb;
                 $goods->big_thumb = $bigThumb;
                 $goods->mid_thumb = $midThumb;
@@ -45,6 +45,13 @@ class Goods extends Model
             //          新增商品属性
 //            只添加新加的数据,跟前台js做上配合
             $goodsData = input('post.');
+            db('rec_item')->where(array('value_type' => 1, 'value_id' => $goodsId))->delete();
+//           处理商品推荐位
+            if (isset($goodsData['recpos'])) {
+                foreach ($goodsData['recpos'] as $k => $v) {
+                    db('rec_item')->insert(['recpos_id' => $v, 'value_id' => $goodsId, 'value_type' => 1]);
+                }
+            }
             if (isset($goodsData['goods_attr'])) {
                 $i = 0;
                 foreach ($goodsData['goods_attr'] as $k => $v) {
@@ -65,6 +72,7 @@ class Goods extends Model
                     }
                 }
             }
+
 //            修改商品属性
             if (isset($goodsData['old_goods_attr'])) {
                 $attrPrice = $goodsData['old_attr_price'];
@@ -162,6 +170,8 @@ class Goods extends Model
 
         //后置钩子
         Goods::afterInsert(function ($goods) {
+//            接受表单信息
+            $goodsData = input('post.');
             //写入会员价格
             $mpriceArr = $goods->mp;
             $goodsId = $goods->id;
@@ -174,9 +184,13 @@ class Goods extends Model
                     }
                 }
             }
-
+            //           处理商品推荐位
+            if (isset($goodsData['recpos'])) {
+                foreach ($goodsData['recpos'] as $k => $v) {
+                    db('rec_item')->insert(['recpos_id' => $v, 'value_id' => $goodsId, 'value_type' => 1]);
+                }
+            }
 //          处理商品属性
-          $goodsData = input('post.');
             $i = 0;
             if (isset($goodsData['goods_attr'])) {
                foreach ($goodsData['goods_attr'] as $k => $v) {
@@ -249,6 +263,7 @@ class Goods extends Model
             }
           }
         }
+
 //        删除关联的会员价格
         db('member_price')->where('goods_id',$goodsId)->delete();
 //        删除关联的商品属性

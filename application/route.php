@@ -17,3 +17,6 @@ Route::rule('cate/:id','index/Cate/index','get',['ext'=>'html|htm'],['id'=>'\d{1
 Route::rule('article/:id','index/Article/index','get',['ext'=>'html|htm'],['id'=>'\d{1,3}']);     // 正则表达式\d{1,3}三个数组内
 //首页路由
 Route::rule('index','index/Index/index','get',['ext'=>'html|htm']);     // 正则表达式\d{1,3}三个数组内
+
+//对栏目二级三级分类的路由
+Route::rule('category/:id','index/Category/index','get',['ext'=>'html|htm'],['id'=>'\d{1,3}']);     // 正则表达式\d{1,3}三个数组内

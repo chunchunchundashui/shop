@@ -39,9 +39,9 @@
                         <a href="{:url('index/index')}">系统</a>
                     </li>
                                         <li>
-                        <a href="{:url('Category/lst')}">商品分类管理</a>
+                        <a href="{:url('categoryBrands/lst')}">品牌管理</a>
                     </li>
-                                        <li class="active">添加商品分类</li>
+                                        <li class="active">添加关联品牌</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -53,88 +53,48 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
             <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新增商品分类</span>
+                <span class="widget-caption">新增品牌</span>
             </div>
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action=""  method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="brand_name" class="col-sm-2 control-label no-padding-right">上级分类</label>
+                            <label for="category_id" class="col-sm-2 control-label no-padding-right">关联栏目名称</label>
                             <div class="col-sm-6">
-                                <select class="form-control" name="pid">
-                                    <option value="0">顶级分类</option>
-                                    {volist name="Category" id="vo"}
-                                    <option value="{$vo.id}"><?php echo str_repeat('-', $vo['level']*8)?>{$vo.cate_name}</option>
+                                <select name="category_id" id="category_id">
+                                    <option value="">请选择</option>
+                                    {volist name="cateRes" id="cate"}
+                                    <option value="{$cate.id}">{$cate.cate_name}</option>
                                     {/volist}
                                 </select>
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
                         <div class="form-group">
-                            <label for="cate_name" class="col-sm-2 control-label no-padding-right">分类名称</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="cate_name" placeholder="" name="cate_name" required="" type="text">
-                            </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="cname"
-                                   class="col-sm-2 control-label no-padding-right">推荐位</label>
+                            <label for="brands_id" class="col-sm-2 control-label no-padding-right">关联品牌名称</label>
                             <div class="col-sm-6">
                                 <div class="checkbox">
-                                    {volist name='categoryRecpos' id='category'}
+                                    {volist name="brands" id="brand"}
                                     <label style="margin-right: 15px;">
-                                        <input type="checkbox" value="{$category.id}" name="recpos[]" class="colored-blue">
-                                        <span class="text">{$category.rec_name}</span>
+                                        <input name="brands_id[]" value="{$brand.id}" type="checkbox" class="colored-blue">
+                                        <span class="text">{$brand.brand_name}</span>
                                     </label>
                                     {/volist}
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="show_nav" class="col-sm-2 control-label no-padding-right">显示到导航</label>
+                            <label for="pro_img" class="col-sm-2 control-label no-padding-right">推广图</label>
                             <div class="col-sm-6">
-                                <div class="radio" style="float:left; padding-right: 10px;">
-                                    <label>
-                                        <input type="radio" name="show_cate" value="1" class="colored-blue">
-                                        <span class="text">是</span>
-                                    </label>
-                                </div>
-                                <div class="radio" style="float:left;">
-                                    <label>
-                                        <input type="radio" name="show_cate" value="0" checked="checked" class="colored-blue">
-                                        <span class="text">否</span>
-                                    </label>
-                                </div>
+                                <input  placeholder="" id="pro_img" name="pro_img"  type="file">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="cate_name" class="col-sm-2 control-label no-padding-right">缩略图</label>
+                            <label for="pro_url" class="col-sm-2 control-label no-padding-right">推广地址</label>
                             <div class="col-sm-6">
-                                <input placeholder="" name="cate_img" type="file">
+                                <input class="form-control" id="pro_url" placeholder="" name="pro_url"  type="text">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="keywords" class="col-sm-2 control-label no-padding-right">关键词</label>
-                            <div class="col-sm-6">
-                                <textarea style="width: 100%;resize: none" name="keywords" cols="30" rows="10" class=""></textarea>
-                            </div>
-                        </div>
-                         <div class="form-group">
-                            <label for="description" class="col-sm-2 control-label no-padding-right">描述</label>
-                            <div class="col-sm-6">
-                                <!--resize: none  禁止填写框拉动-->
-                                <textarea name="description" style="width: 100%;resize: none" cols="30" rows="10" class=""></textarea>
-                            </div>
-                        </div>
-                        <!--<div class="form-group">-->
-                            <!--<label for="group_id" class="col-sm-2 control-label no-padding-right">分类角色</label>-->
-                            <!--<div class="col-sm-6">-->
-                                <!--<select name="group_id" style="width: 100%;">-->
-                                                                        <!--<option selected="selected" value="8">测试</option>-->
-                                                                    <!--</select>-->
-                            <!--</div>-->
-                        <!--</div>  -->
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" id="brandAdd" class="btn brand_Add btn-default">保存信息</button>
@@ -160,12 +120,12 @@
     <script src="__plus__/ueditor/ueditor.all.js"></script>
     <script>
         $(function () {
-            // UE.getEditor('keywords');
             // UE.getEditor('description');
+
         });
         // //实现回车提交
         // window.onload = function(){
-        //     $(jquery-3.3.1.min.js).keydown(function (e) {
+        //     $(document).keydown(function (e) {
         //         if (e.keyCode === 13) {
         //             $("#brand_Add").trigger("click");
         //         }

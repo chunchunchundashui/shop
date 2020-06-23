@@ -106,6 +106,20 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="cname"
+                                                               class="col-sm-2 control-label no-padding-right">推荐位</label>
+                                                        <div class="col-sm-6">
+                                                            <div class="checkbox">
+                                                                {volist name='goodsRecpos' id='recpos'}
+                                                                <label style="margin-right: 15px;">
+                                                                    <input type="checkbox" value="{$recpos.id}" name="recpos[]" class="colored-blue">
+                                                                    <span class="text">{$recpos.rec_name}</span>
+                                                                </label>
+                                                                {/volist}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="cname"
                                                                class="col-sm-2 control-label no-padding-right">商品主图</label>
                                                         <div class="col-sm-6">
                                                             <input class="form-control" id="cname"
@@ -210,7 +224,7 @@
                                                                class="col-sm-2 control-label no-padding-right">商品类型</label>
                                                         <div class="col-sm-6">
                                                             <select name="type_id" class="form-control">
-                                                                <option value="">请选择</option>
+                                                                <option value="0">请选择</option>
                                                                 {volist name="typeView" id="vo"}
                                                                 <option value="{$vo.id}">{$vo.type_name}</option>
                                                                 {/volist}

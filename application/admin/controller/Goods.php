@@ -52,6 +52,8 @@ class Goods extends Controller
         $typeView = db('type')->select();
         //品牌分类
         $brandRes = db('brand')->field('id,brand_name')->select();
+//        商品推荐位
+        $goodsRecpos = db('recpos')->where('rec_type', 1)->select();
         //商品分类
         $Category = new Catetree();
         $CategoryObj = model('Category');
@@ -62,6 +64,7 @@ class Goods extends Controller
             'typeView' => $typeView,
             'brandRes' => $brandRes,
             'Category' => $CategoryRes,
+            'goodsRecpos' => $goodsRecpos,      //商品推荐位
         ]);
         return view();
     }
@@ -109,6 +112,15 @@ class Goods extends Controller
         $goods = db('goods')->find($goodsId);
         // 查询当前商品属性信息
         $attrRes = db('attr')->where('type_id',$goods['type_id'])->select();
+        //        商品推荐位
+        $goodsRecpos = db('recpos')->where('rec_type', 1)->select();
+//        当前商品相关推荐位
+        $_myGoodsRecpos = db('rec_item')->where(array('value_type' => 1, 'value_id' => $goodsId))->select();
+//        将二维数组改写为以为数组
+        $myGoodsRecpos = array();
+        foreach($_myGoodsRecpos as $k => $v) {
+            $myGoodsRecpos[] = $v['recpos_id'];
+        }
 //        查询当前商品拥有的商品属性goods_attr
         $_gattrRes = db('goods_attr')->where('goods_id',$goodsId)->select();
 //        更改二维数组结构为三维数组
@@ -131,6 +143,8 @@ class Goods extends Controller
             'gphotoRes' => $gphotoRes,
             'attrRes' => $attrRes,
             'gattrRes' => $gattrRes,
+            'goodsRecpos' => $goodsRecpos,
+            'myGoodsRecpos' => $myGoodsRecpos,
         ]);
         return view();
     }
