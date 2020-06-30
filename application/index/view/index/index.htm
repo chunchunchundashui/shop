@@ -165,17 +165,11 @@
         <div class="banner home-banner">
           <div class="bd">
             <ul data-type="range">
-
-              <li style="background:url(__index__/img/1494984992503176615.jpg) center center no-repeat;">
-                <div class="banner-width"><a href="" style="height:500px;"></a></div>
+              {volist name="alterImg" id="img"}
+              <li style="background:url(__uploads__/{$img.img_src}) center center no-repeat;">
+                <div class="banner-width"><a href="{$img.link_url}" target="_blank" style="height:500px;"></a></div>
               </li>
-              <li style="background:url(__index__/img/1494984990506843460.jpg) center center no-repeat;">
-                <div class="banner-width"><a href="" style="height:500px;"></a></div>
-              </li>
-              <li style="background:url(__index__/img/1494984991783527346.jpg) center center no-repeat;">
-                <div class="banner-width"><a href="" style="height:500px;"></a></div>
-              </li>
-
+              {/volist}
             </ul>
             <div class="spec" data-spec=""></div>
           </div>
@@ -203,14 +197,14 @@
                   </div>
                   <div class="con">
                     <ul>
-                      <li><a href="article.php?id=63" target="_blank">服务店突破2000多家</a></li>
-                      <li><a href="article.php?id=62" target="_blank">我们成为中国最大家电零售B2B2C系统</a></li>
-                      <li><a href="article.php?id=61" target="_blank">三大国际腕表品牌签约</a></li>
+                      {volist name="anment" id='arts'}
+                      <li><a href="{:url('index/Article/index', array('id' => $arts['id']))}" target="_blank">{$arts.title}</a></li>
+                      {/volist}
                     </ul>
                     <ul style="display:none;">
-                      <li><a href="article.php?id=60" target="_blank">春季家装季，家电买一送一</a></li>
-                      <li><a href="article.php?id=59" target="_blank">抢百元优惠券，享4.22%活期</a></li>
-                      <li><a href="article.php?id=58" target="_blank">Macbook最高返50000消费豆！</a></li>
+                      {volist name="salesRes" id='arts'}
+                      <li><a href="{:url('index/Article/index', array('id' => $arts['id']))}" target="_blank">{$arts.title}</a></li>
+                      {/volist}
                     </ul>
                   </div>
                 </div>
@@ -639,180 +633,11 @@
             <a href="" target="_blank"><img src="__index__/img/1494984992104112514.jpg" class="slide_lr_img"></a>
           </div>
           <div ectype="homeBrand">
-            <div class="brand-list" id="recommend_brands"
-                 data-value="204,93,110,113,116,195,79,95,76,126,73,122,98,82,101,85,105">
-              <ul>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=204" target="_blank"><img
-                      src="__index__/img/1490039286075654490.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="204" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=204" target="_blank">关注人数<br>
-                      <div id="collect_count_204">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=195" target="_blank"><img
-                      src="__index__/img/1490075385239594909.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="195" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=195" target="_blank">关注人数<br>
-                      <div id="collect_count_195">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=73" target="_blank"><img
-                      src="__index__/img/1490072329183966195.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="73" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=73" target="_blank">关注人数<br>
-                      <div id="collect_count_73">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=76" target="_blank"><img
-                      src="__index__/img/1490072373278367315.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="76" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=76" target="_blank">关注人数<br>
-                      <div id="collect_count_76">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=79" target="_blank"><img
-                      src="__index__/img/1490072677495061584.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="79" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=79" target="_blank">关注人数<br>
-                      <div id="collect_count_79">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=82" target="_blank"><img
-                      src="__index__/img/1490072694695600078.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="82" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=82" target="_blank">关注人数<br>
-                      <div id="collect_count_82">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=85" target="_blank"><img
-                      src="__index__/img/1490072756032175204.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="85" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=85" target="_blank">关注人数<br>
-                      <div id="collect_count_85">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=110" target="_blank"><img
-                      src="__index__/img/1490074043963552715.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="110" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=110" target="_blank">关注人数<br>
-                      <div id="collect_count_110">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=113" target="_blank"><img
-                      src="__index__/img/1490074030328949587.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="113" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=113" target="_blank">关注人数<br>
-                      <div id="collect_count_113">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=116" target="_blank"><img
-                      src="__index__/img/1490073109529817869.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="116" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=116" target="_blank">关注人数<br>
-                      <div id="collect_count_116">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=122" target="_blank"><img
-                      src="__index__/img/1490073982547710498.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="122" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=122" target="_blank">关注人数<br>
-                      <div id="collect_count_122">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=126" target="_blank"><img
-                      src="__index__/img/1490073943918274561.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="126" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=126" target="_blank">关注人数<br>
-                      <div id="collect_count_126">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=95" target="_blank"><img
-                      src="__index__/img/1490072870537181142.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="95" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=95" target="_blank">关注人数<br>
-                      <div id="collect_count_95">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=98" target="_blank"><img
-                      src="__index__/img/1490072898345358625.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="98" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=98" target="_blank">关注人数<br>
-                      <div id="collect_count_98">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=101" target="_blank"><img
-                      src="__index__/img/1490072931218635674.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="101" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=101" target="_blank">关注人数<br>
-                      <div id="collect_count_101">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=105" target="_blank"><img
-                      src="__index__/img/1490072971610241726.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="105" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=105" target="_blank">关注人数<br>
-                      <div id="collect_count_105">0</div>
-                    </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="brand-img"><a href="brandn.php?id=93" target="_blank"><img
-                      src="__index__/img/1490072850306019115.jpg"></a></div>
-                  <div class="brand-mash">
-                    <div data-bid="93" ectype="coll_brand"><i class="iconfont icon-zan-alt"></i></div>
-                    <div class="coupon"><a href="brandn.php?id=93" target="_blank">关注人数<br>
-                      <div id="collect_count_93">0</div>
-                    </a></div>
-                  </div>
-                </li>
-              </ul>
+
+            <div class="brand-list" id="recommend_brands">
+                <!-- 处理换一批商品品牌 -->
+                  <!-- 引用的js放到了1558 -->
+                <!-- 结束换一批商品品牌 -->
               <a href="javascript:void(0);" ectype="changeBrand" class="refresh-btn"><i
                   class="iconfont icon-rotate-alt"></i><span>换一批</span></a>
             </div>
@@ -858,11 +683,15 @@
               <div class="bd-left">
                 <div class="floor-left-slide">
                   <div class="bd">
+                    <!-- 循坏展示A位的轮播图 -->
                     <ul>
-                      <li><a href=""><img src="__index__/img/1494985255003388359.jpg"></a></li>
-                      <li><a href=""><img src="__index__/img/1494985255671031591.jpg"></a></li>
-                      <li><a href=""><img src="__index__/img/1494985255859372374.jpg"></a></li>
+                      <?php if(isset($v['leftimgs']['A'])):?>
+                      <?php foreach($v['leftimgs']['A'] as $k1 => $v1):?>
+                      <li><a href="<?php echo $v1['link_url'];?>" target="_blank"><img src="__pro__/<?php echo $v1['img_src'];?>"></a></li>
+                      <?php endforeach;?>
+                      <?php endif;?>
                     </ul>
+                    <!-- 结束循环展示A位的轮播图 -->
                   </div>
                   <div class="hd">
                     <ul></ul>
@@ -870,8 +699,15 @@
                 </div>
 
                 <div class="floor-left-adv">
-                  <a href="" target="_blank"><img src="__index__/img/1494984993812175408.jpg"></a>
-                  <a href="" target="_blank"><img src="__index__/img/1494984993892207941.jpg"></a>
+                  <!-- 循坏展示B位图片 -->
+                  <!-- 判断图片上是否存在 -->
+                  <?php if(isset($v['leftimgs']['B']['0']['img_src'])):?>
+                  <a href="<?php echo $v['leftimgs']['B']['0']['link_url'];?>" target="_blank"><img src="__pro__/<?php echo $v['leftimgs']['B']['0']['img_src'];?>"></a>
+                  <?php endif;?>
+                  <!-- 循坏展示C位图片 -->
+                  <?php if(isset($v['leftimgs']['C']['0']['img_src'])):?>
+                  <a href="<?php echo $v['leftimgs']['C']['0']['link_url'];?>" target="_blank"><img src="__pro__/<?php echo $v['leftimgs']['C']['0']['img_src'];?>"></a>
+                  <?php endif;?>
                 </div>
 
               </div>
@@ -920,76 +756,15 @@
             </div>
             <div class="floor-fd">
               <div class="floor-fd-brand clearfix">
+                <?php foreach($v['brands']['brands'] as $k1 => $v1):?>
                 <div class="item">
-                  <a href="brandn.php?id=72" target="_blank">
+                  <a href="<?php echo $v1['brand_url'];?>" target="_blank">
                     <div class="link-l"></div>
-                    <div class="img"><img src="__index__/img/1490072313895957648.jpg" title="ELLE HOME"></div>
+                    <div class="img"><img src="__uploads__/<?php echo $v1['brand_img'];?>" title="<?php echo $v1['brand_name'];?>"></div>
                     <div class="link"></div>
                   </a>
                 </div>
-                <div class="item">
-                  <a href="brandn.php?id=76" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="__index__/img/1490072373278367315.jpg" title="金利来"></div>
-                    <div class="link"></div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="brandn.php?id=79" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="__index__/img/1490072677495061584.jpg" title="justyle"></div>
-                    <div class="link"></div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="brandn.php?id=82" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="__index__/img/1490072694695600078.jpg" title="李宁"></div>
-                    <div class="link"></div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="brandn.php?id=86" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="__index__/img/1490072765604121481.jpg" title="康比特"></div>
-                    <div class="link"></div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="brandn.php?id=106" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="__index__/img/1490072981305868823.jpg" title="开普特"></div>
-                    <div class="link"></div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="brandn.php?id=122" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="__index__/img/1490073982547710498.jpg" title="Five Plus"></div>
-                    <div class="link"></div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="brandn.php?id=149" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="__index__/img/1490073591535005714.jpg" title="鸿星尔克"></div>
-                    <div class="link"></div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="brandn.php?id=152" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="__index__/img/1490228100138579787.jpg" title="杰克琼斯"></div>
-                    <div class="link"></div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="brandn.php?id=154" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="__index__/img/1490073529881448780.jpg" title="匡威"></div>
-                    <div class="link"></div>
-                  </a>
-                </div>
+                <?php endforeach;?>
               </div>
             </div>
           </div>
@@ -1008,271 +783,20 @@
             <div class="ftit"><h3>还没逛够</h3></div>
           </div>
           <ul>
-
+            {volist name="indexGoodsRes" id='indexGoods'}
             <li class="opacity_img">
               <a href="goods.php?id=620" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489098265067.jpg"></div>
-                <div class="p-name" title="新品HYC 2k显示器32寸电脑显示器无边框HDMI液晶显示器IPS显示屏 2K高清屏IPS 超薄 厚6mm 无边框">新品HYC
-                  2k显示器32寸电脑显示器无边框HDMI液晶显示器IPS显示屏 2K高清屏IPS 超薄 厚6mm 无边框
-                </div>
+                <div class="p-img"><img src="__uploads__/{$indexGoods.mid_thumb}" alt="{$indexGoods.goods_name}"></div>
+                <div class="p-name" title="{$indexGoods.goods_name}">{$indexGoods.goods_name}</div>
                 <div class="p-price">
                   <div class="shop-price">
-                    <em>¥</em>1500.00
+                    <em>¥</em>{$indexGoods.shop_price}
                   </div>
-                  <div class="original-price"></div>
+                  <div class="original-price">{$indexGoods.markte_price}</div>
                 </div>
               </a>
             </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=621" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489098360804.jpg"></div>
-                <div class="p-name" title="三星C24F396FH曲面显示器23.5英寸电脑显示器24液晶显示屏幕超22">
-                  三星C24F396FH曲面显示器23.5英寸电脑显示器24液晶显示屏幕超22
-                </div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>2200.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=622" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489098597912.jpg"></div>
-                <div class="p-name" title="Apple/苹果 27” Retina 5K显示屏 iMac:3.3GHz处理器2TB存储">Apple/苹果 27” Retina 5K显示屏
-                  iMac:3.3GHz处理器2TB存储
-                </div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>8999.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=624" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489099128797.jpg"></div>
-                <div class="p-name" title="名龙堂i7 6700升7700 GTX1060 6G台式电脑主机DIY游戏组装整机 升6GB独显 送正版WIN10 一年上门">名龙堂i7
-                  6700升7700 GTX1060 6G台式电脑主机DIY游戏组装整机 升6GB独显 送正版WIN10 一年上门
-                </div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>4300.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=625" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489099437211.jpg"></div>
-                <div class="p-name" title="秋季新款男士套头卫衣印花外套韩版简约百搭潮流男生上衣服">秋季新款男士套头卫衣印花外套韩版简约百搭潮流男生上衣服</div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>120.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=627" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489099773629.jpg"></div>
-                <div class="p-name" title="2017春装新款男士卫衣套头圆领韩版潮流时尚男生休闲外套">2017春装新款男士卫衣套头圆领韩版潮流时尚男生休闲外套</div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>200.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=633" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489102299856.jpg"></div>
-                <div class="p-name" title="新款学院风韩版时尚太空棉宽松长袖印花圆领卫衣女">新款学院风韩版时尚太空棉宽松长袖印花圆领卫衣女</div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>233.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=634" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489102753231.jpg"></div>
-                <div class="p-name" title="新款韩版chic学生宽松短款外套上衣字母长袖连帽套头卫衣女潮">新款韩版chic学生宽松短款外套上衣字母长袖连帽套头卫衣女潮</div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>300.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=635" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489102950633.jpg"></div>
-                <div class="p-name" title="韩都衣舍2017韩版女装新款黑白拼接插肩棒球服春季短外套HH5597妠 朴信惠同款 黑白拼接 插肩袖 棒球服">
-                  韩都衣舍2017韩版女装新款黑白拼接插肩棒球服春季短外套HH5597妠 朴信惠同款 黑白拼接 插肩袖 棒球服
-                </div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>450.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=636" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489103412794.jpg"></div>
-                <div class="p-name" title="The Face Shop 水光无瑕气垫CC霜 裸妆隔离保湿补水持久遮瑕强 韩式裸妆 打造水嫩遮瑕 光润亮彩">The Face Shop
-                  水光无瑕气垫CC霜 裸妆隔离保湿补水持久遮瑕强 韩式裸妆 打造水嫩遮瑕 光润亮彩
-                </div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>222.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=637" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489103674623.jpg"></div>
-                <div class="p-name" title="一叶子补水面膜女保湿控油深层清洁收毛孔护肤面膜贴套装专柜正品 补水保湿 清洁控油">一叶子补水面膜女保湿控油深层清洁收毛孔护肤面膜贴套装专柜正品 补水保湿
-                  清洁控油
-                </div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>330.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=638" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489104168209.jpg"></div>
-                <div class="p-name" title="美宝莲绝色持久唇膏 粉红警报 魅惑炫亮润泽 唇彩口红">美宝莲绝色持久唇膏 粉红警报 魅惑炫亮润泽 唇彩口红</div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>520.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=639" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489104534699.jpg"></div>
-                <div class="p-name" title="美宝莲绝色持久唇膏 粉红警报 魅惑炫亮润泽 唇彩口红">美宝莲绝色持久唇膏 粉红警报 魅惑炫亮润泽 唇彩口红</div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>300.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=640" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489104621775.jpg"></div>
-                <div class="p-name" title="花美时三合一自动旋转双头眉笔眉粉染眉膏画眉持久防水防汗不脱色 防水防汗 持久不晕染 正品包邮">
-                  花美时三合一自动旋转双头眉笔眉粉染眉膏画眉持久防水防汗不脱色 防水防汗 持久不晕染 正品包邮
-                </div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>200.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=642" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489104935834.jpg"></div>
-                <div class="p-name" title="一叶子面膜女补水保湿收缩毛孔控油玻尿酸面膜专柜正品 共28片">一叶子面膜女补水保湿收缩毛孔控油玻尿酸面膜专柜正品 共28片</div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>80.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=644" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489105021484.jpg"></div>
-                <div class="p-name" title="欧莱雅男士水能保湿化妆护肤品套装深层补水滋润洗面奶爽肤水乳液">欧莱雅男士水能保湿化妆护肤品套装深层补水滋润洗面奶爽肤水乳液</div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>60.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=645" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489105083498.jpg"></div>
-                <div class="p-name" title="杰威尔发胶定型喷雾男士干胶头发持久定型造型啫喱水发蜡蓬松清香 快速定型，蓬松清香，不起白屑，买2送1">
-                  杰威尔发胶定型喷雾男士干胶头发持久定型造型啫喱水发蜡蓬松清香 快速定型，蓬松清香，不起白屑，买2送1
-                </div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>110.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=646" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489105134405.jpg"></div>
-                <div class="p-name" title="美的电磁炉Midea/美的 WK2102电磁炉特价家用触摸屏电池炉灶正品 已爆售百万多台 防滑触摸屏 一键爆炒">美的电磁炉Midea/美的
-                  WK2102电磁炉特价家用触摸屏电池炉灶正品 已爆售百万多台 防滑触摸屏 一键爆炒
-                </div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>455.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=647" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489105175252.jpg"></div>
-                <div class="p-name" title="志高嵌入式电陶炉家用双头双灶镶嵌式电磁炉双眼光波炉特价正品 不挑锅可烧烤 三环猛火 嵌入式双灶">
-                  志高嵌入式电陶炉家用双头双灶镶嵌式电磁炉双眼光波炉特价正品 不挑锅可烧烤 三环猛火 嵌入式双灶
-                </div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>488.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
-            <li class="opacity_img">
-              <a href="goods.php?id=648" target="_blank">
-                <div class="p-img"><img src="__index__/img/0_thumb_G_1489105257655.jpg"></div>
-                <div class="p-name" title="Midea/美的 MB-WFS5017TM电饭煲5L智能正品电饭锅家用3-4-6-7-8人 下单立减20 精研柴火饭 涡轮防溢">Midea/美的
-                  MB-WFS5017TM电饭煲5L智能正品电饭锅家用3-4-6-7-8人 下单立减20 精研柴火饭 涡轮防溢
-                </div>
-                <div class="p-price">
-                  <div class="shop-price">
-                    <em>¥</em>300.00
-                  </div>
-                  <div class="original-price"></div>
-                </div>
-              </a>
-            </li>
+            {/volist}
           </ul>
           <div class="spec" data-spec=""></div>
         </div>
@@ -1597,9 +1121,6 @@
           function deleteCartGoodsResponse(res) {
             if (res.error) {
               alert(res.err_msg);
-            }
-            else if (res.index == 1) {
-              Ajax.call('get_ajax_content.php?act=get_content', 'data_type=cart_list', return_cart_list, 'POST', 'JSON');
             }
             else {
               $("#ECS_CARTINFO").html(res.content);
@@ -2023,6 +1544,15 @@
 
   /*首页可视化 第八套模板 楼层左侧前后轮播 */
   aroundSilder(".floor_silder")
+</script>
+
+<script>
+  var page = 0;
+  var brand_url = "{:url('index/brand/lst')}";
+  //加载页面时自动提交一个点击事件刷新出商品品牌图片
+  $(function () {
+    $('.refresh-btn').click();
+  })
 </script>
 </body>
 </html>

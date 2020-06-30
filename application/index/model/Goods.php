@@ -11,7 +11,7 @@ use think\Model;
 use catetree\Catetree;
 class Goods extends Model
 {
-//   获取所有的配置项
+//   获取指定推荐位的商品
     public function getRecposGoods($recposId,$limit='')
     {
         $_hotIds = db('rec_item')->where(array('value_type' => 1, 'recpos_id' => $recposId))->select();
@@ -20,7 +20,7 @@ class Goods extends Model
         	$hotIds[] = $v['value_id'];
         }
         $map['id'] = array('IN', $hotIds); 
-        $recRes = $this->field('id,mid_thumb,goods_name')->where($map)->limit($limit)->select();
+        $recRes = $this->field('id,mid_thumb,goods_name,shop_price,markte_price')->where($map)->limit($limit)->select();
         return $recRes;
     }
 

@@ -27,4 +27,11 @@ class Article extends Model
         $artArr = $this->where('cate_id',3)->field('id,title')->select();
         return $artArr;
     }
+
+//    获取商品公告,和促销活动
+    public function getArticle($id, $limitId)
+    {
+        $arts = $this->where(array('cate_id' => $id))->limit($limitId)->select();
+        return $arts;
+    }
 }

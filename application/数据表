@@ -58,6 +58,13 @@ id  goods_id    sm_photo      mid_photo     big_photo
 id  brands_id  pso_img  pso_url  category_id
 
 
+栏目广告  category_ad
+id  img_src  position   link_url  category_id
+
+用户主表 user
+id  username  password  email  mobile_phone  checked        email_checked       phone_checked
+
+    用户名        密码   邮箱      手机号     当前是否验证      使用邮箱验证          使用手机号验证
 
 家用电器
 大家电                                                         生活电器

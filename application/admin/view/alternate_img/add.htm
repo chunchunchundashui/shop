@@ -39,9 +39,9 @@
                         <a href="{:url('index/index')}">系统</a>
                     </li>
                                         <li>
-                        <a href="{:url('Category/lst')}">商品分类管理</a>
+                        <a href="{:url('alternate_img/lst')}">轮播图管理</a>
                     </li>
-                                        <li class="active">添加商品分类</li>
+                                        <li class="active">添加轮播图</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -53,89 +53,49 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
             <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新增商品分类</span>
+                <span class="widget-caption">新增轮播图</span>
             </div>
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action=""  method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="brand_name" class="col-sm-2 control-label no-padding-right">上级分类</label>
+                            <label for="title" class="col-sm-2 control-label no-padding-right">轮播图名称</label>
                             <div class="col-sm-6">
-                                <select class="form-control" name="pid">
-                                    <option value="0">顶级分类</option>
-                                    {volist name="Category" id="vo"}
-                                    <option value="{$vo.id}"><?php echo str_repeat('-', $vo['level']*8)?>{$vo.cate_name}</option>
-                                    {/volist}
-                                </select>
+                                <input class="form-control" id="title" placeholder="" name="title" required="" type="text">
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
                         <div class="form-group">
-                            <label for="cate_name" class="col-sm-2 control-label no-padding-right">分类名称</label>
+                            <label for="link_url" class="col-sm-2 control-label no-padding-right">轮播图地址</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="cate_name" placeholder="" name="cate_name" required="" type="text">
-                            </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="iconfont" class="col-sm-2 control-label no-padding-right">icon图标</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="iconfont" placeholder="" name="iconfont" type="text">
-                            </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="cname"
-                                   class="col-sm-2 control-label no-padding-right">推荐位</label>
-                            <div class="col-sm-6">
-                                <div class="checkbox">
-                                    {volist name='categoryRecpos' id='category'}
-                                    <label style="margin-right: 15px;">
-                                        <input type="checkbox" value="{$category.id}" name="recpos[]" class="colored-blue">
-                                        <span class="text">{$category.rec_name}</span>
-                                    </label>
-                                    {/volist}
-                                </div>
+                                <input class="form-control" id="link_url" placeholder="" name="link_url"  type="text">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="show_nav" class="col-sm-2 control-label no-padding-right">显示到导航</label>
+                            <label for="img_src" class="col-sm-2 control-label no-padding-right">轮播图</label>
+                            <div class="col-sm-6">
+                                <input  placeholder="" id="img_src" name="img_src" required=""  type="file">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="status" class="col-sm-2 control-label no-padding-right">轮播图状态</label>
                             <div class="col-sm-6">
                                 <div class="radio" style="float:left; padding-right: 10px;">
                                     <label>
-                                        <input type="radio" name="show_cate" value="1" class="colored-blue">
-                                        <span class="text">是</span>
+                                        <input type="radio" id="status" name="status" checked="checked" value="1" class="colored-blue">
+                                        <span class="text">显示</span>
                                     </label>
                                 </div>
                                 <div class="radio" style="float:left;">
                                     <label>
-                                        <input type="radio" name="show_cate" value="0" checked="checked" class="colored-blue">
-                                        <span class="text">否</span>
+                                        <input type="radio" name="status" value="0" class="colored-blue">
+                                        <span class="text">隐藏</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="cate_name" class="col-sm-2 control-label no-padding-right">缩略图</label>
-                            <div class="col-sm-6">
-                                <input placeholder="" name="cate_img" type="file">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="keywords" class="col-sm-2 control-label no-padding-right">关键词</label>
-                            <div class="col-sm-6">
-                                <textarea style="width: 100%;resize: none" name="keywords" cols="30" rows="10" class=""></textarea>
-                            </div>
-                        </div>
-                         <div class="form-group">
-                            <label for="description" class="col-sm-2 control-label no-padding-right">描述</label>
-                            <div class="col-sm-6">
-                                <!--resize: none  禁止填写框拉动-->
-                                <textarea name="description" style="width: 100%;resize: none" cols="30" rows="10" class=""></textarea>
-                            </div>
-                        </div>
                         <!--<div class="form-group">-->
-                            <!--<label for="group_id" class="col-sm-2 control-label no-padding-right">分类角色</label>-->
+                            <!--<label for="group_id" class="col-sm-2 control-label no-padding-right">轮播图角色</label>-->
                             <!--<div class="col-sm-6">-->
                                 <!--<select name="group_id" style="width: 100%;">-->
                                                                         <!--<option selected="selected" value="8">测试</option>-->
@@ -144,7 +104,7 @@
                         <!--</div>  -->
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" id="brandAdd" class="btn brand_Add btn-default">保存信息</button>
+                                <button type="submit" id="alternate_imgAdd" class="btn alternate_img_Add btn-default">保存信息</button>
                             </div>
                         </div>
                     </form>
@@ -167,14 +127,14 @@
     <script src="__plus__/ueditor/ueditor.all.js"></script>
     <script>
         $(function () {
-            // UE.getEditor('keywords');
-            // UE.getEditor('description');
+            UE.getEditor('alternate_img_description');
+
         });
         // //实现回车提交
         // window.onload = function(){
-        //     $(jquery-3.3.1.min.js).keydown(function (e) {
+        //     $(document).keydown(function (e) {
         //         if (e.keyCode === 13) {
-        //             $("#brand_Add").trigger("click");
+        //             $("#alternate_img_Add").trigger("click");
         //         }
         //     });
         // };

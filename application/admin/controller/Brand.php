@@ -90,7 +90,13 @@ class Brand extends Controller
 //    商品删除
     public function del()
     {
-        $brandInfo = model('Brand')->find(input('post.id'));
+        $id = input('post.id');
+        $Brand = model('brand')->field('brand_img')->find($id);
+        $BrandImg = IMG_UPLOADS.$Brand['brand_img'];      /*IMG_UPLOADS这是在入口文件定义的一个路径*/
+        if (file_exists($BrandImg)) {        /*file_exists检查文件或目录是否存在*/
+            @unlink($BrandImg);
+        }
+        $brandInfo = model('Brand')->find($id);
         $result = $brandInfo->delete();
         if ($result == 1 ) {
             $this->success('商品删除成功!', 'admin/brand/lst');

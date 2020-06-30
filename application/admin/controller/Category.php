@@ -137,6 +137,11 @@ class Category extends Controller
 //                $article->delete($v1['id']);
 //            }
 //        }
+//      删除栏目前,检查并删除当前栏目的推荐信息
+        $recItem = db('recItem');
+        foreach ($sonids as $k => $v) {
+            $recItem->where(array('value_id' => $v, 'value_type' => 2))->delete();
+        }
         $sonids=implode(',',$sonids);       /*   转换为字符串     */
         $result = $Category->where("id in ($sonids)")->delete();
 

@@ -20,9 +20,26 @@ class Cate extends Base
         $ids = $cateTree->childrenids($id, $cate);
         $ids[] = $id;
         $map['cate_id'] = array('IN', $ids);
-        $artRes = db('article')->where($map)->select();
+//        动态缓存
+        $cacheArtResName = $id.'_artRes';
+        if(cache($cacheArtResName)) {
+            $artRes = cache($cacheArtResName);
+        }else {
+            $artRes = db('article')->where($map)->select();
+            if ($this->config['cache'] == '是') {
+                cache($cacheArtResName,$artRes,$this->config['cache_time']);
+            }
+        }
 //        当前栏目基本信息
-        $cates = $cate->find($id);
+        $cacheCateName = $id.'_cates';
+        if(cache($cacheCateName)) {
+            $cates = cache($cacheCateName);
+        }else {
+            $cates = $cate->find($id);
+            if ($this->config['cache'] == '是') {
+                cache($cacheCateName,$cates,$this->config['cache_time']);
+            }
+        }
         //        查找二级分类跟顶级分类
         $helpCates = model('cate')->shopHelpCates();
         //        普通左侧栏目分类

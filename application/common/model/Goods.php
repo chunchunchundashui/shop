@@ -244,6 +244,8 @@ class Goods extends Model
 //        前置钩子删除商品方法
       Goods::beforeDelete(function ($goods) {
         $goodsId = $goods->id;
+//      删除商品前,检查并删除当前栏目的推荐信息
+        db('rec_item')->where(array('value_id' => $goodsId, 'value_type' => 1))->delete();
 //        判断是否存在原图,在执行以下语句
         if ($goods->og_thumb) {
           //        删除主图及其缩略图

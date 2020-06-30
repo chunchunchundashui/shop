@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <title>长春THinkPHP5第四季 实战开发大型B2C商城项目</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__admin__/style/bootstrap.css" rel="stylesheet">
+    <link href="__admin__/style/font-awesome.css" rel="stylesheet">
+    <link href="__admin__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__admin__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__admin__/style/demo.css" rel="stylesheet">
+    <link href="__admin__/style/typicons.css" rel="stylesheet">
+    <link href="__admin__/style/animate.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- 头部 -->
+{include file="common/top" /}
+<!-- /头部 -->
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        <!--公共左侧-->
+        {include file="common/left" /}
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Breadcrumb -->
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="{:url('index/index')}">系统</a>
+                    </li>
+                    <li>
+                        <a href="{:url('alternate_img/lst')}">轮播图管理</a>
+                    </li>
+                    <li class="active">添加轮播图</li>
+                </ul>
+            </div>
+            <!-- /Page Breadcrumb -->
+
+            <!-- Page Body -->
+            <div class="page-body">
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <div class="widget-header bordered-bottom bordered-blue">
+                                <span class="widget-caption">新增轮播图</span>
+                            </div>
+                            <div class="widget-body">
+                                <div id="horizontal-form">
+                                    <form class="form-horizontal" role="form" action=""  method="post" enctype="multipart/form-data">
+                                        <input type="hidden" name="id" value="{$alternate_imgInfo.id}">
+                                        <div class="form-group">
+                                            <label for="title" class="col-sm-2 control-label no-padding-right">轮播图名称</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" id="title" placeholder="" name="title" value="{$alternate_imgInfo.title}" required="" type="text">
+                                            </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="link_url" class="col-sm-2 control-label no-padding-right">轮播图地址</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" id="link_url" placeholder="" value="{$alternate_imgInfo.link_url}" name="link_url"  type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="img_src" class="col-sm-2 control-label no-padding-right">轮播图</label>
+                                            <div class="col-sm-6">
+                                                <input  placeholder="" id="img_src" name="img_src" type="file">
+                                                {if condition="$alternate_imgInfo['img_src']"}
+                                                <img src="__uploads__/{$alternate_imgInfo.img_src}" alt="" width="600" height="300">
+                                                {else /}
+                                                无缩略图
+                                                {/if}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="status" class="col-sm-2 control-label no-padding-right">轮播图状态</label>
+                                            <div class="col-sm-6">
+                                                <div class="radio" style="float:left; padding-right: 10px;">
+                                                    <label>
+                                                        <input type="radio" id="status" name="status" {if condition="$alternate_imgInfo['status'] eq 1"} checked="checked" {/if} value="1" class="colored-blue">
+                                                        <span class="text">显示</span>
+                                                    </label>
+                                                </div>
+                                                <div class="radio" style="float:left;">
+                                                    <label>
+                                                        <input type="radio" name="status" {if condition="$alternate_imgInfo['status'] eq 0"} checked="checked" {/if} value="0" class="colored-blue">
+                                                        <span class="text">隐藏</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<div class="form-group">-->
+                                        <!--<label for="group_id" class="col-sm-2 control-label no-padding-right">轮播图角色</label>-->
+                                        <!--<div class="col-sm-6">-->
+                                        <!--<select name="group_id" style="width: 100%;">-->
+                                        <!--<option selected="selected" value="8">测试</option>-->
+                                        <!--</select>-->
+                                        <!--</div>-->
+                                        <!--</div>  -->
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" id="alternate_imgAdd" class="btn alternate_img_Add btn-default">保存信息</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+</div>
+
+<!--Basic Scripts-->
+{include file="common/js" /}
+<script src="__plus__/ueditor/ueditor.config.js"></script>
+<script src="__plus__/ueditor/ueditor.all.js"></script>
+<script>
+  $(function () {
+    UE.getEditor('alternate_img_description');
+
+  });
+  // //实现回车提交
+  // window.onload = function(){
+  //     $(document).keydown(function (e) {
+  //         if (e.keyCode === 13) {
+  //             $("#alternate_img_Add").trigger("click");
+  //         }
+  //     });
+  // };
+
+</script>
+
+</body></html>

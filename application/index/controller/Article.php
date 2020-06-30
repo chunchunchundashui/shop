@@ -14,13 +14,43 @@ class Article extends Base
     public function index($id)
     {
 //        根据id查找对应的内容
-        $arts = model('article')->find($id);
+//        动态缓存
+        $cacheName = $id.'_arts';
+        if (cache($cacheName)) {
+            $arts = cache($cacheName);
+        }else {
+            $arts = model('article')->find($id);
+            if ($this->config['cache'] == '是') {
+                cache($cacheName, $arts,$this->config['cache_time']);
+            }
+        }
+
         //        查找二级分类跟顶级分类
-        $helpCates = model('cate')->shopHelpCates();
-        //        普通左侧栏目分类
-        $comCates = model('cate')->getComCates();
+//        if (cache('helpCates')) {
+//            $helpCates = cache('helpCates');
+//        }else {
+            $helpCates = model('cate')->shopHelpCates();
+//            cache('helpCates', $helpCates, 3600);
+//        }
+
+        //        普通左侧栏目分类放入缓存
+//        if (cache('comCates')) {
+//            $comCates = cache('comCate');
+//        }else {
+            $comCates = model('cate')->getComCates();
+//            cache('comCates', $comCates, 3600);
+//        }
 //        面包屑导航
-        $position = model('cate')->position($arts['cate_id']);
+        $cachePositon = $arts['cate_id'].'_position';
+        if (cache($cachePositon)) {
+            $position = cache($cachePositon);
+        }else {
+            $position = model('cate')->position($arts['cate_id']);
+            if ($this->config['cache'] == '是') {
+                cache($cachePositon, $position,$this->config['cache_time']);
+            }
+        }
+
 //        这种放法再次查询比较浪费资源
 //        $position[] = model('cate')->find($arts['cate_id']);
 //        dump($position);die;

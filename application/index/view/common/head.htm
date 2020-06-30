@@ -172,7 +172,7 @@
 					{volist name="cateRes" id='cate'}
 					<div class="categorys-item" ectype="cateItem" data-id="{$cate.id}" data-eveval="0">
 						<div class="item item-content">
-							<i class="iconfont icon-ele"></i>
+							<i class="iconfont {$cate.iconfont}"></i>
 							<div class="categorys-title">
 								<strong>
 									<a href="{:url('index/Category/index', array('id' => $cate['id']))}" target="_blank">{$cate.cate_name}</a>
