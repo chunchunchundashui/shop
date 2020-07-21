@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:57:"D:\phpStudy\WWW\shop/application/admin\view\goods\add.htm";i:1592920553;s:58:"D:\phpStudy\WWW\shop\application\admin\view\common\top.htm";i:1572317047;s:59:"D:\phpStudy\WWW\shop\application\admin\view\common\left.htm";i:1593325978;s:57:"D:\phpStudy\WWW\shop\application\admin\view\common\js.htm";i:1572488612;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:57:"D:\phpStudy\WWW\shop/application/admin\view\goods\add.htm";i:1592920553;s:58:"D:\phpStudy\WWW\shop\application\admin\view\common\top.htm";i:1593441874;s:59:"D:\phpStudy\WWW\shop\application\admin\view\common\left.htm";i:1593325978;s:57:"D:\phpStudy\WWW\shop\application\admin\view\common\js.htm";i:1572488612;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,6 +52,11 @@
             <div class="navbar-header pull-right">
                 <div class="navbar-account">
                     <ul class="account-area">
+                        <li><a href="<?php echo url('Index/clearCache'); ?>" class="login-area dropdown-toggle">
+                            <section>
+                                <h2><span class="profile"><span><i class="menu-icon fa fa-trash-o">&nbsp;</i>清空缓存</span></span></h2>
+                            </section>
+                        </a></li>
                         <li>
                             <a class="login-area dropdown-toggle" data-toggle="dropdown">
                                 <div class="avatar" title="View your public profile">

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:63:"D:\phpStudy\WWW\shop/application/index\view\article\article.htm";i:1592225381;s:59:"D:\phpStudy\WWW\shop\application\index\view\common\head.htm";i:1593435047;s:64:"D:\phpStudy\WWW\shop\application\index\view\common\cate_left.htm";i:1592225018;s:61:"D:\phpStudy\WWW\shop\application\index\view\common\footer.htm";i:1592318019;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:63:"D:\phpStudy\WWW\shop/application/index\view\article\article.htm";i:1592225381;s:59:"D:\phpStudy\WWW\shop\application\index\view\common\head.htm";i:1594393129;s:64:"D:\phpStudy\WWW\shop\application\index\view\common\cate_left.htm";i:1592225018;s:61:"D:\phpStudy\WWW\shop\application\index\view\common\footer.htm";i:1592318019;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -143,7 +143,7 @@
 </head>
 <body class="bg-ligtGary">
 <div class="site-nav" id="site-nav">
-	<div class="w w1390">
+	<div class="w <?php if(isset($show_right)) { echo 'w1200';}else { echo 'w1390';} ?>">
 		<div class="fl">
 			<div class="city-choice" id="city-choice" data-ectype="dorpdown">
 				<div class="dorpdown-layer">
@@ -167,7 +167,7 @@
 	</div>
 </div>
 <div class="header">
-	<div class="w w1390">
+	<div class="w <?php if(isset($show_right)) { echo 'w1200';}else { echo 'w1390';} ?>">
 		<div class="logo">
 			<div class="logoImg"><a href="#"><img src="/shop/public/static/index/img/logo.png" /></a></div>
 		</div>
@@ -211,9 +211,11 @@
 
 
 				// ajax异步获取顶级分类下的子分类,品牌,频道等相关信息在右侧菜单显示
-				var ajax_cate_url = "<?php echo url('Category/getCateInfo'); ?>";
+				var ajax_cate_url = "<?php echo url('index/Category/getCateInfo'); ?>";
 				// 待加载中的图片路径
 				var load_img = "/shop/public/static/index/img/loadGoods.gif";
+
+
               function changenum(rec_id, diff, warehouse_id, area_id)
               {
                 var cValue = $('#cart_value').val();

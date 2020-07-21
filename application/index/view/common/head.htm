@@ -1,16 +1,13 @@
 <div class="site-nav" id="site-nav">
-	<div class="w w1390">
+	<div class="w <?php if(isset($show_right)) { echo 'w1200';}else { echo 'w1390';} ?>">
 		<div class="fl">
 			<div class="city-choice" id="city-choice" data-ectype="dorpdown">
 				<div class="dorpdown-layer">
 					<div class="scrollBody" id="scrollBody"></div>
 				</div>
-			</div>            <div class="txt-info" id="ECS_MEMBERZONE">
+			</div><div class="txt-info" id="ECS_MEMBERZONE">
 
-			<a href="#" class="link-login red">请登录</a>
-			<a href="#" class="link-regist">免费注册</a>
-
-		</div>
+			</div>
 		</div>
 		<ul class="quick-menu fr">
 			{volist name="navRes.top" id="top_nav"}
@@ -23,9 +20,9 @@
 	</div>
 </div>
 <div class="header">
-	<div class="w w1390">
+	<div class="w <?php if(isset($show_right)) { echo 'w1200';}else { echo 'w1390';} ?>">
 		<div class="logo">
-			<div class="logoImg"><a href="#"><img src="__index__/img/logo.png" /></a></div>
+			<div class="logoImg"><a href="{:url('index/index/index')}"><img src="__index__/img/logo.png" /></a></div>
 		</div>
 		<div class="dsc-search">
 			<div class="form">
@@ -66,10 +63,12 @@
 
 
 
-				// ajax异步获取顶级分类下的子分类,品牌,频道等相关信息在右侧菜单显示
-				var ajax_cate_url = "{:url('Category/getCateInfo')}";
-				// 待加载中的图片路径
-				var load_img = "__index__/img/loadGoods.gif";
+              // ajax异步获取顶级分类下的子分类,品牌,频道等相关信息在右侧菜单显示
+              var ajax_cate_url = "{:url('index/Category/getCateInfo')}";
+              // 待加载中的图片路径
+              var load_img = "__index__/img/loadGoods.gif";
+
+
               function changenum(rec_id, diff, warehouse_id, area_id)
               {
                 var cValue = $('#cart_value').val();
@@ -158,9 +157,20 @@
                 $(".pop_panel").html(result.content);
                 tbplHeigth();
               }
-			</script>        </div>
+			</script>
+			<!--ajax异步刷新判断用户是否勾选默认登陆 -->
+			<script src="__js__/layer/layer.js"></script>
+			<script>
+              //  这个地址是在login.js下面
+              var checkLogin = "{:url('member/account/checkLogin')}";
+              var loginOut = "{:url('member/user/loginOut')}";
+			</script>
+			<!-- 引入异步登陆js -->
+			<script type="text/javascript" src="__index__/js/login.js"></script>
+		</div>
 	</div>
 </div>
+
 <div class="nav dsc-zoom">
 	<!-- 调整头部大小从cate中声明一个变量 -->
 	<div class="w <?php if(isset($show_right)) { echo 'w1200';}else { echo 'w1390';} ?>">

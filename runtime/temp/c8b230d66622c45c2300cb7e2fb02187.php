@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:56:"D:\phpStudy\WWW\shop/application/admin\view\attr\lst.htm";i:1574320167;s:58:"D:\phpStudy\WWW\shop\application\admin\view\common\top.htm";i:1572317047;s:59:"D:\phpStudy\WWW\shop\application\admin\view\common\left.htm";i:1592396483;s:57:"D:\phpStudy\WWW\shop\application\admin\view\common\js.htm";i:1572488612;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:56:"D:\phpStudy\WWW\shop/application/admin\view\attr\lst.htm";i:1574320167;s:58:"D:\phpStudy\WWW\shop\application\admin\view\common\top.htm";i:1593441874;s:59:"D:\phpStudy\WWW\shop\application\admin\view\common\left.htm";i:1593325978;s:57:"D:\phpStudy\WWW\shop\application\admin\view\common\js.htm";i:1572488612;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,6 +44,11 @@
             <div class="navbar-header pull-right">
                 <div class="navbar-account">
                     <ul class="account-area">
+                        <li><a href="<?php echo url('Index/clearCache'); ?>" class="login-area dropdown-toggle">
+                            <section>
+                                <h2><span class="profile"><span><i class="menu-icon fa fa-trash-o">&nbsp;</i>清空缓存</span></span></h2>
+                            </section>
+                        </a></li>
                         <li>
                             <a class="login-area dropdown-toggle" data-toggle="dropdown">
                                 <div class="avatar" title="View your public profile">
@@ -193,6 +198,35 @@
                 <li>
                     <a href="<?php echo url('admin/Recpos/add'); ?>">
                         <span class="menu-text">推荐位添加</span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!--品牌关键词-->
+        <li>
+            <a href="javascript:void(0)" class="menu-dropdown">
+                <i class="menu-icon fa  fa-random"></i>
+                <span class="menu-text">栏目关联</span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="<?php echo url('admin/CategoryWords/lst'); ?>">
+                        <span class="menu-text">推荐词关联</span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo url('admin/CategoryBrands/lst'); ?>">
+                        <span class="menu-text">品牌关联</span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo url('admin/CategoryAd/lst'); ?>">
+                        <span class="menu-text">左图关联</span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
@@ -373,7 +407,12 @@
                         <i class="menu-expand"></i>
                     </a>
                 </li>
-
+                <li>
+                    <a href="<?php echo url('AlternateImg/lst'); ?>">
+                        <span class="menu-text">首页轮播图</span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
             </ul>
         </li>
 

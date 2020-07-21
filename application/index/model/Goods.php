@@ -43,4 +43,24 @@ class Goods extends Model
         $goodsRes = db('goods')->where($map)->limit(6)->order('id desc')->select();
         return $goodsRes;
     }
+
+//     计算会员价格
+    public function getMemberPrice($goods_id)
+    {
+        $levelId = session('level_id');
+        $levelRate = session('level_rate');
+        $goodsInfo = $this->find($goods_id);
+        if (session('level_id')) {
+            $memberPrice = db('member_price')->where(array('mlevel_id'=>$levelId,'goods_id'=> $goodsInfo['id']))->find();
+            if ($memberPrice){
+                $price = $memberPrice['mprice'];
+            }else{
+                $levelRate = $levelRate/100;
+                $price = $goodsInfo['shop_price']*$levelRate;
+            }
+        }else {
+            $price = $goodsInfo['shop_price'];
+        }
+        return $price;
+    }
 }

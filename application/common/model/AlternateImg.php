@@ -12,5 +12,10 @@ use traits\model\SoftDelete;
 
 class AlternateImg extends Model
 {
-
+//   获取所有的配置项
+    public function getAlterImg()
+    {
+        $AlterImg = $this->where(array('status' => 1))->order('sort desc')->select();
+        return $AlterImg;
+    }
 }

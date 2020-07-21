@@ -26,9 +26,9 @@ class Goods extends Model
 
                 $image = \think\Image::open(IMG_UPLOADS.$ogThumb);
                 // 按照原图的比例生成一个最大为150*150的缩略图并保存为thumb.png
-                $image->thumb(500, 500)->save(IMG_UPLOADS.$bigThumb);
-                $image->thumb(240, 240)->save(IMG_UPLOADS.$midThumb);
-                $image->thumb(58, 58)->save(IMG_UPLOADS.$smhumb);
+                $image->thumb(800, 800)->save(IMG_UPLOADS.$bigThumb);
+                $image->thumb(400, 400)->save(IMG_UPLOADS.$midThumb);
+                $image->thumb(100, 100)->save(IMG_UPLOADS.$smhumb);
                 $goods->og_thumb = $ogThumb;
                 $goods->big_thumb = $bigThumb;
                 $goods->mid_thumb = $midThumb;
@@ -121,7 +121,7 @@ class Goods extends Model
                         // 按照原图的比例生成一个最大为150*150的缩略图并保存为thumb.png
                         $image->thumb(800, 800)->save(IMG_UPLOADS.$bigphoto);
                         $image->thumb(400, 400)->save(IMG_UPLOADS.$midphoto);
-                        $image->thumb(200, 200)->save(IMG_UPLOADS.$smphoto);
+                        $image->thumb(100, 100)->save(IMG_UPLOADS.$smphoto);
                         db('goods_photo')->insert(['goods_id' => $goodsId, 'og_photo' => $ogphoto, 'big_photo' => $bigphoto, 'mid_photo' => $midphoto, 'sm_photo' => $smphoto]);
                     }else{
                         // 上传失败获取错误信息

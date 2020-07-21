@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\phpStudy\WWW\shop/application/index\view\category\category.htm";i:1591505761;s:59:"D:\phpStudy\WWW\shop\application\index\view\common\head.htm";i:1593435047;s:60:"D:\phpStudy\WWW\shop\application\index\view\common\right.htm";i:1591505509;s:61:"D:\phpStudy\WWW\shop\application\index\view\common\footer.htm";i:1592318019;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\phpStudy\WWW\shop/application/index\view\category\category.htm";i:1591505761;s:59:"D:\phpStudy\WWW\shop\application\index\view\common\head.htm";i:1594995753;s:60:"D:\phpStudy\WWW\shop\application\index\view\common\right.htm";i:1591505509;s:61:"D:\phpStudy\WWW\shop\application\index\view\common\footer.htm";i:1592318019;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -24,18 +24,15 @@ var load_icon = '<img src="/shop/public/static/index/img/load/load.gif" width="2
 </head>
 <body>
 	<div class="site-nav" id="site-nav">
-	<div class="w w1390">
+	<div class="w <?php if(isset($show_right)) { echo 'w1200';}else { echo 'w1390';} ?>">
 		<div class="fl">
 			<div class="city-choice" id="city-choice" data-ectype="dorpdown">
 				<div class="dorpdown-layer">
 					<div class="scrollBody" id="scrollBody"></div>
 				</div>
-			</div>            <div class="txt-info" id="ECS_MEMBERZONE">
+			</div><div class="txt-info" id="ECS_MEMBERZONE">
 
-			<a href="#" class="link-login red">请登录</a>
-			<a href="#" class="link-regist">免费注册</a>
-
-		</div>
+			</div>
 		</div>
 		<ul class="quick-menu fr">
 			<?php if(is_array($navRes['top']) || $navRes['top'] instanceof \think\Collection || $navRes['top'] instanceof \think\Paginator): $i = 0; $__LIST__ = $navRes['top'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$top_nav): $mod = ($i % 2 );++$i;?>
@@ -48,9 +45,9 @@ var load_icon = '<img src="/shop/public/static/index/img/load/load.gif" width="2
 	</div>
 </div>
 <div class="header">
-	<div class="w w1390">
+	<div class="w <?php if(isset($show_right)) { echo 'w1200';}else { echo 'w1390';} ?>">
 		<div class="logo">
-			<div class="logoImg"><a href="#"><img src="/shop/public/static/index/img/logo.png" /></a></div>
+			<div class="logoImg"><a href="<?php echo url('index/index/index'); ?>"><img src="/shop/public/static/index/img/logo.png" /></a></div>
 		</div>
 		<div class="dsc-search">
 			<div class="form">
@@ -91,10 +88,12 @@ var load_icon = '<img src="/shop/public/static/index/img/load/load.gif" width="2
 
 
 
-				// ajax异步获取顶级分类下的子分类,品牌,频道等相关信息在右侧菜单显示
-				var ajax_cate_url = "<?php echo url('Category/getCateInfo'); ?>";
-				// 待加载中的图片路径
-				var load_img = "/shop/public/static/index/img/loadGoods.gif";
+              // ajax异步获取顶级分类下的子分类,品牌,频道等相关信息在右侧菜单显示
+              var ajax_cate_url = "<?php echo url('index/Category/getCateInfo'); ?>";
+              // 待加载中的图片路径
+              var load_img = "/shop/public/static/index/img/loadGoods.gif";
+
+
               function changenum(rec_id, diff, warehouse_id, area_id)
               {
                 var cValue = $('#cart_value').val();
@@ -181,9 +180,20 @@ var load_icon = '<img src="/shop/public/static/index/img/load/load.gif" width="2
                 $(".pop_panel").html(result.content);
                 tbplHeigth();
               }
-			</script>        </div>
+			</script>
+			<!--ajax异步刷新判断用户是否勾选默认登陆 -->
+			<script src="/shop/public/static/lib/layer/layer.js"></script>
+			<script>
+              //  这个地址是在login.js下面
+              var checkLogin = "<?php echo url('member/account/checkLogin'); ?>";
+              var loginOut = "<?php echo url('member/user/loginOut'); ?>";
+			</script>
+			<!-- 引入异步登陆js -->
+			<script type="text/javascript" src="/shop/public/static/index/js/login.js"></script>
+		</div>
 	</div>
 </div>
+
 <div class="nav dsc-zoom">
 	<!-- 调整头部大小从cate中声明一个变量 -->
 	<div class="w <?php if(isset($show_right)) { echo 'w1200';}else { echo 'w1390';} ?>">

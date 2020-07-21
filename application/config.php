@@ -14,6 +14,15 @@ return [
     // | 应用设置
     // +----------------------------------------------------------------------
 
+//    加密
+    'encryption_key'         => "64845e7fab5ca7ed95e87fca8064ae6d",
+//    自定义配置
+    'big_thumb_width'        => '500',
+    'big_thumb_height'        => '500',
+    'mid_thumb_width'        => '100',
+    'mid_thumb_height'        => '100',
+    'sm_thumb_width'        => '50',
+    'sm_thumb_height'        => '50',
     // 应用调试模式
     'app_debug'              => true,
     // 应用Trace

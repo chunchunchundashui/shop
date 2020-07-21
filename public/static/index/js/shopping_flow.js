@@ -697,7 +697,7 @@ function checkOrderForm(frm)
 		} 
   });
 
-  if(user_id > 0 && store_id == 0){
+  if(user_id == 0 && store_id == 0){
 	  if(input_length == 0 || numChecked == 0){
 		  	
 			var divId = "cart-address-not";

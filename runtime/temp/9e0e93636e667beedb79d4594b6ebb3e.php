@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:60:"D:\phpStudy\WWW\shop/application/admin\view\category\add.htm";i:1593432843;s:58:"D:\phpStudy\WWW\shop\application\admin\view\common\top.htm";i:1572317047;s:59:"D:\phpStudy\WWW\shop\application\admin\view\common\left.htm";i:1593325978;s:57:"D:\phpStudy\WWW\shop\application\admin\view\common\js.htm";i:1572488612;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:60:"D:\phpStudy\WWW\shop/application/admin\view\category\add.htm";i:1593435159;s:58:"D:\phpStudy\WWW\shop\application\admin\view\common\top.htm";i:1593441874;s:59:"D:\phpStudy\WWW\shop\application\admin\view\common\left.htm";i:1593325978;s:57:"D:\phpStudy\WWW\shop\application\admin\view\common\js.htm";i:1572488612;}*/ ?>
 <!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
@@ -43,6 +43,11 @@
             <div class="navbar-header pull-right">
                 <div class="navbar-account">
                     <ul class="account-area">
+                        <li><a href="<?php echo url('Index/clearCache'); ?>" class="login-area dropdown-toggle">
+                            <section>
+                                <h2><span class="profile"><span><i class="menu-icon fa fa-trash-o">&nbsp;</i>清空缓存</span></span></h2>
+                            </section>
+                        </a></li>
                         <li>
                             <a class="login-area dropdown-toggle" data-toggle="dropdown">
                                 <div class="avatar" title="View your public profile">
@@ -512,7 +517,7 @@
                         <div class="form-group">
                             <label for="iconfont" class="col-sm-2 control-label no-padding-right">icon图标</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="iconfont" placeholder="" name="iconfont" required="" type="text">
+                                <input class="form-control" id="iconfont" placeholder="" name="iconfont" type="text">
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>

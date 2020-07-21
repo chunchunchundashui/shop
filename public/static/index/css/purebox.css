@@ -103,6 +103,7 @@
 #time_box .picksite-time .op-btns{ margin:38px 0 0 290px;}
 #time_box .picksite-time .ztd_tishi{ margin-top:35px;}
 
+.take_their{ max-height:250px; overflow-y:auto;}
 .their—tab-nav{ margin-bottom:15px;}
 .their—tab-nav ul{ display: inline-block;display: block;}
 .their—tab-nav ul:after{ content: ".";display: block;height: 0;clear: both;visibility: hidden;}
@@ -259,10 +260,12 @@
 
 /*by kong 门店 start*/
 .storeDialog{ padding:0 10px;}
-.storeDialog-top{ overflow:hidden; line-height:30px; margin-top:15px; margin-bottom:25px;}
+.storeDialog-top{ line-height:30px; margin-top:15px; margin-bottom:25px;}
+.storeDialog-top:after{ content: ".";display: block;height: 0;clear: both;visibility: hidden;}
 .storeDialog-top .dt{ float:left; color:#777;}
 .storeDialog-top .dd{ float:left; font-size:0;}
 .storeDialog-top .dd select{ font-size:12px; color: #777;background-color: #FFF;height: 30px;vertical-align: middle;padding: 0 4px;border: solid 1px #E6E9EE; margin-right:10px; outline:none;}
+.storeDialog-top .dd .mod-select{ margin-right:5px;}
 .store-content{ height:265px;}
 .store-content li{ float:left; width:100%;}
 .store-content li .td{ float:left; height:38px; line-height:38px; border:1px solid #dcdcdc; margin:0 -1px -1px 0;}
