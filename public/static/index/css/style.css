@@ -1713,7 +1713,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f42424', endC
 .g-d-store-info .item.gd-shop-qrcode .mobile_pop .img{ width:160px; height:160px; margin-top:10px;}
 .g-d-store-info .item.gd-shop-qrcode:hover .mobile_pop{ display:block;}
 /*放大镜样式*/
-.MagicZoomPup { z-index: 3;visibility: hidden;position: absolute;top: 0;left: 0;width: 50px;height: 50px;border: 1px solid #aaa;background-image: url(../img/common/zoom-point.png);opacity: .5;-moz-opacity: .5;-khtml-opacity: .5;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);cursor: move}
+.MagicZoomPup { z-index: 3;visibility: hidden;position: absolute;top: 0;left: 0;width: 50px;height: 50px;border: 1px solid #aaa;background-image: url(../img/zoom-point.png);opacity: .5;-moz-opacity: .5;-khtml-opacity: .5;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);cursor: move}
 .MagicBoxShadow { border: 1px solid #e4e4e4;}
 
 .product-info{ margin-top:20px;}

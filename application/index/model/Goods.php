@@ -63,4 +63,11 @@ class Goods extends Model
         }
         return $price;
     }
+
+//    获取商品会员价
+    public function getShopPrice($goods_id)
+    {
+        $goodsInfo = $this->field('shop_price')->find($goods_id);
+        return $goodsInfo['shop_price'];
+    }
 }

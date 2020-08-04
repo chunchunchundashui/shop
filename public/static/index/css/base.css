@@ -504,7 +504,7 @@ input.btn25{ height: 25px;line-height: 23px;}
 .ui-label:hover{ background:url(../img/checkbox_cur_12x12.png) 0 2px no-repeat; cursor:pointer; color:#f42424;}
 
 .ui-label-14{ padding-left:18px; background:url(../img/checkbox_14x14.png) 0 1px no-repeat; cursor:pointer;}
-.ui-checkbox:checked + label.ui-label-14{ background:url(../img/checked_solid_14x14.png) 0 1px no-repeat; color:#f42424;}
+/*.ui-checkbox:checked + label.ui-label-14{ background:url(../img/checked_solid_14x14.png) 0 1px no-repeat; color:#f42424;}*/
 
 .ui-solid-label{ padding-left:18px; background:url(../img/checkbox_12x12.png) 0 2px no-repeat;}
 .ui-solid-checkbox:checked + label{ background:url(../img/checked_solid_12x12.png) 0 2px no-repeat;}

@@ -211,7 +211,7 @@ $(function(){
 		var cart_value = '';
 		$("input[name='checkItem']").each(function(index, element) {
 			if($(element).is(':checked')){
-				cart_value += $(element).val() + ",";
+				cart_value += $(element).val() + "@";
 			}
         });
 		
@@ -225,7 +225,7 @@ $(function(){
 	//获取选择商品的信息
 	function change_cart_goods_number(rec_id)
 	{   
-		Ajax.call('flow.php?step=ajax_cart_goods_amount', 'rec_id=' + rec_id, change_cart_goods_response, 'POST','JSON');                
+		Ajax.call(ajax_cart_goods_amount, 'rec_id=' + rec_id, change_cart_goods_response, 'POST','JSON');                
 	}
 	
 	//获取选择商品的信息回调	
@@ -261,7 +261,7 @@ $(function(){
 			select_flag = '&sel_id=' + str + '&sel_flag=' + 'cart_sel_flag';
 		}
 
-		Ajax.call('flow.php?step=ajax_cart_goods_amount', 'rec_id=' + rec_id + select_flag + ajax_where, replace_cart_goods_response, 'POST','JSON');                
+		Ajax.call(ajax_cart_goods_amount, 'rec_id=' + rec_id + select_flag + ajax_where, replace_cart_goods_response, 'POST','JSON');                
 	}
 	
 	//点击换购更新换购商品

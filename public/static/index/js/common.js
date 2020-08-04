@@ -371,11 +371,22 @@ function addToCart(goodsId, parentId,event,obj,divId,store_id,end_time,store_mob
                 }
 	  	goods.store_id = store_id;
 	}
-	
+
+  // 申明一个数组  获取商品属性id并拼装字符串
+  var goods_attr = new Array();
+  $(":checked").each(function() {
+    // 使用push方法,放到goods_attr_ids数组中
+    goods_attr.push($(this).val());
+  });
+  // JS中的转换为字符串  完成字符串拼接
+  goods_attr = goods_attr.toString();
+  console.log(goods_attr);
+
 	goods.quick    = quick;
 	goods.spec     = spec_arr;
 	goods.goods_id = goodsId;
 	goods.number   = number;
+	goods.goods_attr = goods_attr;
 	if(divId){goods.divId    = divId;}
 	goods.parent   = (typeof(parentId) == "undefined") ? 0 : parseInt(parentId);
   
@@ -397,12 +408,13 @@ function addToCart(goodsId, parentId,event,obj,divId,store_id,end_time,store_mob
 			get_goods_prompt_message(json_languages.Product_spec_prompt);
 		}
 	}else{
-		Ajax.call('flow.php?step=add_to_cart', 'goods=' + $.toJSON(goods), addToCartResponse, 'POST', 'JSON');
+		Ajax.call(ajax_add_to_cart, 'goods=' + $.toJSON(goods), addToCartResponse, 'POST', 'JSON');
 	}
 }
 
 function addToCartStages(goodsId)
 {
+
 	var goods        = new Object();
 	var spec_arr     = new Array();
 	var fittings_arr = new Array();
@@ -454,7 +466,7 @@ function addToCartStages(goodsId)
 	});
 
 	//@模板堂-bylu 获取分期数  start
-	if($("input[name='stages_qishu']").val()){
+      if($("input[name='stages_qishu']").val()){
 		goods.stages_qishu = $("input[name='stages_qishu']").val();		
 	}
 	//@模板堂-bylu  end
@@ -505,10 +517,12 @@ function addToCartResponse(result)
   }
   else
   {
-    var cart_url = 'flow.php?step=cart';
+    // var cart_url = cart_url;
     if (result.one_step_buy == '1')
     {
-      location.href = cart_url;
+      // location.href = cart_url;
+      // 只打开一个页面,后面跳转就不会新加页面了
+      window.open(cart_url ,'win1');
     }
     else
     {

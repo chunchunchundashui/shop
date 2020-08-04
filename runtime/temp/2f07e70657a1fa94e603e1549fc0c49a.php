@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:59:"D:\phpStudy\WWW\shop/application/index\view\goods\goods.htm";i:1595341657;s:59:"D:\phpStudy\WWW\shop\application\index\view\common\head.htm";i:1594995753;s:60:"D:\phpStudy\WWW\shop\application\index\view\common\right.htm";i:1591505509;s:61:"D:\phpStudy\WWW\shop\application\index\view\common\footer.htm";i:1592318019;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:59:"D:\phpStudy\WWW\shop/application/index\view\goods\goods.htm";i:1596462775;s:59:"D:\phpStudy\WWW\shop\application\index\view\common\head.htm";i:1594995753;s:60:"D:\phpStudy\WWW\shop\application\index\view\common\right.htm";i:1591505509;s:61:"D:\phpStudy\WWW\shop\application\index\view\common\footer.htm";i:1592318019;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -21,6 +21,13 @@
   <link rel="stylesheet" type="text/css" href="/shop/public/static/index/js/calendar/calendar.min.css"/>
   <link rel="stylesheet" type="text/css" href="/shop/public/static/index/js/perfect-scrollbar/perfect-scrollbar.min.css"/>
 </head>
+<!-- 自定义路径 -->
+<script type="text/javascript">
+  // <!-- 将添加到购物车的数据进行储存到cookie中地址 -->
+ var ajax_add_to_cart = "<?php echo url('index/Flow/addToCart'); ?>";
+// 购物车跳转地址
+  var cart_url = "<?php echo url('index/Flow/flow1'); ?>"
+</script>
 <body>
 <div class="site-nav" id="site-nav">
 	<div class="w <?php if(isset($show_right)) { echo 'w1200';}else { echo 'w1390';} ?>">
@@ -446,17 +453,6 @@
               <?php endforeach; endif; else: echo "" ;endif; ?>
               <!-- 单选属性结束 -->
 
-              <!-- 选中只有checked的元素 -->
-              <script type="text/javascript">
-                // 申明一个数组  
-                var goods_attr_ids = new Array();
-                $(":checked").each(function() {
-                  // 使用push方法,放到goods_attr_ids数组中
-                  goods_attr_ids.push($(this).val());
-                });
-                goods_attr_ids = goods_attr_ids.toString();
-                console.log(goods_attr_ids);
-              </script>
               <div class="summary-item is-number">
                 <div class="si-tit">数量</div>
                 <div class="si-warp">
@@ -477,8 +473,8 @@
               <div class="clear"></div>
             </div>
             <div class="choose-btns ml60 clearfix">
-              <a href="javascript:bool=0;addToCart(799)" data-type="0" class="btn-buynow" ectype="btn-buynow">立即购买</a>
-              <a href="javascript:bool=0;addToCartShowDiv(799)" class="btn-append" ectype="btn-append"><i
+              <a href="javascript:bool=0;addToCart(<?php echo $goodsInfo['id']; ?>)" data-type="0" class="btn-buynow" ectype="btn-buynow">立即购买</a>
+              <a href="javascript:bool=0;addToCartShowDiv(<?php echo $goodsInfo['id']; ?>)" class="btn-append" ectype="btn-append"><i
                   class="iconfont icon-carts"></i>加入购物车</a>
 
 
@@ -868,7 +864,7 @@
                       $(this).addClass('checkstatus').siblings().removeClass('checkstatus');
                       $(this).children('input').attr('checked',true);
                       $(this).siblings().children('input').attr('checked',false);
-                      return false;
+                      // return false;
                     });
                   </script>
                   <script type="text/javascript">

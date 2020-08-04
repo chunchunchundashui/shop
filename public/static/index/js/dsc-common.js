@@ -1165,7 +1165,8 @@ $(function(){
 
   //购物车批量删除
   $("*[data-dialog='remove_collect_dialog']").click(function(){
-    var user_id = $("#user_id").val();
+    // var user_id = $("#user_id").val();
+    var user_id = 1;
     if(user_id > 0){
       var remove_url = $(this).data('removeurl');
       var collect_url = $(this).data('collecturl');
@@ -1184,7 +1185,7 @@ $(function(){
 
       pbDialog(content,"",0,450,50,"",true,function(){
         Ajax.call(url, 'cart_value=' + cart_value, function(data){
-          location.href = "flow.php";
+          location.href = flow1;
         }, 'POST','JSON');
       });
     }else{

@@ -3,7 +3,7 @@
 
 .pb-hd{ position: relative;padding: 0 16px;height: 31px;line-height: 31px;background: #f3f3f3;}
 .pb-hd .pb-title{ font-weight:normal;font-size: 14px;color: #666;font-family: "Microsoft YaHei";}
-.pb-hd .pb-x{ cursor: pointer;display: block;position: absolute;z-index: 100000;top: 10px;right: 16px;overflow: hidden;width: 13px;height: 13px;background: url(../images/purebox/dialog.png) no-repeat;font-size: 0;text-indent:-99999px;}
+.pb-hd .pb-x{ cursor: pointer;display: block;position: absolute;z-index: 100000;top: 10px;right: 16px;overflow: hidden;width: 13px;height: 13px;background: url(../img/dialog.png) no-repeat;font-size: 0;text-indent:-99999px;}
 .pb-bd{ padding: 10px;overflow: auto;background: #fff;position: relative;}
 
 /*新增编辑收货信息*/
@@ -30,7 +30,7 @@
 /*删除收货人信息*/
 .tip-box{ width: 300px;*width: 330px;margin: 0 auto;overflow:hidden;}
 .icon-box{ position: relative;_height: 48px;_overflow: visible;}
-.icon-box .m-icon{ display:block;float:left;width: 48px;height: 48px;background: url(../images/purebox/icon48.png) no-repeat;}
+.icon-box .m-icon{ display:block;float:left;width: 48px;height: 48px;background: url(../img/icon48.png) no-repeat;}
 .icon-box .warn-icon{ background-position: -94px 2px;}
 .icon-box .warn-icon-ok{ background-position: 0px 2px;}
 .icon-box .warn-icon-wen{ background-position: -145px 2px;}
@@ -70,10 +70,10 @@
 #logistics_box .logistics-box li label{ height:38px; line-height:38px; padding-right:38px; color:#000;}
 #logistics_box .op-btns{ float:none; margin:40px 0 0 290px;}
 .otips{ margin-top:20px; color:#3a78bf; padding-left:18px; position:relative;}
-.otips .ts{ background:url(../images/purebox/ecsc_icon.png) -566px -373px no-repeat; display:inline-block; width:14px; height:14px; vertical-align:middle; position:absolute; left:0; top:1px;}
+.otips .ts{ background:url(../img/ecsc_icon.png) -566px -373px no-repeat; display:inline-block; width:14px; height:14px; vertical-align:middle; position:absolute; left:0; top:1px;}
 
 #logistics_box .logistics-box li.item-selected{ background:#ec5051;}
-#logistics_box .logistics-box li.item-selected label{ color:#fff; background:url(../images/purebox/radioed-white-icon.png) no-repeat;}
+#logistics_box .logistics-box li.item-selected label{ color:#fff; background:url(../img/radioed-white-icon.png) no-repeat;}
 
 /*自提点、自提日期 start*/
 #picksite_box .picksite-box{ overflow:hidden; padding:20px 0  0 15px;}
@@ -99,7 +99,7 @@
 #time_box .picksite-time li label{ font-size:14px; height:38px; line-height:38px;}
 #time_box .picksite-time li label #riqi{ margin-right:6px;}
 #time_box .picksite-time li.item-selected{ background:#f68a00;}
-#time_box .picksite-time li.item-selected label{ color:#fff; background:url(../images/purebox/radioed-orange-white-icon.png) no-repeat;}
+#time_box .picksite-time li.item-selected label{ color:#fff; background:url(../img/radioed-orange-white-icon.png) no-repeat;}
 #time_box .picksite-time .op-btns{ margin:38px 0 0 290px;}
 #time_box .picksite-time .ztd_tishi{ margin-top:35px;}
 
@@ -177,7 +177,7 @@
 #noGoods .pb-ft{ padding:0; text-align:center;}
 
 /*优惠券弹框*/
-.success-icon{ background:url(../images/purebox/icon448.png) no-repeat; width:49px; height:49px; display:inline-block; *display:inline; *zoom:1; float:left;}
+.success-icon{ background:url(../img/icon448.png) no-repeat; width:49px; height:49px; display:inline-block; *display:inline; *zoom:1; float:left;}
 #coupons_dialog .m-icon{ background-position:0 0;}
 #coupons_dialog .i-icon{ background-position:-59px 0;}
 #coupons_dialog .success-icon{ float:left; margin:42px 0 0 50px;}
@@ -233,7 +233,7 @@
 .city-box-info .city-box ul li{ float:left;height: 25px;line-height: 25px;margin: 0 0 5px 0;width: 80px;overflow: hidden;}
 .city-box-info .city-box a{ display: inline-block;padding: 0 4px;height: 25px;line-height: 25px;}
 .city-box-info .city-box a:hover{ background: #f3f3f3;color: #ff6700;text-decoration: none;}
-.city-box-info .city-box a i{ display: inline-block;width: 12px;height: 12px;background:url(../images/purebox/dian.png) no-repeat;}
+.city-box-info .city-box a i{ display: inline-block;width: 12px;height: 12px;background:url(../img/dian.png) no-repeat;}
 
 .select-shop{ position:relative; overflow:hidden; height:340px; margin-top:20px;}
 .select-shop-box{ float:left; width:100%; height:100%;}
@@ -362,7 +362,7 @@
 #payDialog .pb-hd .pb-x{ top:18px;}
 #payDialog .pat{ padding:5px 0 15px 30px; color:#ff8f23; font-size:14px;}
 #payDialog .paydia-warp{ overflow:hidden; padding:0 30px; margin-top:15px;}
-#payDialog .paydia-warp i{ width:170px; height:170px; float:left; display:block; background:url(../images/purebox/paydialog.png) no-repeat;}
+#payDialog .paydia-warp i{ width:170px; height:170px; float:left; display:block; background:url(../img/paydialog.png) no-repeat;}
 #payDialog .paydia-warp .con{ float:left; margin-left:50px; width:240px;}
 #payDialog .paydia-warp .con-warp{ float:left; width:100%; padding-bottom:25px;}
 #payDialog .paydia-warp .con-success{ border-bottom:1px solid #d2d2d2;}

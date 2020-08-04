@@ -20,3 +20,6 @@ Route::rule('index','index/Index/index','get',['ext'=>'html|htm']);     // 正�
 
 //对栏目二级三级分类的路由
 Route::rule('category/:id','index/Category/index','get',['ext'=>'html|htm'],['id'=>'\d{1,3}']);     // 正则表达式\d{1,3}三个数组内
+
+Route::rule('flow1', 'index/Flow/flow1','get', ['ext'=>'html|htm']);
+Route::rule('goods/:id','index/Goods/index','get',['ext'=>'html|htm'],['id'=>'\d{1,3}']);     // 正则表达式\d{1,3}三个数组内

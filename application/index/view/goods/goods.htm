@@ -20,6 +20,13 @@
   <link rel="stylesheet" type="text/css" href="__index__/js/calendar/calendar.min.css"/>
   <link rel="stylesheet" type="text/css" href="__index__/js/perfect-scrollbar/perfect-scrollbar.min.css"/>
 </head>
+<!-- 自定义路径 -->
+<script type="text/javascript">
+  // <!-- 将添加到购物车的数据进行储存到cookie中地址 -->
+ var ajax_add_to_cart = "{:url('index/Flow/addToCart')}";
+// 购物车跳转地址
+  var cart_url = "{:url('index/Flow/flow1')}"
+</script>
 <body>
 {include file="common/head" /}
 <div class="full-main-n">
@@ -224,18 +231,6 @@
               {/volist}
               <!-- 单选属性结束 -->
 
-              <!-- 选中只有checked的元素 -->
-              <script type="text/javascript">
-                // 申明一个数组  
-                var goods_attr_ids = new Array();
-                $(":checked").each(function() {
-                  // 使用push方法,放到goods_attr_ids数组中
-                  goods_attr_ids.push($(this).val());
-                });
-                // JS中的转换为字符串
-                goods_attr_ids = goods_attr_ids.toString();
-                console.log(goods_attr_ids);
-              </script>
               <div class="summary-item is-number">
                 <div class="si-tit">数量</div>
                 <div class="si-warp">
@@ -256,8 +251,8 @@
               <div class="clear"></div>
             </div>
             <div class="choose-btns ml60 clearfix">
-              <a href="javascript:bool=0;addToCart(799)" data-type="0" class="btn-buynow" ectype="btn-buynow">立即购买</a>
-              <a href="javascript:bool=0;addToCartShowDiv(799)" class="btn-append" ectype="btn-append"><i
+              <a href="javascript:bool=0;addToCart({$goodsInfo.id})" data-type="0" class="btn-buynow" ectype="btn-buynow">立即购买</a>
+              <a href="javascript:bool=0;addToCartShowDiv({$goodsInfo.id})" class="btn-append" ectype="btn-append"><i
                   class="iconfont icon-carts"></i>加入购物车</a>
 
 
@@ -647,7 +642,7 @@
                       $(this).addClass('checkstatus').siblings().removeClass('checkstatus');
                       $(this).children('input').attr('checked',true);
                       $(this).siblings().children('input').attr('checked',false);
-                      return false;
+                      // return false;
                     });
                   </script>
                   <script type="text/javascript">
