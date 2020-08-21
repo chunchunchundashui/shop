@@ -111,20 +111,64 @@ class Cart extends Model
         return json(['error' => 0]);
     }
 
+//    计算下单的商品总价格
+    public function doGoodsPriceCount($doGoods)
+    {
+        $goodsTotalPrice = 0;
+        $goods = model('goods');
+//        三元运算符进行判断
+        $cart = isset($_COOKIE['cart']) ? unserialize($_COOKIE['cart']) : array();
+        if ($doGoods) {
+            $doGoodsArr = explode('@', $doGoods);
+            foreach ($cart as $k => $v) {
+                if (!in_array($k, $doGoodsArr)) {
+                    unset($cart[$k]);
+                }
+            }
+            $_cart = array();
+            foreach($cart as $k => $v) {
+                $arr = explode('-', $k);    // $arr[0]就是商品的id,如果存在第二个元素的话$arr[1]代表商品单选属性id字符串
+                // 获取折扣价格会员价
+                $memberPrice = $goods->getMemberPrice($arr[0]);
+                $_cart[$k]['member_price'] = $memberPrice;
+                if ($arr[1]) {
+                    $goodsAttrPrice = 0;
+                    $goodsAttrRes = db('goods_attr')->alias('ga')->field('ga.*,a.attr_name')->join('attr a', "ga.attr_id = a.id")->where('ga.id','in', $arr[1])->select();
+                    foreach ($goodsAttrRes as $k1 => $v1) {
+                        $goodsAttrPrice+=$v1['attr_price'];
+                    }
+                    $_cart[$k]['member_price'] += $goodsAttrPrice;
+                }
+                $goodsTotalPrice += $_cart[$k]['member_price']*$v;
+            }
+        }
+        return $goodsTotalPrice;
+    }
+
 //读取cookie获取购物车商品
-    public function getGoodsListInCart()
+    public function getGoodsListInCart($doGoods='')
     {
         $goods = model('goods');
 //        三元运算符进行判断
         $cart = isset($_COOKIE['cart']) ? unserialize($_COOKIE['cart']) : array();
+        if ($doGoods) {
+            $doGoodsArr = explode('@', $doGoods);
+            foreach ($cart as $k => $v) {
+                if (!in_array($k, $doGoodsArr)) {
+                        unset($cart[$k]);
+                }
+            }
+        }
         $_cart = array();
         foreach($cart as $k => $v) {
             $arr = explode('-', $k);    // $arr[0]就是商品的id,如果存在第二个元素的话$arr[1]代表商品单选属性id字符串
-            $goodsInfo = $goods->field('id,goods_name,sm_thumb')->find($arr[0]);
+            $goodsInfo = $goods->field('id,goods_name,sm_thumb,shop_price,markte_price')->find($arr[0]);
             // 获取折扣价格会员价
             $memberPrice = $goods->getMemberPrice($arr[0]);
             $_cart[$k]['goods_name'] = $goodsInfo['goods_name'];
             $_cart[$k]['sm_thumb'] = $goodsInfo['sm_thumb'];
+            $_cart[$k]['shop_price'] = $goodsInfo['shop_price'];
+            $_cart[$k]['market_price'] = $goodsInfo['markte_price'];
             $_cart[$k]['member_price'] = $memberPrice;
             $_cart[$k]['goods_num'] = $v;
             $_cart[$k]['goods_id'] = $goodsInfo['id'];
@@ -145,6 +189,7 @@ class Cart extends Model
                $goodsAttrStr = implode('<br />', $goodsAttrStr);
                $_cart[$k]['goods_attr_str'] = $goodsAttrStr;
                $_cart[$k]['member_price'] += $goodsAttrPrice;
+               $_cart[$k]['shop_price'] += $goodsAttrPrice;
             }
             $_cart[$k]['subtotal'] = $_cart[$k]['member_price']*$v;
         }

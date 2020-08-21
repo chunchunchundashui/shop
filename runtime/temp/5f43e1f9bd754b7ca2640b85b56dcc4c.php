@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:58:"D:\phpStudy\WWW\shop/application/index\view\flow\flow1.htm";i:1596556435;s:61:"D:\phpStudy\WWW\shop\application\index\view\common\footer.htm";i:1592318019;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:58:"D:\phpStudy\WWW\shop/application/index\view\flow\flow1.htm";i:1597246995;s:61:"D:\phpStudy\WWW\shop\application\index\view\common\footer.htm";i:1592318019;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -28,6 +28,8 @@
   var loginOut = "<?php echo url('member/user/loginOut'); ?>";
 //  删除成功跳转地址
   var flow1 = "<?php echo url('index/Flow/flow1'); ?>";
+  //实时更新添加到购物车中的商品数量
+  var cart_goods_num = "<?php echo url('index/Flow/cartGoodsNum'); ?>";
 </script>
 <!-- 引入异步登陆js -->
 <script type="text/javascript" src="/shop/public/static/index/js/login.js"></script>
@@ -103,7 +105,7 @@
 <div class="header header-cart">
   <div class="w w1200">
     <div class="logo">
-      <div class="logoImg"><a href="#"><img src="/shop/public/static/index/img/logo.png" /></a></div>
+      <div class="logoImg"><a href="<?php echo url('index/index/index'); ?>"><img src="/shop/public/static/index/img/logo.png" /></a></div>
       <div class="tit">购物车（<em ectype="cartNum">2</em>）</div>
     </div>
     <div class="dsc-search">
@@ -475,8 +477,8 @@
               <div class="toolbar-right">
                 <div class="comm-right">
                   <div class="btn-area">
-                    <form name="formCart" method="post" action="flow.php" onsubmit="return get_toCart();">
-                      <input name="goPay" type="submit" class="submit-btn" value="去支付"  id="go_pay" data-url="flow.php"/>
+                    <form name="formCart" method="post" action="<?php echo url('index/Flow/flow2'); ?>" onsubmit="return get_toCart();">
+                      <input name="goPay" type="submit" class="submit-btn" value="去支付" <?php if(!session('username')): ?> id="go_pay" <?php endif; ?>  data-url="flow123.php"/>
                       <input name="step" value="checkout" type="hidden" />
                       <input name="store_seller" value="" type="hidden" id="cart_store_seller" />
                       <input name="cart_value" id="cart_value" value="" type="hidden" />

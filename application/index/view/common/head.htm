@@ -7,7 +7,7 @@
 				</div>
 			</div><div class="txt-info" id="ECS_MEMBERZONE">
 
-			</div>
+		</div>
 		</div>
 		<ul class="quick-menu fr">
 			{volist name="navRes.top" id="top_nav"}
@@ -49,14 +49,11 @@
 		<div class="shopCart" data-ectype="dorpdown" id="ECS_CARTINFO" data-carteveval="0">
 
 			<div class="shopCart-con dsc-cm">
-				<a href="#">
+				<a href="{:url('index/Flow/flow1')}">
 					<i class="iconfont icon-carts"></i>
 					<span>我的购物车</span>
-					<em class="count cart_num">0</em>
+					<em id="cart_goods_num" class="count cart_num">0</em>
 				</a>
-			</div>
-			<div class="dorpdown-layer" ectype="dorpdownLayer">
-				<div class="prompt"><div class="nogoods"><b></b><span>购物车中还没有商品，赶紧选购吧！</span></div></div>
 			</div>
 
 			<script type="text/javascript">
@@ -164,6 +161,11 @@
               //  这个地址是在login.js下面
               var checkLogin = "{:url('member/account/checkLogin')}";
               var loginOut = "{:url('member/user/loginOut')}";
+              //实时更新添加到购物车中的商品数量
+              var cart_goods_num = "{:url('index/Flow/cartGoodsNum')}";
+
+              var pleace_login = "{:url('member/account/login')}";
+
 			</script>
 			<!-- 引入异步登陆js -->
 			<script type="text/javascript" src="__index__/js/login.js"></script>

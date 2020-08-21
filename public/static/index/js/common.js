@@ -46,12 +46,22 @@ function addToCartShowDiv(goodsId, script_name,goods_recommend,parentId)
 	  goods.area_id = area_id; 
   }
   //ecmoban模板堂 --zhuo 仓库ID end
+  // 申明一个数组  获取商品属性id并拼装字符串
+  var goods_attr = new Array();
+  $(":checked").each(function() {
+    // 使用push方法,放到goods_attr_ids数组中
+    goods_attr.push($(this).val());
+  });
+  // JS中的转换为字符串  完成字符串拼接
+  goods_attr = goods_attr.toString();
+  // console.log(goods_attr);
 
   goods.quick    = quick;
   goods.spec     = spec_arr;
   goods.goods_id = goodsId;
   goods.number   = number;
- 
+  goods.goods_attr = goods_attr;
+
   goods.script_name   = (typeof(script_name) == "undefined") ? 0 : parseInt(script_name);
   goods.goods_recommend   = (typeof(goods_recommend) == "undefined") ? '' : goods_recommend;
   goods.parent   = (typeof(parentId) == "undefined") ? 0 : parseInt(parentId);
@@ -82,7 +92,7 @@ function addToCartShowDiv(goodsId, script_name,goods_recommend,parentId)
 		  get_goods_prompt_message(json_languages.Product_spec_prompt);
 	  }
   }else{
-	  Ajax.call('flow.php?step=add_to_cart_showDiv', 'goods=' + $.toJSON(goods), addToCartShowDivResponse, 'POST', 'JSON');
+	  Ajax.call(ajax_add_to_cart, 'goods=' + $.toJSON(goods), addToCartShowDivResponse, 'POST', 'JSON');
   }
 }
 
@@ -112,12 +122,13 @@ function addToCartShowDivResponse(result)
   }
   else
   {
-    var cartInfo = document.getElementById('ECS_CARTINFO');
-    var cart_url = 'flow.php?step=cart';
-    if (cartInfo)
-    {
-      cartInfo.innerHTML = result.content;
-    }
+    cartGoodsNum();
+    // var cartInfo = document.getElementById('ECS_CARTINFO');
+    // var cart_url = 'flow.php?step=cart';
+    // if (cartInfo)
+    // {
+    //   cartInfo.innerHTML = result.content;
+    // }
 	
 	if(result.goods_recommend && result.goods_recommend !='')
 	{

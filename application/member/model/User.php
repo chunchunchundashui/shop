@@ -12,7 +12,7 @@ use think\Model;
 
 class User extends Model
 {
-    public function login($data,$type = 0)
+    public function login($data,$type = 0,$backAct="#")
     {
         $userData = array();
         // trim去除收尾的空格
@@ -40,6 +40,7 @@ class User extends Model
                 $arr = [
                     'error' => 0,
                     'message' => "",
+//                    'url' => $backAct,
                 ];
                 if ($type == 1) {
                     return $arr;

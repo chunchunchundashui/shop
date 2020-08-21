@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:63:"D:\phpStudy\WWW\shop/application/index\view\article\article.htm";i:1592225381;s:59:"D:\phpStudy\WWW\shop\application\index\view\common\head.htm";i:1594393129;s:64:"D:\phpStudy\WWW\shop\application\index\view\common\cate_left.htm";i:1592225018;s:61:"D:\phpStudy\WWW\shop\application\index\view\common\footer.htm";i:1592318019;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:63:"D:\phpStudy\WWW\shop/application/index\view\article\article.htm";i:1592225381;s:59:"D:\phpStudy\WWW\shop\application\index\view\common\head.htm";i:1597163051;s:64:"D:\phpStudy\WWW\shop\application\index\view\common\cate_left.htm";i:1592225018;s:61:"D:\phpStudy\WWW\shop\application\index\view\common\footer.htm";i:1592318019;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -149,10 +149,7 @@
 				<div class="dorpdown-layer">
 					<div class="scrollBody" id="scrollBody"></div>
 				</div>
-			</div>            <div class="txt-info" id="ECS_MEMBERZONE">
-
-			<a href="#" class="link-login red">请登录</a>
-			<a href="#" class="link-regist">免费注册</a>
+			</div><div class="txt-info" id="ECS_MEMBERZONE">
 
 		</div>
 		</div>
@@ -169,7 +166,7 @@
 <div class="header">
 	<div class="w <?php if(isset($show_right)) { echo 'w1200';}else { echo 'w1390';} ?>">
 		<div class="logo">
-			<div class="logoImg"><a href="#"><img src="/shop/public/static/index/img/logo.png" /></a></div>
+			<div class="logoImg"><a href="<?php echo url('index/index/index'); ?>"><img src="/shop/public/static/index/img/logo.png" /></a></div>
 		</div>
 		<div class="dsc-search">
 			<div class="form">
@@ -196,24 +193,21 @@
 		<div class="shopCart" data-ectype="dorpdown" id="ECS_CARTINFO" data-carteveval="0">
 
 			<div class="shopCart-con dsc-cm">
-				<a href="#">
+				<a href="<?php echo url('index/Flow/flow1'); ?>">
 					<i class="iconfont icon-carts"></i>
 					<span>我的购物车</span>
-					<em class="count cart_num">0</em>
+					<em id="cart_goods_num" class="count cart_num">0</em>
 				</a>
-			</div>
-			<div class="dorpdown-layer" ectype="dorpdownLayer">
-				<div class="prompt"><div class="nogoods"><b></b><span>购物车中还没有商品，赶紧选购吧！</span></div></div>
 			</div>
 
 			<script type="text/javascript">
 
 
 
-				// ajax异步获取顶级分类下的子分类,品牌,频道等相关信息在右侧菜单显示
-				var ajax_cate_url = "<?php echo url('index/Category/getCateInfo'); ?>";
-				// 待加载中的图片路径
-				var load_img = "/shop/public/static/index/img/loadGoods.gif";
+              // ajax异步获取顶级分类下的子分类,品牌,频道等相关信息在右侧菜单显示
+              var ajax_cate_url = "<?php echo url('index/Category/getCateInfo'); ?>";
+              // 待加载中的图片路径
+              var load_img = "/shop/public/static/index/img/loadGoods.gif";
 
 
               function changenum(rec_id, diff, warehouse_id, area_id)
@@ -302,9 +296,25 @@
                 $(".pop_panel").html(result.content);
                 tbplHeigth();
               }
-			</script>        </div>
+			</script>
+			<!--ajax异步刷新判断用户是否勾选默认登陆 -->
+			<script src="/shop/public/static/lib/layer/layer.js"></script>
+			<script>
+              //  这个地址是在login.js下面
+              var checkLogin = "<?php echo url('member/account/checkLogin'); ?>";
+              var loginOut = "<?php echo url('member/user/loginOut'); ?>";
+              //实时更新添加到购物车中的商品数量
+              var cart_goods_num = "<?php echo url('index/Flow/cartGoodsNum'); ?>";
+
+              var pleace_login = "<?php echo url('member/account/login'); ?>";
+
+			</script>
+			<!-- 引入异步登陆js -->
+			<script type="text/javascript" src="/shop/public/static/index/js/login.js"></script>
+		</div>
 	</div>
 </div>
+
 <div class="nav dsc-zoom">
 	<!-- 调整头部大小从cate中声明一个变量 -->
 	<div class="w <?php if(isset($show_right)) { echo 'w1200';}else { echo 'w1390';} ?>">

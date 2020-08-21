@@ -1,0 +1,22 @@
+下单需要建三个表
+
+订单表, 存放订单的基本信息
+order
+id  out_trade_no    user_id    goods_total_price   order_total_price      payment       distribution    order_status    pay_status      post_status
+     订单编号     下单用户id      商品总价            订单总价           支付方式         配送方式        订单状态        支付的状态       配送的状态
+post_spent
+运费
+
+
+订单商品表, 订单和商品的对应关系
+order_goods
+id  goods_id  goods_name  goods_price  goods_market_price   goods_attr_id        goods_attr_str             goods_num         order_id
+      商品id   商品名称   商品本店价格   商品市场价价格    商品属性id字符串     商品属性文本   购买商品的数量    所属订单:多个商品对应多个id
+
+
+地址表, 收货人
+address
+
+id     user_id         name  county   province city  district      adress     phone      tel        zipcode    sign_building     best_time          email
+    收货人对应的id     姓名   国家      省      市      县        详细地址    电话号码    固定电话     邮编    地址别名           最佳送货时间      邮箱
+

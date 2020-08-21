@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:59:"D:\phpStudy\WWW\shop/application/index\view\goods\goods.htm";i:1596462775;s:59:"D:\phpStudy\WWW\shop\application\index\view\common\head.htm";i:1594995753;s:60:"D:\phpStudy\WWW\shop\application\index\view\common\right.htm";i:1591505509;s:61:"D:\phpStudy\WWW\shop\application\index\view\common\footer.htm";i:1592318019;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:59:"D:\phpStudy\WWW\shop/application/index\view\goods\goods.htm";i:1596637752;s:59:"D:\phpStudy\WWW\shop\application\index\view\common\head.htm";i:1597163051;s:60:"D:\phpStudy\WWW\shop\application\index\view\common\right.htm";i:1591505509;s:61:"D:\phpStudy\WWW\shop\application\index\view\common\footer.htm";i:1592318019;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -38,7 +38,7 @@
 				</div>
 			</div><div class="txt-info" id="ECS_MEMBERZONE">
 
-			</div>
+		</div>
 		</div>
 		<ul class="quick-menu fr">
 			<?php if(is_array($navRes['top']) || $navRes['top'] instanceof \think\Collection || $navRes['top'] instanceof \think\Paginator): $i = 0; $__LIST__ = $navRes['top'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$top_nav): $mod = ($i % 2 );++$i;?>
@@ -80,14 +80,11 @@
 		<div class="shopCart" data-ectype="dorpdown" id="ECS_CARTINFO" data-carteveval="0">
 
 			<div class="shopCart-con dsc-cm">
-				<a href="#">
+				<a href="<?php echo url('index/Flow/flow1'); ?>">
 					<i class="iconfont icon-carts"></i>
 					<span>我的购物车</span>
-					<em class="count cart_num">0</em>
+					<em id="cart_goods_num" class="count cart_num">0</em>
 				</a>
-			</div>
-			<div class="dorpdown-layer" ectype="dorpdownLayer">
-				<div class="prompt"><div class="nogoods"><b></b><span>购物车中还没有商品，赶紧选购吧！</span></div></div>
 			</div>
 
 			<script type="text/javascript">
@@ -193,6 +190,11 @@
               //  这个地址是在login.js下面
               var checkLogin = "<?php echo url('member/account/checkLogin'); ?>";
               var loginOut = "<?php echo url('member/user/loginOut'); ?>";
+              //实时更新添加到购物车中的商品数量
+              var cart_goods_num = "<?php echo url('index/Flow/cartGoodsNum'); ?>";
+
+              var pleace_login = "<?php echo url('member/account/login'); ?>";
+
 			</script>
 			<!-- 引入异步登陆js -->
 			<script type="text/javascript" src="/shop/public/static/index/js/login.js"></script>
@@ -1010,7 +1012,7 @@
           <div class="title"><h3>提示</h3><a href="javascript:loadingClose();" title="关闭" class="loading-x">X</a></div>
         </div>
         <div class="btns">
-          <a href="flow.php" class="ecsc-btn-mini ecsc-btn-orange">去付款</a>
+          <a href="<?php echo url('index/Flow/flow1'); ?>" class="ecsc-btn-mini ecsc-btn-orange">去付款</a>
           <a href="javascript:loadingClose();" class="ecsc-btn-mini">继续购物</a>
         </div>
       </div>

@@ -1190,7 +1190,7 @@ $(function(){
       });
     }else{
       var back_url = "flow.php";
-      $.notLogin("get_ajax_content.php?act=get_login_dialog",back_url);
+      $.notLogin("http://localhost/shop/index.php/index/Flow/loginDailog",back_url);
     }
   });
 
@@ -1198,7 +1198,7 @@ $(function(){
   //购物车未登录结算弹出登录框
   $("#go_pay").click(function(){
     var back_url=$(this).data("url");
-    $.notLogin("get_ajax_content.php?act=get_login_dialog",back_url);
+    $.notLogin("http://localhost/shop/index.php/index/Flow/loginDailog",back_url);
     return false;
   });
 
