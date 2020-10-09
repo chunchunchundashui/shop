@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6b62b5e3-6d81-40ab-af62-db9267d00904" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/workerman/workerman" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-image" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-captcha" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-helper" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-migration" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-worker" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-mongo" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-oracle" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-installer" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-queue" />
+      <path value="$PROJECT_DIR$/vendor/PHPExcel-1.8/Classes" />
+      <path value="$PROJECT_DIR$/vendor/PHPExcel-1.8/Documentation" />
+      <path value="$PROJECT_DIR$/vendor/PHPExcel-1.8/Examples" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1gkvqvC7U05kUxuuMlGNdvXHXU2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/admin/model" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phpStudy\WWW\shop\application\admin\model" />
+      <recent name="D:\phpStudy\WWW\shop\application\admin\view" />
+      <recent name="D:\phpStudy\WWW\shop\application\admin\controller" />
+      <recent name="D:\phpStudy\WWW\shop\application\admin\view\order" />
+      <recent name="D:\phpStudy\WWW\shop\application\common\validate" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b62b5e3-6d81-40ab-af62-db9267d00904" name="Default Changelist" comment="" />
+      <created>1598671598335</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598671598335</updated>
+      <workItem from="1598671600944" duration="39000" />
+      <workItem from="1598671670605" duration="19000" />
+      <workItem from="1599137955625" duration="8423000" />
+      <workItem from="1599481563618" duration="1795000" />
+      <workItem from="1599484679554" duration="6175000" />
+      <workItem from="1599659900382" duration="3438000" />
+      <workItem from="1599879199496" duration="1271000" />
+      <workItem from="1599971879735" duration="1112000" />
+      <workItem from="1600005489941" duration="1259000" />
+      <workItem from="1600164621373" duration="7688000" />
+      <workItem from="1600603518549" duration="50000" />
+      <workItem from="1600607026587" duration="2967000" />
+      <workItem from="1600783439257" duration="3718000" />
+      <workItem from="1600864870656" duration="12915000" />
+      <workItem from="1600953066912" duration="7116000" />
+      <workItem from="1600960700880" duration="4396000" />
+      <workItem from="1601208950447" duration="10495000" />
+      <workItem from="1601297384182" duration="6579000" />
+      <workItem from="1601633419710" duration="523000" />
+      <workItem from="1602245405385" duration="3630000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Deployment" timestamp="1600867657787">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1600867657787" />
+    <state x="536" y="165" key="#SSH_Configurations" timestamp="1599880018010">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="536" y="165" key="#SSH_Configurations/0.0.1920.1040@0.0.1920.1040" timestamp="1599880018010" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601633799797">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601633799797" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1599661047044">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599661047044" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1598671686951">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598671686951" />
+    <state x="714" y="240" key="NewPhpClassDialog" timestamp="1601302144801">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="714" y="240" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601302144801" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1600603569704">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600603569704" />
+    <state x="681" y="261" width="540" height="524" key="StructurePopup" timestamp="1599972030528">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="681" y="261" width="540" height="524" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1599972030528" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1600165202989">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1600165202989" />
+    <state x="814" y="418" key="WebDeployment.AddServerDialog.v.1" timestamp="1599137969740">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="814" y="418" key="WebDeployment.AddServerDialog.v.1/0.0.1920.1040@0.0.1920.1040" timestamp="1599137969740" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599661047044">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599661047044" />
+    <state x="662" y="223" width="596" height="594" key="find.popup" timestamp="1600866968133">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="223" width="596" height="594" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600866968133" />
+    <state x="775" y="250" key="ftp.server.browser" timestamp="1600867656238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="775" y="250" key="ftp.server.browser/0.0.1920.1040@0.0.1920.1040" timestamp="1600867656238" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1600611050786">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600611050785" />
+    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup" timestamp="1601301753997">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601301753997" />
+    <state x="769" y="387" key="webDeployment.PermissionsDialog" timestamp="1599138524871">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="756" y="257" key="webDeployment.PermissionsDialog.Tabs" timestamp="1601301622174">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="756" y="257" key="webDeployment.PermissionsDialog.Tabs/0.0.1920.1040@0.0.1920.1040" timestamp="1601301622174" />
+    <state x="769" y="387" key="webDeployment.PermissionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599138524871" />
+  </component>
+</project>

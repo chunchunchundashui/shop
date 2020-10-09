@@ -1,0 +1,2375 @@
+---------------------------------------------------------------
+[ 2020-09-27T20:15:53+08:00 ] 0.0.0.0 GET localhost/shop/index.php/goods/39.html
+[运行时间：10.188826s] [吞吐率：0.10req/s] [内存消耗：2,637.84kb] [文件加载：58]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Goods',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '39',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Goods->index[ D:\phpStudy\WWW\shop\application\index\controller\Goods.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\goods\goods.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'show_right',
+  6 => 'goodsInfo',
+  7 => 'goodsPhotoRes',
+  8 => 'radioArr',
+  9 => 'uniArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.226985s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_cate` [ RunTime:1.064634s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_cate` WHERE  `cate_type` = 3 ORDER BY `id` ASC [ RunTime:0.045448s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002213s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 4 [ RunTime:0.073484s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 52 [ RunTime:0.000649s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 62 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 63 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `tp_article` WHERE  `cate_id` = 3 [ RunTime:0.001335s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.001484s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` ORDER BY `sort` DESC [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_conf` [ RunTime:0.001100s ]
+[ sql ] [ SQL ] SELECT `ename`,`value` FROM `tp_conf` [ RunTime:0.036063s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001177s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.095001s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001981s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 39 LIMIT 1 [ RunTime:0.089722s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_photo` [ RunTime:0.003898s ]
+[ sql ] [ SQL ] SELECT `sm_photo`,`mid_photo`,`big_photo`,`og_photo` FROM `tp_goods_photo` WHERE  `goods_id` = 39 [ RunTime:0.039688s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.001304s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name`,`a`.`attr_type` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`goods_id` = '39' [ RunTime:0.025234s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:15:56+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/goods/ajaxgetmemberprice.html
+[运行时间：0.316402s] [吞吐率：3.16req/s] [内存消耗：2,500.70kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'ajaxgetmemberprice',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/goods/39.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '11',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goods_id' => '39',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Goods->ajaxGetMemberPrice[ D:\phpStudy\WWW\shop\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004044s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.005880s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001678s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 39 LIMIT 1 [ RunTime:0.000512s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:15:57+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/cartgoodsnum.html
+[运行时间：0.090397s] [吞吐率：11.06req/s] [内存消耗：2,510.55kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cartgoodsnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/goods/39.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->cartGoodsNum[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002090s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002824s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000584s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000481s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:15:57+08:00 ] 0.0.0.0 GET localhost/shop/index.php/goods/favicon.ico
+[运行时间：0.150429s] [吞吐率：6.65req/s] [内存消耗：1,139.18kb] [文件加载：35]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'goods',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/goods/39.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-09-27T20:15:57+08:00 ] 0.0.0.0 GET localhost/shop/index.php/member/account/checklogin.html
+[运行时间：0.290646s] [吞吐率：3.44req/s] [内存消耗：2,559.77kb] [文件加载：58]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/goods/39.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ D:\phpStudy\WWW\shop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003333s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001336s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.001096s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_user` WHERE  `username` = 'admin' OR `email` = 'admin'  OR `mobile_phone` = 'admin' LIMIT 1 [ RunTime:0.138798s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_level` [ RunTime:0.000932s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_level` WHERE  `bom_point` <= 15200  AND `top_point` >= 15200 LIMIT 1 [ RunTime:0.000731s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:16:27+08:00 ] 0.0.0.0 GET localhost/shop/index.php
+[运行时间：0.342313s] [吞吐率：2.92req/s] [内存消耗：2,960.90kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\shop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\index\index.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'show_right',
+  6 => 'show_nav',
+  7 => 'indexGoodsRes',
+  8 => 'anment',
+  9 => 'salesRes',
+  10 => 'alterImg',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001905s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001216s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_alternate_img` [ RunTime:0.003070s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_alternate_img` WHERE  `status` = 1 ORDER BY `sort` DESC [ RunTime:0.000701s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.001201s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 66 LIMIT 3 [ RunTime:0.000999s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 72 LIMIT 3 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_rec_item` [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 7 [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001253s ]
+[ sql ] [ SQL ] SELECT `id`,`mid_thumb`,`goods_name`,`shop_price`,`markte_price` FROM `tp_goods` WHERE  `id` IN (21,30,34,36,35,29,33,32,31,28,26,24,25,20,7,40) LIMIT 20 [ RunTime:0.045704s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.001392s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 0 LIMIT 1 [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 0 LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 0 LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 0 LIMIT 1 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 0 LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 0 LIMIT 1 [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 0 LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 0 LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 0 LIMIT 1 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 0 LIMIT 1 [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 0 LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 0 LIMIT 1 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 37 LIMIT 1 [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 37 LIMIT 1 [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 37 LIMIT 1 [ RunTime:0.000242s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 37 LIMIT 1 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 37 LIMIT 1 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 37 LIMIT 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 37 LIMIT 1 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 37 LIMIT 1 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 37 LIMIT 1 [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 37 LIMIT 1 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 37 LIMIT 1 [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 37 LIMIT 1 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (44,45,46,38)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000649s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000698s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (40,41,42,43,39)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 3 [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (38,44,45,46,39,40,41,42,43,37)  AND `id` IN (17,20,22,23,24,25,26,27,7,28,29,30,31,35,21,39,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category_brands` [ RunTime:0.001170s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_brands` WHERE  `category_id` = 37 LIMIT 1 [ RunTime:0.000632s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.001106s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 27 LIMIT 1 [ RunTime:0.030516s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category_ad` [ RunTime:0.000898s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_ad` WHERE  `category_id` = 37 [ RunTime:0.023116s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000445s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 32 LIMIT 1 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 32 LIMIT 1 [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 32 LIMIT 1 [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 32 LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 32 LIMIT 1 [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 32 LIMIT 1 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 32 LIMIT 1 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 32 LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 32 LIMIT 1 [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 32 LIMIT 1 [ RunTime:0.000653s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 32 LIMIT 1 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 32 LIMIT 1 [ RunTime:0.000419s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (48,49,50,47)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (34,35,36,33)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 3 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (33,34,35,36,47,48,49,50,32)  AND `id` IN (17,20,22,23,24,25,26,27,7,28,29,30,31,35,21,39,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_brands` WHERE  `category_id` = 32 LIMIT 1 [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 27 LIMIT 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_ad` WHERE  `category_id` = 32 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 15 LIMIT 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 15 LIMIT 1 [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 15 LIMIT 1 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 15 LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 15 LIMIT 1 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 15 LIMIT 1 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 15 LIMIT 1 [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 15 LIMIT 1 [ RunTime:0.000510s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 15 LIMIT 1 [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 15 LIMIT 1 [ RunTime:0.000727s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 15 LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 15 LIMIT 1 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (18,19,20,21,22,23,24,16)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (25,26,27,17)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (29,30,31,28)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 3 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (16,18,19,20,21,22,23,24,17,25,26,27,28,29,30,31,15)  AND `id` IN (17,20,22,23,24,25,26,27,7,28,29,30,31,35,21,39,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_brands` WHERE  `category_id` = 15 LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_ad` WHERE  `category_id` = 15 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 54 LIMIT 1 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 54 LIMIT 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 54 LIMIT 1 [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 54 LIMIT 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 54 LIMIT 1 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 54 LIMIT 1 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 54 LIMIT 1 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 54 LIMIT 1 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 54 LIMIT 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 54 LIMIT 1 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 54 LIMIT 1 [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 54 LIMIT 1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (56,55)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 3 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (55,56,54)  AND `id` IN (17,20,22,23,24,25,26,27,7,28,29,30,31,35,21,39,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_brands` WHERE  `category_id` = 54 LIMIT 1 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_ad` WHERE  `category_id` = 54 [ RunTime:0.000295s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:16:28+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/cartgoodsnum.html
+[运行时间：0.043735s] [吞吐率：22.86req/s] [内存消耗：2,510.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cartgoodsnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->cartGoodsNum[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001309s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002846s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000798s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000450s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:16:28+08:00 ] 0.0.0.0 GET localhost/shop/index.php/member/account/checklogin.html
+[运行时间：0.052510s] [吞吐率：19.04req/s] [内存消耗：2,517.88kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ D:\phpStudy\WWW\shop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001840s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001608s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000717s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000627s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000636s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:16:29+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/brand/lst.html
+[运行时间：0.260759s] [吞吐率：3.83req/s] [内存消耗：2,066.98kb] [文件加载：51]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'brand',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Brand->lst[ D:\phpStudy\WWW\shop\application\index\controller\Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011267s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.004334s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_brand` LIMIT 1 [ RunTime:0.052901s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` ORDER BY `id` DESC LIMIT 0,17 [ RunTime:0.000562s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:16:31+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin
+[运行时间：0.148035s] [吞吐率：6.76req/s] [内存消耗：1,395.37kb] [文件加载：42]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\shop\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\index\index.htm [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-09-27T20:16:37+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html
+[运行时间：0.114990s] [吞吐率：8.70req/s] [内存消耗：2,406.16kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003122s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001093s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `status` = '1' LIMIT 1 [ RunTime:0.027332s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.001060s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:17:18+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=posted
+[运行时间：0.044511s] [吞吐率：22.47req/s] [内存消耗：2,392.83kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'posted',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009900s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.002852s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `post_status` = 1  AND `status` = '1' LIMIT 1 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `post_status` = 1  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000491s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:17:20+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_post
+[运行时间：0.049802s] [吞吐率：20.08req/s] [内存消耗：2,407.73kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=posted',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_post',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010939s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.002446s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `post_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `post_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000527s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:17:23+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_post&page=2
+[运行时间：0.044594s] [吞吐率：22.42req/s] [内存消耗：2,397.44kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_post',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_post',
+  'page' => '2',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010390s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.003826s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `post_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `post_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 6,6 [ RunTime:0.000622s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:17:26+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_post&page=1
+[运行时间：0.047081s] [吞吐率：21.24req/s] [内存消耗：2,407.77kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_post&page=2',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_post',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010722s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.004550s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `post_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000532s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `post_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.001336s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:17:27+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay
+[运行时间：0.050536s] [吞吐率：19.79req/s] [内存消耗：2,407.82kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_post&page=1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010897s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.002840s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000866s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:17:28+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay
+[运行时间：0.041322s] [吞吐率：24.20req/s] [内存消耗：2,408.01kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_post&page=1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010397s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.000957s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000857s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:24:09+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay
+[运行时间：0.272580s] [吞吐率：3.67req/s] [内存消耗：2,562.15kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_post&page=1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006710s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.046674s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.016413s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000570s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:48:01+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay
+[运行时间：0.065178s] [吞吐率：15.34req/s] [内存消耗：2,562.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_post&page=1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007239s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.004757s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.014682s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.001159s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:48:08+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=posted
+[运行时间：0.035695s] [吞吐率：28.02req/s] [内存消耗：2,393.23kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'posted',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003404s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001216s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `post_status` = 1  AND `status` = '1' LIMIT 1 [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `post_status` = 1  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000585s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:48:11+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay
+[运行时间：0.046102s] [吞吐率：21.69req/s] [内存消耗：2,408.21kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=posted',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010657s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001767s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000456s ]
+---------------------------------------------------------------
+[ 2020-09-27T20:48:14+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=got_goods
+[运行时间：0.035230s] [吞吐率：28.38req/s] [内存消耗：2,390.63kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'got_goods',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001975s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001087s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `post_status` = 2  AND `status` = '1' LIMIT 1 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `post_status` = 2  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000526s ]
+---------------------------------------------------------------
+[ 2020-09-27T21:42:17+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=got_goods
+[运行时间：0.051044s] [吞吐率：19.59req/s] [内存消耗：2,404.74kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'got_goods',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012314s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.003509s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `post_status` = 2  AND `status` = '1' LIMIT 1 [ RunTime:0.001260s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `post_status` = 2  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000569s ]
+---------------------------------------------------------------
+[ 2020-09-27T21:42:29+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=got_goods
+[运行时间：0.044562s] [吞吐率：22.44req/s] [内存消耗：2,404.74kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'got_goods',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011020s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001239s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `post_status` = 2  AND `status` = '1' LIMIT 1 [ RunTime:0.000605s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `post_status` = 2  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000537s ]
+---------------------------------------------------------------
+[ 2020-09-27T21:42:30+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay
+[运行时间：0.047265s] [吞吐率：21.16req/s] [内存消耗：2,422.27kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=got_goods',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010713s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.003881s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000747s ]
+---------------------------------------------------------------
+[ 2020-09-27T21:42:33+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/exportorders.html?status=no_pay
+[运行时间：0.072411s] [吞吐率：13.81req/s] [内存消耗：1,378.84kb] [文件加载：43]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [2]include(D:\phpStudy\WWW\shop/application/../phpexcel/PHPexcel.php): failed to open stream: No such file or directory[D:\phpStudy\WWW\shop\application\admin\controller\Order.php:73]
+---------------------------------------------------------------
+[ 2020-09-27T21:45:35+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/exportorders.html?status=no_pay
+[运行时间：0.490213s] [吞吐率：2.04req/s] [内存消耗：3,867.17kb] [文件加载：86]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010271s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001235s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC [ RunTime:0.001292s ]
+[ error ] [8]未定义变量: sheet[D:\phpStudy\WWW\shop\application\admin\controller\Order.php:114]
+---------------------------------------------------------------
+[ 2020-09-27T21:48:23+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay
+[运行时间：0.045422s] [吞吐率：22.02req/s] [内存消耗：2,423.09kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=got_goods',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003214s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001237s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000555s ]
+---------------------------------------------------------------
+[ 2020-09-27T21:48:25+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/exportorders.html?status=no_pay
+[运行时间：0.094739s] [吞吐率：10.56req/s] [内存消耗：3,954.05kb] [文件加载：88]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010148s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001416s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC [ RunTime:0.000702s ]
+[ error ] [0]Invalid cell coordinate A[D:\phpStudy\WWW\shop\plus\PHPexcel\PHPExcel\Cell.php:594]
+---------------------------------------------------------------
+[ 2020-09-27T21:49:24+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay
+[运行时间：0.051409s] [吞吐率：19.45req/s] [内存消耗：2,423.05kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=got_goods',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010322s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001529s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000610s ]
+---------------------------------------------------------------
+[ 2020-09-27T21:49:25+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/exportorders.html?status=no_pay
+[运行时间：0.077985s] [吞吐率：12.82req/s] [内存消耗：3,954.01kb] [文件加载：88]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012322s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001092s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC [ RunTime:0.001144s ]
+[ error ] [0]Invalid cell coordinate A[D:\phpStudy\WWW\shop\plus\PHPexcel\PHPExcel\Cell.php:594]
+---------------------------------------------------------------
+[ 2020-09-27T21:50:04+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/exportorders.html?status=no_pay
+[运行时间：0.187978s] [吞吐率：5.32req/s] [内存消耗：3,951.85kb] [文件加载：88]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010403s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001016s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC [ RunTime:0.000592s ]
+[ error ] [0]类的属性不存在:app\admin\model\Order->username[D:\phpStudy\WWW\shop\thinkphp\library\think\Model.php:626]
+---------------------------------------------------------------
+[ 2020-09-27T21:50:57+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay
+[运行时间：0.037564s] [吞吐率：26.62req/s] [内存消耗：2,423.13kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=got_goods',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002594s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001903s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000829s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000654s ]
+---------------------------------------------------------------
+[ 2020-09-27T21:54:37+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay
+[运行时间：0.052428s] [吞吐率：19.07req/s] [内存消耗：2,423.13kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=got_goods',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010987s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001422s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000863s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000638s ]
+---------------------------------------------------------------
+[ 2020-09-27T21:54:38+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/exportorders.html?status=no_pay
+[运行时间：0.068566s] [吞吐率：14.58req/s] [内存消耗：3,952.66kb] [文件加载：88]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001986s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001618s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC [ RunTime:0.000661s ]
+[ error ] [0]类的属性不存在:app\admin\model\Order->username[D:\phpStudy\WWW\shop\thinkphp\library\think\Model.php:626]
+---------------------------------------------------------------
+[ 2020-09-27T22:02:03+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/exportorders.html?status=no_pay
+[运行时间：0.206417s] [吞吐率：4.84req/s] [内存消耗：5,001.31kb] [文件加载：110]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003332s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001669s ]
+[ sql ] [ SQL ] SELECT `o`.*,`u`.`username` FROM `tp_order` `o` INNER JOIN `tp_user` `u` ON `o`.`user_id`=`u`.`id` WHERE  `o`.`pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC [ RunTime:0.001020s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:02:07+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay
+[运行时间：0.051976s] [吞吐率：19.24req/s] [内存消耗：2,423.19kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=got_goods',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010077s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001260s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000667s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:02:50+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay&page=2
+[运行时间：0.045127s] [吞吐率：22.16req/s] [内存消耗：2,410.31kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+  'page' => '2',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009826s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001488s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 6,6 [ RunTime:0.001296s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:02:51+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay&page=1
+[运行时间：0.035378s] [吞吐率：28.27req/s] [内存消耗：2,423.03kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay&page=2',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+  'page' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001378s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001124s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000550s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:03:24+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=pay
+[运行时间：0.058522s] [吞吐率：17.09req/s] [内存消耗：2,407.90kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay&page=1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009836s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.008316s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 1  AND `status` = '1' LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 1  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000605s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:03:25+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=no_pay
+[运行时间：0.048787s] [吞吐率：20.50req/s] [内存消耗：2,422.98kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'no_pay',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011744s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.002269s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `pay_status` = 0  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000589s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:03:27+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html
+[运行时间：0.038010s] [吞吐率：26.31req/s] [内存消耗：2,421.38kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=no_pay',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001617s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.000937s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `status` = '1' LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000579s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:03:31+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?page=2
+[运行时间：0.035996s] [吞吐率：27.78req/s] [内存消耗：2,413.98kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002489s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.000955s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `status` = '1' LIMIT 1 [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `status` = '1' ORDER BY `id` DESC LIMIT 6,6 [ RunTime:0.000592s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:03:33+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?page=1
+[运行时间：0.035424s] [吞吐率：28.23req/s] [内存消耗：2,422.11kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?page=2',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002623s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.002415s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `status` = '1' LIMIT 1 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000471s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:03:35+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/exportorders.html?status=all
+[运行时间：0.195173s] [吞吐率：5.12req/s] [内存消耗：5,012.02kb] [文件加载：110]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?page=1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'all',
+)
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011538s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001058s ]
+[ sql ] [ SQL ] SELECT `o`.*,`u`.`username` FROM `tp_order` `o` INNER JOIN `tp_user` `u` ON `o`.`user_id`=`u`.`id` WHERE  `o`.`post_status` > -1  AND `status` = '1' ORDER BY `id` DESC [ RunTime:0.075881s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:17:35+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?page=1
+[运行时间：0.050376s] [吞吐率：19.85req/s] [内存消耗：2,422.74kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?page=2',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003320s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.003830s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `status` = '1' LIMIT 1 [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000676s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:17:36+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=got_goods
+[运行时间：0.043912s] [吞吐率：22.77req/s] [内存消耗：2,405.97kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?page=1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'got_goods',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010005s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.000886s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `post_status` = 2  AND `status` = '1' LIMIT 1 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `post_status` = 2  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000495s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:17:37+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=posted
+[运行时间：0.050588s] [吞吐率：19.77req/s] [内存消耗：2,408.59kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=got_goods',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'posted',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010938s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.002894s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `post_status` = 1  AND `status` = '1' LIMIT 1 [ RunTime:0.000857s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `post_status` = 1  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000522s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:17:38+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/exportorders.html?status=posted
+[运行时间：0.087371s] [吞吐率：11.45req/s] [内存消耗：3,953.13kb] [文件加载：90]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=posted',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'posted',
+)
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010844s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001059s ]
+[ sql ] [ SQL ] SELECT `o`.*,`u`.`username` FROM `tp_order` `o` INNER JOIN `tp_user` `u` ON `o`.`user_id`=`u`.`id` WHERE  `o`.`post_status` = 1  AND `status` = '1' ORDER BY `id` DESC [ RunTime:0.004342s ]
+[ error ] [8]A non well formed numeric value encountered[D:\phpStudy\WWW\shop\application\admin\controller\Order.php:119]
+---------------------------------------------------------------
+[ 2020-09-27T22:18:17+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/lst.html?status=posted
+[运行时间：0.053208s] [吞吐率：18.79req/s] [内存消耗：2,408.73kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=got_goods',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'posted',
+)
+[ info ] [ RUN ] app\admin\controller\Order->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\lst.htm [ array (
+  0 => 'lst',
+  1 => 'orderStatus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009856s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001033s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order` WHERE  `post_status` = 1  AND `status` = '1' LIMIT 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order` WHERE  `post_status` = 1  AND `status` = '1' ORDER BY `id` DESC LIMIT 0,6 [ RunTime:0.000504s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:18:19+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/exportorders.html?status=posted
+[运行时间：0.122327s] [吞吐率：8.17req/s] [内存消耗：4,979.21kb] [文件加载：110]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'exportorders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=posted',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'status' => 'posted',
+)
+[ info ] [ RUN ] app\admin\controller\Order->exportOrders[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010363s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001115s ]
+[ sql ] [ SQL ] SELECT `o`.*,`u`.`username` FROM `tp_order` `o` INNER JOIN `tp_user` `u` ON `o`.`user_id`=`u`.`id` WHERE  `o`.`post_status` = 1  AND `status` = '1' ORDER BY `id` DESC [ RunTime:0.000892s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:19:12+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/detail/id/15.html
+[运行时间：0.415251s] [吞吐率：2.41req/s] [内存消耗：2,132.60kb] [文件加载：49]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=posted',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '15',
+)
+[ info ] [ RUN ] app\admin\controller\Order->detail[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\detail.htm [ array (
+  0 => 'orderInfo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012417s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001923s ]
+[ sql ] [ SQL ] SELECT `o`.*,`u`.`username` FROM `tp_order` `o` INNER JOIN `tp_user` `u` ON `o`.`user_id`=`u`.`id` WHERE  `o`.`id` = '15' LIMIT 1 [ RunTime:0.001031s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:19:12+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/detail/id/__PLUS__/ueditor/ueditor.config.js
+[运行时间：0.055051s] [吞吐率：18.16req/s] [内存消耗：2,130.10kb] [文件加载：49]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/detail/id/15.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '__PLUS__',
+  'ueditor' => 'ueditor.config.js',
+)
+[ info ] [ RUN ] app\admin\controller\Order->detail[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\detail.htm [ array (
+  0 => 'orderInfo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012419s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.001059s ]
+[ sql ] [ SQL ] SELECT `o`.*,`u`.`username` FROM `tp_order` `o` INNER JOIN `tp_user` `u` ON `o`.`user_id`=`u`.`id` WHERE  `o`.`id` = '__PLUS__' LIMIT 1 [ RunTime:0.002131s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:19:13+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/detail/id/__PLUS__/ueditor/ueditor.all.js
+[运行时间：0.036146s] [吞吐率：27.67req/s] [内存消耗：2,130.09kb] [文件加载：49]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/detail/id/15.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '__PLUS__',
+  'ueditor' => 'ueditor.all.js',
+)
+[ info ] [ RUN ] app\admin\controller\Order->detail[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\detail.htm [ array (
+  0 => 'orderInfo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010223s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order` [ RunTime:0.000836s ]
+[ sql ] [ SQL ] SELECT `o`.*,`u`.`username` FROM `tp_order` `o` INNER JOIN `tp_user` `u` ON `o`.`user_id`=`u`.`id` WHERE  `o`.`id` = '__PLUS__' LIMIT 1 [ RunTime:0.000654s ]
+---------------------------------------------------------------
+[ 2020-09-27T22:19:15+08:00 ] 0.0.0.0 GET localhost/shop/index.php/admin/order/ordergoods/id/15.html
+[运行时间：0.103452s] [吞吐率：9.67req/s] [内存消耗：2,195.19kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'ordergoods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; username=V1BVXVs; password=BwYLAABT; PHPSESSID=bjp2kapkiv0iai3fqhu8mt4fh3',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/admin/order/lst.html?status=posted',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '15',
+)
+[ info ] [ RUN ] app\admin\controller\Order->orderGoods[ D:\phpStudy\WWW\shop\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/admin\view\order\order_goods.htm [ array (
+  0 => 'orderGoods',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001696s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_order_goods` [ RunTime:0.010130s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_order_goods` WHERE  `order_id` = 15 LIMIT 1 [ RunTime:0.020752s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_order_goods` WHERE  `order_id` = 15 LIMIT 0,20 [ RunTime:0.000467s ]

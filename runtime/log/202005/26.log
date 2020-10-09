@@ -1,0 +1,356 @@
+---------------------------------------------------------------
+[ 2020-05-26T22:53:49+08:00 ] 0.0.0.0 GET localhost/shop/public/
+[运行时间：0.393601s] [吞吐率：2.54req/s] [内存消耗：1,090.13kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\shop\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-26T22:53:54+08:00 ] 0.0.0.0 GET localhost/shop/public/admin
+[运行时间：0.147782s] [吞吐率：6.77req/s] [内存消耗：1,329.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; pgv_si=s5886552064',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\shop\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop\public/../application/admin\view\index\index.htm [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-26T22:53:54+08:00 ] 0.0.0.0 GET localhost/shop/public/static/admin/images/adam-jansen.jpg
+[运行时间：0.057141s] [吞吐率：17.50req/s] [内存消耗：1,123.66kb] [文件加载：35]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; pgv_si=s5886552064',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/public/admin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'purpose' => 'prefetch',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-26T22:54:03+08:00 ] 0.0.0.0 GET localhost/shop/public/admin/goods/lst.html
+[运行时间：0.729760s] [吞吐率：1.37req/s] [内存消耗：2,427.43kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; pgv_si=s5886552064',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/public/admin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop\public/../application/admin\view\goods\lst.htm [ array (
+  0 => 'lst',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.072397s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.069144s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_goods` `g` INNER JOIN `tp_category` `c` ON `g`.`category_id`=`c`.`id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`id` LEFT JOIN `tp_product` `p` ON `g`.`id`=`p`.`goods_id` GROUP BY `g`.`id` ) `_group_count_` LIMIT 1 [ RunTime:0.167179s ]
+[ sql ] [ SQL ] SELECT g.*, c.cate_name, b.brand_name, t.type_name, SUM(p.goods_number) gn FROM `tp_goods` `g` INNER JOIN `tp_category` `c` ON `g`.`category_id`=`c`.`id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`id` LEFT JOIN `tp_product` `p` ON `g`.`id`=`p`.`goods_id` GROUP BY `g`.`id` ORDER BY `g`.`id` DESC LIMIT 0,10 [ RunTime:0.009226s ]
+---------------------------------------------------------------
+[ 2020-05-26T22:54:04+08:00 ] 0.0.0.0 GET localhost/shop/public/admin/goods/add.html
+[运行时间：0.179903s] [吞吐率：5.56req/s] [内存消耗：2,354.23kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; pgv_si=s5886552064',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/public/admin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->add[ D:\phpStudy\WWW\shop\application\admin\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop\public/../application/admin\view\goods\add.htm [ array (
+  0 => 'mlRes',
+  1 => 'typeView',
+  2 => 'brandRes',
+  3 => 'Category',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002637s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_level` [ RunTime:0.062988s ]
+[ sql ] [ SQL ] SELECT `id`,`level_name` FROM `tp_member_level` [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_type` [ RunTime:0.000901s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_type` [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.001013s ]
+[ sql ] [ SQL ] SELECT `id`,`brand_name` FROM `tp_brand` [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002366s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` ORDER BY `sort` DESC [ RunTime:0.000571s ]
+---------------------------------------------------------------
+[ 2020-05-26T22:54:04+08:00 ] 0.0.0.0 GET localhost/shop/public/static/admin/images/adam-jansen.jpg
+[运行时间：0.022736s] [吞吐率：43.98req/s] [内存消耗：1,123.63kb] [文件加载：35]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; pgv_si=s5886552064',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/public/admin/goods/add.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-26T22:54:46+08:00 ] 0.0.0.0 GET localhost/shop/public/admin/goods/lst.html
+[运行时间：0.058147s] [吞吐率：17.20req/s] [内存消耗：2,427.45kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; pgv_si=s5886552064',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/public/admin/goods/add.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Goods->lst[ D:\phpStudy\WWW\shop\application\admin\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop\public/../application/admin\view\goods\lst.htm [ array (
+  0 => 'lst',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002966s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.002400s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_goods` `g` INNER JOIN `tp_category` `c` ON `g`.`category_id`=`c`.`id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`id` LEFT JOIN `tp_product` `p` ON `g`.`id`=`p`.`goods_id` GROUP BY `g`.`id` ) `_group_count_` LIMIT 1 [ RunTime:0.001669s ]
+[ sql ] [ SQL ] SELECT g.*, c.cate_name, b.brand_name, t.type_name, SUM(p.goods_number) gn FROM `tp_goods` `g` INNER JOIN `tp_category` `c` ON `g`.`category_id`=`c`.`id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`id` LEFT JOIN `tp_product` `p` ON `g`.`id`=`p`.`goods_id` GROUP BY `g`.`id` ORDER BY `g`.`id` DESC LIMIT 0,10 [ RunTime:0.001121s ]
+---------------------------------------------------------------
+[ 2020-05-26T22:54:47+08:00 ] 0.0.0.0 GET localhost/shop/public/static/admin/images/adam-jansen.jpg
+[运行时间：0.039101s] [吞吐率：25.57req/s] [内存消耗：1,123.63kb] [文件加载：35]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; pgv_si=s5886552064',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/public/admin/goods/lst.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-26T22:54:49+08:00 ] 0.0.0.0 GET localhost/shop/public/admin/goods/edit/id/5.html
+[运行时间：0.165789s] [吞吐率：6.03req/s] [内存消耗：2,363.73kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; pgv_si=s5886552064',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/public/admin/goods/lst.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5',
+)
+[ info ] [ RUN ] app\admin\controller\Goods->edit[ D:\phpStudy\WWW\shop\application\admin\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop\public/../application/admin\view\goods\edit.htm [ array (
+  0 => 'mlRes',
+  1 => 'typeView',
+  2 => 'brandRes',
+  3 => 'Category',
+  4 => 'goods',
+  5 => 'mpRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001165s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_level` [ RunTime:0.003373s ]
+[ sql ] [ SQL ] SELECT `id`,`level_name` FROM `tp_member_level` [ RunTime:0.002006s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_type` [ RunTime:0.002678s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_type` [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.046022s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `goods_id` = 5 [ RunTime:0.001481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.002552s ]
+[ sql ] [ SQL ] SELECT `id`,`brand_name` FROM `tp_brand` [ RunTime:0.000644s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001413s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000785s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.003473s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` ORDER BY `sort` DESC [ RunTime:0.001043s ]
+---------------------------------------------------------------
+[ 2020-05-26T22:54:49+08:00 ] 0.0.0.0 GET localhost/shop/public/static/admin/images/adam-jansen.jpg
+[运行时间：0.035417s] [吞吐率：28.24req/s] [内存消耗：1,123.63kb] [文件加载：35]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; pgv_si=s5886552064',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/public/admin/goods/edit/id/5.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File

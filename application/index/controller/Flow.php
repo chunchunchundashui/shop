@@ -81,7 +81,7 @@ class Flow extends Base
         $orderData['out_trade_no'] = time().rand(111111,999999);
         $orderData['user_id'] = $uid;
         $orderData['goods_total_price'] = model('cart')->doGoodsPriceCount($doGOods);   //选中的购物车中的商品总价
-        $orderData['post_spent'] = 10;      // 运费接口
+        $orderData['post_spent'] = 0;      // 运费接口
         $orderData['order_total_price'] = ($orderData['goods_total_price']+$orderData['post_spent']);   //实际要支付的订单总价
         $orderData['payment'] = input('payment');
         $orderData['distribution'] = input('distribution');
@@ -117,13 +117,75 @@ class Flow extends Base
     public function flow4()
     {
         $orderId = input('oid');
-        $orderInfo = db('order')->field('id, out_trade_no, order_total_price, payment, distribution, adress, phone, city, county, adress, user_id, name, province')->find($orderId);
+        $orderInfo = db('order')->field('id, out_trade_no, order_total_price, payment, distribution, adress, phone, city, county, adress, user_id, name, province, pay_status')->find($orderId);
+        if($orderInfo['payment'] == 1 && $orderInfo['pay_status'] == 0){
+//            include('./pay/alipayapi.php');
+            include('./pay/alipay/alipay.php');
+            $payBtn = $sHtml;
+//            $payBtn = $html_text;
+            $this->assign([
+                'payBtn' => $payBtn,
+            ]);
+        }
         $this->assign([
             'orderInfo' => $orderInfo,
         ]);
         return view();
     }
+
+//    微信支付生成二维码
+    public function wxewm($outTradeNo)
+    {
+//        获取订单的总价
+        $orderTotalPrice = db('order')->where('out_trade_no',$outTradeNo)->value('order_total_price');
+        $orderTotalPrice = $orderTotalPrice*100;
+        include('./pay/wxpay/index2.php');
+        $obj = new \WeiXinPay2();
+        $qrurl = $obj->getQrUrl($outTradeNo,$orderTotalPrice);
+        //2.生成二维码
+        \QRcode::png($qrurl);
+    }
+
+// 微信支付成功回调
+    public function wxPaySuccess()
+    {
+        include('./pay/wxpay/notify.php');
+        new \Notify();
+    }
     
+//    微信异步获取支付状态
+    public function wxPayStatus()
+    {
+        $outTradeOn = input('out_trade_no');
+        $payStatus = db('order')->where('out_trade_no',$outTradeOn)->value('pay_status');
+        return json(['pay_status' => $payStatus]);
+    }
+    
+//    支付成功页面
+    public function paySuccess()
+    {
+        $orderDb = db('order');
+        $arr = input('get.');
+        $outTradeNo = $arr['out_trade_no'];
+        $orderInfo = $orderDb->where('out_trade_no',$outTradeNo)->find();
+        if ($orderInfo) {
+            $orderDb->where('out_trade_no', $orderInfo['out_trade_no'])->update(array('pay_status' => 1));
+        }
+        $this->assign([
+            'orderInfo' => $orderInfo,
+        ]);
+        return view();
+    }
+
+//    引入tp5db内到支付宝接口中
+    public function aliNotiFy()
+    {
+        $orderDb = db('order');
+        include('./pay/alipay/alipay.php');
+//        include('./pay/alipayapi.php');
+    }
+
+
 //    进入购物车默认勾选所有商品计算价格,节省价格,总数
 //      $recId为选中的商品的id字符串: 1,2,3
     public function ajaxCartGoodsAmount()

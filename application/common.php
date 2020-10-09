@@ -160,6 +160,7 @@ function emai($toemail, $code)
 // 发送手机验证码
 function sendsms($tel)
 {
+
     try {
 // 请根据实际 appid 和 appkey 进行开发，以下只作为演示 sdk 使用
         $appid = '1400379804';
@@ -168,6 +169,7 @@ function sendsms($tel)
         $smsSign = '岳长春学习测试';
 //$phoneNumber1 = $tel;
         $singleSender = new \sms\SmsSingleSender($appid, $appkey);
+
 // 指定模板单发
 // 假设模板内容为：测试短信，{1}，{2}，{3}，
 // $mobilelz=$this->generate_code();//生成验证码
@@ -181,10 +183,13 @@ function sendsms($tel)
             $member['mobilelz'] = $mobilelz;
             $member['credate'] = date('Y-m-d H:i:s');//创建时间
             $member['enddate'] = date('Y-m-d H:i:s', strtotime('+180 second'));//验证码失效时间
+
             $mobid = db('mobile')->insert($member,false,true);//没有登记就写入
+
             if ($mobid) {//写入库成功才到验证码发送出去
                 $params = array($mobilelz);//我申请的短信模板只有两个参数 $mobilelz这个是生成的随机验证码 “3” 收到短信上显示3分钟后失效
                 $result = $singleSender->sendWithParam("86", $member['mobile'], $templId, $params, $smsSign, "", "");
+
                 $rsp = json_decode($result,true);
                 if ($rsp['result'] != 0) {//放送失败的话
                     Db::name('mobile')->where('mobile', $tel)->delete();

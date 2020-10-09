@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title>长春THinkPHP5第四季 实战开发大型B2C商城项目</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__admin__/style/bootstrap.css" rel="stylesheet">
+    <link href="__admin__/style/font-awesome.css" rel="stylesheet">
+    <link href="__admin__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__admin__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__admin__/style/demo.css" rel="stylesheet">
+    <link href="__admin__/style/typicons.css" rel="stylesheet">
+    <link href="__admin__/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+	<!-- 头部 -->
+	{include file="common/top" /}
+
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+            {include file="common/left" /}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="{:url('admin/index/index')}">系统</a>
+                    </li>
+                                        <li class="active">会员管理</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<button type="button" tooltip="添加品牌"  class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '{:url('user/add')}'"> <i class="fa fa-plus"></i> Add
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr>
+                                <th class="text-center" width="8%">ID</th>
+                                <th class="text-center">用户名</th>
+                                <th class="text-center">邮箱</th>
+                                <th class="text-center">电话</th>
+                                <th class="text-center">验证状态</th>
+                                <th class="text-center">积分</th>
+                                <th class="text-center">会员级别</th>
+                                <th class="text-center" width="14%">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="lst" id="vo"}
+                             <tr>
+                                <td align="center">{$vo.id}</td>
+                                <td align="center">{$vo.username}</td>
+                                <td align="center">{if condition="$vo['email']"}{$vo.email}{else /}暂未填写{/if}</td>
+                                <td align="center">{if condition="$vo['mobile_phone'] eq ''"}暂未填写{else /}{$vo.mobile_phone}{/if}</td>
+                                <td align="center">{if condition="$vo['register_type'] eq 1"}手机验证{elseif condition="$vo['register_type'] eq 2"/}手机邮箱都验证{else /}邮箱验证{/if}</td>
+                                <td align="center">{$vo.points}</td>
+                                <td align="center">{$vo.level_name}</td>
+                                <td align="center">
+                                    <a href="{:url('admin/user/edit', ['id' => $vo.id])}" class="btn btn-primary btn-sm shiny">编辑</a>
+                                    <a href="javascript:;" class="btn btn-danger user_del btn-sm shiny" onclick="del(this, '{$vo.id}')">删除</a>
+                                </td>
+                            </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+
+                </div>
+                    <div style="padding-top: 10px; text-align: right;">
+                        {$lst->render()}
+                    </div>
+                <div>
+                	                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    {include file="common/js" /}
+    <script>
+      function del(obj,id){
+        layer.confirm('确认要删除吗？',function(index){
+          var div = $(obj).parent().parent();
+          //发异步删除数据
+          $.post("{:url('user/del')}",{id:id},function (data) {
+            if(data.code == 1){
+              div.remove();
+              //删除成功 删除元素
+              layer.msg(data.msg,{icon:1,time:1000});
+            }else{
+              //删除失败
+              layer.msg(data.msg,{icon:2,time:1000});
+            }
+          });
+        });
+        return false;
+      }
+    </script>
+
+
+</body></html>

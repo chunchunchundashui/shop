@@ -1,0 +1,758 @@
+---------------------------------------------------------------
+[ 2020-09-14T20:14:32+08:00 ] 0.0.0.0 GET localhost/shop/
+[运行时间：1.872095s] [吞吐率：0.53req/s] [内存消耗：2,895.02kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=V1BVXVs; password=BwYLAABT; cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\shop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\index\index.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'show_right',
+  6 => 'show_nav',
+  7 => 'indexGoodsRes',
+  8 => 'anment',
+  9 => 'salesRes',
+  10 => 'alterImg',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083200s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_cate` [ RunTime:0.059573s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_cate` WHERE  `cate_type` = 3 ORDER BY `id` ASC [ RunTime:0.005749s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.067208s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 4 [ RunTime:0.009550s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 52 [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 62 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 63 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `tp_article` WHERE  `cate_id` = 3 [ RunTime:0.000625s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.044200s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` ORDER BY `sort` DESC [ RunTime:0.001818s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_conf` [ RunTime:0.039716s ]
+[ sql ] [ SQL ] SELECT `ename`,`value` FROM `tp_conf` [ RunTime:0.008564s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.037994s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.022089s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_alternate_img` [ RunTime:0.025034s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_alternate_img` WHERE  `status` = 1 ORDER BY `sort` DESC [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 66 LIMIT 3 [ RunTime:0.000493s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 72 LIMIT 3 [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_rec_item` [ RunTime:0.080945s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 7 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.079348s ]
+[ sql ] [ SQL ] SELECT `id`,`mid_thumb`,`goods_name`,`shop_price`,`markte_price` FROM `tp_goods` WHERE  `id` IN (21,30,34,36,35,29,33,32,31,28,26,24,25,20,7,40) LIMIT 20 [ RunTime:0.008169s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 0 LIMIT 1 [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 0 LIMIT 1 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 0 LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 0 LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 0 LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 0 LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 0 LIMIT 1 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 0 LIMIT 1 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 0 LIMIT 1 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 0 LIMIT 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 0 LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 0 LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 37 LIMIT 1 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 37 LIMIT 1 [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 37 LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 37 LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 37 LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 37 LIMIT 1 [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 37 LIMIT 1 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 37 LIMIT 1 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 37 LIMIT 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 37 LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 37 LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 37 LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (44,45,46,38)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (40,41,42,43,39)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 3 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (38,44,45,46,39,40,41,42,43,37)  AND `id` IN (17,20,22,23,24,25,26,27,7,28,29,30,31,35,21,39,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category_brands` [ RunTime:0.031642s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_brands` WHERE  `category_id` = 37 LIMIT 1 [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.013269s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 27 LIMIT 1 [ RunTime:0.011324s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category_ad` [ RunTime:0.041286s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_ad` WHERE  `category_id` = 37 [ RunTime:0.015376s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 32 LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 32 LIMIT 1 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 32 LIMIT 1 [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 32 LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 32 LIMIT 1 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 32 LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 32 LIMIT 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 32 LIMIT 1 [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 32 LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 32 LIMIT 1 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 32 LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 32 LIMIT 1 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (48,49,50,47)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (34,35,36,33)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000714s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 3 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (33,34,35,36,47,48,49,50,32)  AND `id` IN (17,20,22,23,24,25,26,27,7,28,29,30,31,35,21,39,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000854s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_brands` WHERE  `category_id` = 32 LIMIT 1 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 27 LIMIT 1 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_ad` WHERE  `category_id` = 32 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 15 LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 15 LIMIT 1 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 15 LIMIT 1 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 15 LIMIT 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 15 LIMIT 1 [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 15 LIMIT 1 [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 15 LIMIT 1 [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 15 LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 15 LIMIT 1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 15 LIMIT 1 [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 15 LIMIT 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 15 LIMIT 1 [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (18,19,20,21,22,23,24,16)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000555s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (25,26,27,17)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (29,30,31,28)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 3 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (16,18,19,20,21,22,23,24,17,25,26,27,28,29,30,31,15)  AND `id` IN (17,20,22,23,24,25,26,27,7,28,29,30,31,35,21,39,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_brands` WHERE  `category_id` = 15 LIMIT 1 [ RunTime:0.000415s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_ad` WHERE  `category_id` = 15 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 54 LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 54 LIMIT 1 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 54 LIMIT 1 [ RunTime:0.000549s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 54 LIMIT 1 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 54 LIMIT 1 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 54 LIMIT 1 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 54 LIMIT 1 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 54 LIMIT 1 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 54 LIMIT 1 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 54 LIMIT 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 54 LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 54 LIMIT 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (56,55)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 3 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (55,56,54)  AND `id` IN (17,20,22,23,24,25,26,27,7,28,29,30,31,35,21,39,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_brands` WHERE  `category_id` = 54 LIMIT 1 [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_ad` WHERE  `category_id` = 54 [ RunTime:0.000387s ]
+---------------------------------------------------------------
+[ 2020-09-14T20:14:35+08:00 ] 0.0.0.0 GET localhost/shop/index.php
+[运行时间：0.134059s] [吞吐率：7.46req/s] [内存消耗：2,960.80kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=V1BVXVs; password=BwYLAABT; cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\shop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\index\index.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'show_right',
+  6 => 'show_nav',
+  7 => 'indexGoodsRes',
+  8 => 'anment',
+  9 => 'salesRes',
+  10 => 'alterImg',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001737s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002088s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000737s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000698s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_alternate_img` [ RunTime:0.003175s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_alternate_img` WHERE  `status` = 1 ORDER BY `sort` DESC [ RunTime:0.000650s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.001747s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 66 LIMIT 3 [ RunTime:0.000634s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `cate_id` = 72 LIMIT 3 [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_rec_item` [ RunTime:0.000983s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 7 [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001031s ]
+[ sql ] [ SQL ] SELECT `id`,`mid_thumb`,`goods_name`,`shop_price`,`markte_price` FROM `tp_goods` WHERE  `id` IN (21,30,34,36,35,29,33,32,31,28,26,24,25,20,7,40) LIMIT 20 [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 0 LIMIT 1 [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 0 LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 0 LIMIT 1 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 0 LIMIT 1 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 0 LIMIT 1 [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 0 LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 0 LIMIT 1 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 0 LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 0 LIMIT 1 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 0 LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 0 LIMIT 1 [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 0 LIMIT 1 [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 37 LIMIT 1 [ RunTime:0.001221s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 37 LIMIT 1 [ RunTime:0.000660s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 37 LIMIT 1 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 37 LIMIT 1 [ RunTime:0.000785s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 37 LIMIT 1 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 37 LIMIT 1 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 37 LIMIT 1 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 37 LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 37 LIMIT 1 [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 37 LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 37 LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 37 LIMIT 1 [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (44,45,46,38)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (40,41,42,43,39)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 3 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (38,44,45,46,39,40,41,42,43,37)  AND `id` IN (17,20,22,23,24,25,26,27,7,28,29,30,31,35,21,39,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000932s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category_brands` [ RunTime:0.001401s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_brands` WHERE  `category_id` = 37 LIMIT 1 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.001851s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 27 LIMIT 1 [ RunTime:0.000762s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category_ad` [ RunTime:0.000976s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_ad` WHERE  `category_id` = 37 [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000454s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 32 LIMIT 1 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 32 LIMIT 1 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 32 LIMIT 1 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 32 LIMIT 1 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 32 LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 32 LIMIT 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 32 LIMIT 1 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 32 LIMIT 1 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 32 LIMIT 1 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 32 LIMIT 1 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 32 LIMIT 1 [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 32 LIMIT 1 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (48,49,50,47)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (34,35,36,33)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 3 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (33,34,35,36,47,48,49,50,32)  AND `id` IN (17,20,22,23,24,25,26,27,7,28,29,30,31,35,21,39,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_brands` WHERE  `category_id` = 32 LIMIT 1 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 27 LIMIT 1 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_ad` WHERE  `category_id` = 32 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 15 LIMIT 1 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 15 LIMIT 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 15 LIMIT 1 [ RunTime:0.000415s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 15 LIMIT 1 [ RunTime:0.001085s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 15 LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 15 LIMIT 1 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 15 LIMIT 1 [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 15 LIMIT 1 [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 15 LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 15 LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 15 LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 15 LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (18,19,20,21,22,23,24,16)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (25,26,27,17)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (29,30,31,28)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 3 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (16,18,19,20,21,22,23,24,17,25,26,27,28,29,30,31,15)  AND `id` IN (17,20,22,23,24,25,26,27,7,28,29,30,31,35,21,39,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_brands` WHERE  `category_id` = 15 LIMIT 1 [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 28 LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_ad` WHERE  `category_id` = 15 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `recpos_id` = 4  AND `value_type` = 2 [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 47  AND `pid` = 54 LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 33  AND `pid` = 54 LIMIT 1 [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 38  AND `pid` = 54 LIMIT 1 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 37  AND `pid` = 54 LIMIT 1 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 32  AND `pid` = 54 LIMIT 1 [ RunTime:0.000777s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 15  AND `pid` = 54 LIMIT 1 [ RunTime:0.000848s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 39  AND `pid` = 54 LIMIT 1 [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 16  AND `pid` = 54 LIMIT 1 [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 17  AND `pid` = 54 LIMIT 1 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 28  AND `pid` = 54 LIMIT 1 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 54  AND `pid` = 54 LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `id` = 55  AND `pid` = 54 LIMIT 1 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 6 [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (56,55)  AND `id` IN (15,29,31,32,33,34,36,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `tp_category` [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_rec_item` WHERE  `value_type` = 1  AND `recpos_id` = 3 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `category_id` IN (55,56,54)  AND `id` IN (17,20,22,23,24,25,26,27,7,28,29,30,31,35,21,39,40) ORDER BY `id` DESC LIMIT 6 [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_brands` WHERE  `category_id` = 54 LIMIT 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category_ad` WHERE  `category_id` = 54 [ RunTime:0.000339s ]
+---------------------------------------------------------------
+[ 2020-09-14T20:14:38+08:00 ] 0.0.0.0 GET localhost/shop/index.php/member/account/checklogin.html
+[运行时间：0.263568s] [吞吐率：3.79req/s] [内存消耗：2,559.50kb] [文件加载：58]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=V1BVXVs; password=BwYLAABT; cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ D:\phpStudy\WWW\shop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011162s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001086s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000748s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.042187s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_user` WHERE  `username` = 'admin' OR `email` = 'admin'  OR `mobile_phone` = 'admin' LIMIT 1 [ RunTime:0.000674s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_level` [ RunTime:0.027152s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_level` WHERE  `bom_point` <= 15200  AND `top_point` >= 15200 LIMIT 1 [ RunTime:0.000516s ]
+---------------------------------------------------------------
+[ 2020-09-14T20:14:39+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/cartgoodsnum.html
+[运行时间：0.048702s] [吞吐率：20.53req/s] [内存消耗：2,510.54kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cartgoodsnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=V1BVXVs; password=BwYLAABT; cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->cartGoodsNum[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001791s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001477s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000439s ]
+---------------------------------------------------------------
+[ 2020-09-14T20:14:39+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/brand/lst.html
+[运行时间：0.136206s] [吞吐率：7.34req/s] [内存消耗：2,066.95kb] [文件加载：51]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'brand',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=V1BVXVs; password=BwYLAABT; cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Brand->lst[ D:\phpStudy\WWW\shop\application\index\controller\Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003210s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.001275s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_brand` LIMIT 1 [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` ORDER BY `id` DESC LIMIT 0,17 [ RunTime:0.000609s ]
+---------------------------------------------------------------
+[ 2020-09-14T20:14:54+08:00 ] 0.0.0.0 GET localhost/shop/index.php/goods/21.html
+[运行时间：0.370620s] [吞吐率：2.70req/s] [内存消耗：2,688.88kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Goods',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=V1BVXVs; password=BwYLAABT; cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=6er5qi8ghm668hl65qr0sbpks6',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '21',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Goods->index[ D:\phpStudy\WWW\shop\application\index\controller\Goods.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\goods\goods.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'show_right',
+  6 => 'goodsInfo',
+  7 => 'goodsPhotoRes',
+  8 => 'radioArr',
+  9 => 'uniArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002274s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002126s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.001369s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001096s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 21 LIMIT 1 [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_photo` [ RunTime:0.034621s ]
+[ sql ] [ SQL ] SELECT `sm_photo`,`mid_photo`,`big_photo`,`og_photo` FROM `tp_goods_photo` WHERE  `goods_id` = 21 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.047068s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name`,`a`.`attr_type` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`goods_id` = '21' [ RunTime:0.060132s ]
+---------------------------------------------------------------
+[ 2020-09-14T20:14:54+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/goods/ajaxgetmemberprice.html
+[运行时间：0.115299s] [吞吐率：8.67req/s] [内存消耗：2,496.52kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'ajaxgetmemberprice',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=V1BVXVs; password=BwYLAABT; cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=6er5qi8ghm668hl65qr0sbpks6',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/goods/21.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '11',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goods_id' => '21',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Goods->ajaxGetMemberPrice[ D:\phpStudy\WWW\shop\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001816s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001233s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001279s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 21 LIMIT 1 [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.058410s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 21 LIMIT 1 [ RunTime:0.000510s ]
+---------------------------------------------------------------
+[ 2020-09-14T20:14:54+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/cartgoodsnum.html
+[运行时间：0.042298s] [吞吐率：23.64req/s] [内存消耗：2,510.84kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cartgoodsnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=V1BVXVs; password=BwYLAABT; cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=6er5qi8ghm668hl65qr0sbpks6',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/goods/21.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->cartGoodsNum[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011371s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001343s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000481s ]
+---------------------------------------------------------------
+[ 2020-09-14T20:14:54+08:00 ] 0.0.0.0 GET localhost/shop/index.php/goods/favicon.ico
+[运行时间：0.050229s] [吞吐率：19.91req/s] [内存消耗：1,139.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'goods',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=V1BVXVs; password=BwYLAABT; cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=6er5qi8ghm668hl65qr0sbpks6',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/goods/21.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-09-14T20:14:55+08:00 ] 0.0.0.0 GET localhost/shop/index.php/member/account/checklogin.html
+[运行时间：0.036353s] [吞吐率：27.51req/s] [内存消耗：2,517.90kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=V1BVXVs; password=BwYLAABT; cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=6er5qi8ghm668hl65qr0sbpks6',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/goods/21.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ D:\phpStudy\WWW\shop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001156s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001126s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000502s ]
+---------------------------------------------------------------
+[ 2020-09-14T20:15:09+08:00 ] 0.0.0.0 GET localhost/shop/index.php/goods/user.php?act=clear_history&1600085709343343
+[运行时间：0.013579s] [吞吐率：73.64req/s] [内存消耗：1,139.73kb] [文件加载：35]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'goods',
+    1 => 'user.php',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'username=V1BVXVs; password=BwYLAABT; cart=a%3A1%3A%7Bs%3A8%3A%2240-64%2C65%22%3Bs%3A1%3A%221%22%3B%7D; PHPSESSID=6er5qi8ghm668hl65qr0sbpks6',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/goods/21.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'act' => 'clear_history',
+  '1600085709343343' => '',
+)
+[ info ] [ LOG ] INIT File

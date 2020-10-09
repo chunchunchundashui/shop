@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title>长春THinkPHP5第四季 实战开发大型B2C商城项目</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__admin__/style/bootstrap.css" rel="stylesheet">
+    <link href="__admin__/style/font-awesome.css" rel="stylesheet">
+    <link href="__admin__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__admin__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__admin__/style/demo.css" rel="stylesheet">
+    <link href="__admin__/style/typicons.css" rel="stylesheet">
+    <link href="__admin__/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+	<!-- 头部 -->
+	{include file="common/top" /}
+
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+            {include file="common/left" /}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="{:url('admin/index/index')}">系统</a>
+                    </li>
+                                        <li class="active">商品管理</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<div style="padding-bottom: 10px;">
+  <a href="{:url('Order/lst')}?status=no_pay" class="btn btn-blue">未支付</a>
+  <a href="{:url('Order/lst')}?status=pay" class="btn btn-sky">已支付</a>
+  <a href="{:url('Order/lst')}?status=no_post" class="btn btn-azure">未发货</a>
+  <a href="{:url('Order/lst')}?status=posted" class="btn btn-palegreen">已发货</a>
+  <a href="{:url('Order/lst')}?status=got_goods" class="btn btn-magenta">已收货</a>
+  <a href="{:url('Order/exportOrders')}?status={$orderStatus}" class="btn btn-darkorange"><i class="glyphicon glyphicon-retweet"></i>导出订单</a>
+</div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr>
+                                <th class="text-center" width="4%">ID</th>
+                                <th class="text-center">订单号</th>
+                                <th>收货人姓名</th>
+                                <th class="text-center">电话</th>
+                                <th class="text-center">省</th>
+                                <th class="text-center">市</th>
+                                <th class="text-center">县/区</th>
+                                <th class="text-center">详细地址</th>
+                                <th class="text-center">支付方式</th>
+                                <th class="text-center">配送方式</th>
+                                <th class="text-center">订单状态</th>
+                                <th class="text-center">支付的状态</th>
+                                <th class="text-center">配送的状态</th>
+                                <th class="text-center">运费</th>
+                                <th class="text-center">下单时间</th>
+                                <th class="text-center">编辑</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="lst" id="vo"}
+                             <tr>
+                                <td align="center">{$vo.id}</td>
+                                <td align="center">{$vo.out_trade_no}</td>
+                                <td align="center">{$vo.name}</td>
+                                <td align="center">{$vo.phone}</td>
+                                <td align="center">{$vo.province}</td>
+                                <td align="center">{$vo.city}</td>
+                                <td align="center">{$vo.county}</td>
+                                <td align="center">{$vo.adress}</td>
+                                <td align="center">{if condition="$vo['payment'] eq 1"}支付宝{else /}微信{/if}</td>
+                                <td align="center">{$vo.distribution}</td>
+                                <td align="center">{if condition="$vo['order_status'] eq 0"}未确认{elseif condition="$vo['order_status'] eq 1"}已确认{elseif condition="$vo['order_status'] eq 2"}申请退款{else /}退款成功{/if}</td>
+                                <td align="center">{if condition="$vo['pay_status'] eq 0"}未支付{else /}已支付{/if}</td>
+                                <td align="center">{if condition="$vo['post_status'] eq 0"}未发货{elseif condition="$vo['post_status'] eq 1"}已发货{else/}已收货{/if}</td>
+                                <td align="center">{$vo.post_spent}</td>
+                                <td align="center">{$vo.create_time}</td>
+                                <td align="center">
+                                  <a href="{:url('admin/Order/orderGoods', ['id' => $vo.id])}" class="btn btn-primary btn-sm shiny">订单商品</a>
+                                    <a href="{:url('admin/Order/detail', ['id' => $vo.id])}" class="btn btn-primary btn-sm shiny">详情</a>
+                                  <a href="{:url('admin/Order/edit', ['id' => $vo.id])}" class="btn btn-primary btn-sm shiny">编辑</a>
+                                    <a href="javascript:;" class="btn btn-danger brand_del btn-sm shiny" onclick="del(this, '{$vo.id}')">删除</a>
+                                </td>
+                            </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+
+                </div>
+                    <div style="padding-top: 10px; text-align: right;">
+                        {$lst->render()}
+                    </div>
+                <div>
+                	                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    {include file="common/js" /}
+    <script>
+      function del(obj,id){
+        layer.confirm('确认要删除吗？',function(index){
+          var div = $(obj).parent().parent();
+          //发异步删除数据
+          $.post("{:url('admin/Order/del')}",{id:id},function (data) {
+            if(data.code == 1){
+              div.remove();
+              //删除成功 删除元素
+              layer.msg(data.msg,{icon:1,time:1000});
+            }else{
+              //删除失败
+              layer.msg(data.msg,{icon:2,time:1000});
+            }
+          });
+        });
+        return false;
+      }
+    </script>
+
+
+</body></html>

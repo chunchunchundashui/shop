@@ -1,0 +1,2889 @@
+---------------------------------------------------------------
+[ 2020-08-13T00:02:39+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.059828s] [吞吐率：16.71req/s] [内存消耗：2,812.27kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://localhost',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '106',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67@40-63,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003516s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001381s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000853s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000641s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:02:39+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.058156s] [吞吐率：17.20req/s] [内存消耗：2,524.61kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002273s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002265s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000408s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:02:40+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.048235s] [吞吐率：20.73req/s] [内存消耗：2,524.61kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001798s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001089s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000489s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:13+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.067912s] [吞吐率：14.72req/s] [内存消耗：2,677.77kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://localhost',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '106',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67@40-63,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003465s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002578s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000827s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000625s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000642s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001631s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000830s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000773s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.001212s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000504s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.001797s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000732s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000527s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:13+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.053558s] [吞吐率：18.67req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002248s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001545s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000698s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000571s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:14+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.059747s] [吞吐率：16.74req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002990s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001898s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000404s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:35+08:00 ] 0.0.0.0 GET localhost/shop/index.php/flow1.html
+[运行时间：0.060641s] [吞吐率：16.49req/s] [内存消耗：2,700.85kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Flow',
+    2 => 'flow1',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow1[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow1.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011342s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000910s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000714s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000783s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001202s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.001738s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.002067s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000355s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:36+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/cartgoodsnum.html
+[运行时间：0.046274s] [吞吐率：21.61req/s] [内存消耗：2,493.79kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cartgoodsnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->cartGoodsNum[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002072s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000963s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000415s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000600s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000513s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:36+08:00 ] 0.0.0.0 GET localhost/shop/index.php/member/account/checklogin.html
+[运行时间：0.059566s] [吞吐率：16.79req/s] [内存消耗：2,521.21kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ D:\phpStudy\WWW\shop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001366s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001397s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000566s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000601s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000411s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:37+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/ajaxcartgoodsamount.html
+[运行时间：0.059912s] [吞吐率：16.69req/s] [内存消耗：2,549.33kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'ajaxcartgoodsamount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'origin' => 'http://localhost',
+  'content-length' => '24',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'rec_id' => '40-62,67@40-63,67',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->ajaxCartGoodsAmount[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010969s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000374s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000477s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.001080s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SELECT `shop_price` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.001349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.001124s ]
+[ sql ] [ SQL ] SELECT `attr_price` FROM `tp_goods_attr` WHERE  `id` IN (62,67) [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT `shop_price` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT `attr_price` FROM `tp_goods_attr` WHERE  `id` IN (63,67) [ RunTime:0.000431s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:37+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/ajaxcartgoodsamount.html
+[运行时间：0.045370s] [吞吐率：22.04req/s] [内存消耗：2,546.09kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'ajaxcartgoodsamount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'origin' => 'http://localhost',
+  'content-length' => '34',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'rec_id' => '40-62,67',
+  'favourable_id' => 'null ',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->ajaxCartGoodsAmount[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009919s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000859s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000847s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.000830s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT `shop_price` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000535s ]
+[ sql ] [ SQL ] SELECT `attr_price` FROM `tp_goods_attr` WHERE  `id` IN (62,67) [ RunTime:0.000305s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:39+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.051492s] [吞吐率：19.42req/s] [内存消耗：2,677.72kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'cache-control' => 'max-age=0',
+  'content-length' => '93',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010300s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001021s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000555s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.001406s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000613s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.000763s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000644s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000312s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:39+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.047176s] [吞吐率：21.20req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001439s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001027s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000580s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:39+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.051352s] [吞吐率：19.47req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001491s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001445s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.001544s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000711s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.001775s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000556s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:42+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.057915s] [吞吐率：17.27req/s] [内存消耗：2,677.72kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://localhost',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '93',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012455s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000954s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000802s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.001198s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.000796s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000477s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000634s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000643s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000289s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:42+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.046827s] [吞吐率：21.36req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001348s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001281s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000549s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000411s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:09:42+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.059511s] [吞吐率：16.80req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011257s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001314s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000494s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:03+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.056308s] [吞吐率：17.76req/s] [内存消耗：2,677.72kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://localhost',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '93',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010480s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001271s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.000751s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000913s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:03+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.047113s] [吞吐率：21.23req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001534s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001656s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.001580s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.001266s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000513s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:03+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.048542s] [吞吐率：20.60req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001729s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001349s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000730s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.001422s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000523s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:06+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.051743s] [吞吐率：19.33req/s] [内存消耗：2,677.77kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://localhost',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '106',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67@40-63,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001970s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001113s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001497s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.001050s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000670s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000656s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000399s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:06+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.060787s] [吞吐率：16.45req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002337s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001581s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.002494s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.001219s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000898s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000775s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000531s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:06+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.059842s] [吞吐率：16.71req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003391s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002419s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000796s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000623s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000545s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:10+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.057533s] [吞吐率：17.38req/s] [内存消耗：2,677.77kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://localhost',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '106',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67@40-63,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011730s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000858s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.000752s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.001492s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.001123s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000566s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000863s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000348s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:10+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.052380s] [吞吐率：19.09req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002204s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001683s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.001135s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000997s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000826s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000601s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:10+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.059276s] [吞吐率：16.87req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002892s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001720s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000792s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000757s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000643s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:13+08:00 ] 0.0.0.0 GET localhost/shop/index.php/flow1.html
+[运行时间：0.058880s] [吞吐率：16.98req/s] [内存消耗：2,700.85kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Flow',
+    2 => 'flow1',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow1[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow1.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010657s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001127s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000813s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.001247s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000799s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001310s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000701s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000706s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000415s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000442s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:13+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/cartgoodsnum.html
+[运行时间：0.050600s] [吞吐率：19.76req/s] [内存消耗：2,493.79kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cartgoodsnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->cartGoodsNum[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002769s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001500s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000590s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:13+08:00 ] 0.0.0.0 GET localhost/shop/index.php/member/account/checklogin.html
+[运行时间：0.062637s] [吞吐率：15.97req/s] [内存消耗：2,521.21kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ D:\phpStudy\WWW\shop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011896s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001850s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000882s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000666s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.001428s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:14+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/ajaxcartgoodsamount.html
+[运行时间：0.051762s] [吞吐率：19.32req/s] [内存消耗：2,549.33kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'ajaxcartgoodsamount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'origin' => 'http://localhost',
+  'content-length' => '24',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'rec_id' => '40-62,67@40-63,67',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->ajaxCartGoodsAmount[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010777s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000885s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001031s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT `shop_price` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000632s ]
+[ sql ] [ SQL ] SELECT `attr_price` FROM `tp_goods_attr` WHERE  `id` IN (62,67) [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SELECT `shop_price` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SELECT `attr_price` FROM `tp_goods_attr` WHERE  `id` IN (63,67) [ RunTime:0.000472s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:15+08:00 ] 0.0.0.0 GET localhost/shop/index.php/flow1.html
+[运行时间：0.053633s] [吞吐率：18.65req/s] [内存消耗：2,700.91kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Flow',
+    2 => 'flow1',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow1[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow1.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010419s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001037s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000615s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000658s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.000780s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000585s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000462s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:15+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/cartgoodsnum.html
+[运行时间：0.049170s] [吞吐率：20.34req/s] [内存消耗：2,493.79kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cartgoodsnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->cartGoodsNum[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002856s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000940s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000605s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000370s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:15+08:00 ] 0.0.0.0 GET localhost/shop/index.php/member/account/checklogin.html
+[运行时间：0.064598s] [吞吐率：15.48req/s] [内存消耗：2,521.21kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ D:\phpStudy\WWW\shop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012567s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001354s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000912s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000941s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.002015s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000464s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:16+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/ajaxcartgoodsamount.html
+[运行时间：0.042822s] [吞吐率：23.35req/s] [内存消耗：2,549.33kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'ajaxcartgoodsamount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'origin' => 'http://localhost',
+  'content-length' => '24',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'rec_id' => '40-62,67@40-63,67',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->ajaxCartGoodsAmount[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001597s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000766s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000419s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001030s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000958s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT `shop_price` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SELECT `attr_price` FROM `tp_goods_attr` WHERE  `id` IN (62,67) [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT `shop_price` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SELECT `attr_price` FROM `tp_goods_attr` WHERE  `id` IN (63,67) [ RunTime:0.000575s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:19+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.057040s] [吞吐率：17.53req/s] [内存消耗：2,677.72kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://localhost',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '93',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011921s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001486s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000757s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.000783s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000298s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:19+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.046946s] [吞吐率：21.30req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001349s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001279s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.001310s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.001343s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000532s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:19+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.048665s] [吞吐率：20.55req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001503s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.003120s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.001022s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000754s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000406s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:21+08:00 ] 0.0.0.0 GET localhost/shop/index.php/flow1.html
+[运行时间：0.049414s] [吞吐率：20.24req/s] [内存消耗：2,700.85kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Flow',
+    2 => 'flow1',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow1[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow1.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001424s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000838s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000535s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.000982s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000731s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000684s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000532s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.001186s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000436s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:21+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/cartgoodsnum.html
+[运行时间：0.047187s] [吞吐率：21.19req/s] [内存消耗：2,493.79kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'cartgoodsnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->cartGoodsNum[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003089s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000997s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000526s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:21+08:00 ] 0.0.0.0 GET localhost/shop/index.php/member/account/checklogin.html
+[运行时间：0.050688s] [吞吐率：19.73req/s] [内存消耗：2,521.21kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'account',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\member\controller\Account->checkLogin[ D:\phpStudy\WWW\shop\application\member\controller\Account.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001471s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001038s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000496s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000642s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:22+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/ajaxcartgoodsamount.html
+[运行时间：0.044392s] [吞吐率：22.53req/s] [内存消耗：2,549.33kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'ajaxcartgoodsamount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'origin' => 'http://localhost',
+  'content-length' => '24',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'rec_id' => '40-62,67@40-63,67',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->ajaxCartGoodsAmount[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001520s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000967s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001254s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000791s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SELECT `shop_price` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000864s ]
+[ sql ] [ SQL ] SELECT `attr_price` FROM `tp_goods_attr` WHERE  `id` IN (62,67) [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT `shop_price` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SELECT `attr_price` FROM `tp_goods_attr` WHERE  `id` IN (63,67) [ RunTime:0.000332s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:23+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/ajaxcartgoodsamount.html
+[运行时间：0.048985s] [吞吐率：20.41req/s] [内存消耗：2,546.09kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'ajaxcartgoodsamount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'origin' => 'http://localhost',
+  'content-length' => '34',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'rec_id' => '40-62,67',
+  'favourable_id' => 'null ',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->ajaxCartGoodsAmount[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011431s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001095s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.001274s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT `shop_price` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SELECT `attr_price` FROM `tp_goods_attr` WHERE  `id` IN (62,67) [ RunTime:0.000340s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:24+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.043099s] [吞吐率：23.20req/s] [内存消耗：2,677.72kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'cache-control' => 'max-age=0',
+  'content-length' => '93',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001364s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000797s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000615s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.001090s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000371s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:24+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.036368s] [吞吐率：27.50req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001557s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001185s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000478s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:24+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.036447s] [吞吐率：27.44req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001614s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001128s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000585s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000430s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:28+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.059217s] [吞吐率：16.89req/s] [内存消耗：2,677.72kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://localhost',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '93',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011165s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001540s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000633s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000611s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.000924s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000786s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000611s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000477s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000751s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:28+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.054981s] [吞吐率：18.19req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001858s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001427s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000792s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000743s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.002113s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:11:28+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.066840s] [吞吐率：14.96req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011061s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001175s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000759s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000738s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000665s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:12:15+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.045011s] [吞吐率：22.22req/s] [内存消耗：2,662.00kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://localhost',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '93',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010702s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001418s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000376s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:12:15+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.055267s] [吞吐率：18.09req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009925s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001408s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000690s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000663s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000654s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.001470s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:12:16+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.041313s] [吞吐率：24.21req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011595s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000382s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:12:41+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.053199s] [吞吐率：18.80req/s] [内存消耗：2,677.72kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://localhost',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '93',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002263s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.002702s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.001273s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000667s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('63','67') [ RunTime:0.000397s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:12:41+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.064121s] [吞吐率：15.60req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005291s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001890s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.001127s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.003493s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000766s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000398s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:12:41+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.066511s] [吞吐率：15.04req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002267s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002838s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.003276s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000777s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000580s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:13:26+08:00 ] 0.0.0.0 POST localhost/shop/index.php/index/flow/flow2.html
+[运行时间：0.066913s] [吞吐率：14.94req/s] [内存消耗：2,673.64kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'flow2',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/flow1.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'origin' => 'http://localhost',
+  'sec-fetch-user' => '?1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'content-length' => '93',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'goPay' => '去支付',
+  'step' => 'checkout',
+  'store_seller' => '',
+  'cart_value' => '40-62,67',
+  'goods_ru' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Flow->flow2[ D:\phpStudy\WWW\shop\application\index\controller\Flow.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\shop/application/index\view\flow\flow2.htm [ array (
+  0 => 'helpCateRes',
+  1 => 'shopInfoRes',
+  2 => 'navRes',
+  3 => 'configs',
+  4 => 'cateRes',
+  5 => 'cartGoodsRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012768s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001036s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000698s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods` [ RunTime:0.000858s ]
+[ sql ] [ SQL ] SELECT `id`,`goods_name`,`sm_thumb` FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_goods` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.000713s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` WHERE  `mlevel_id` = 3  AND `goods_id` = 40 LIMIT 1 [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_goods_attr` [ RunTime:0.000627s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`a`.`attr_name` FROM `tp_goods_attr` `ga` INNER JOIN `tp_attr` `a` ON `ga`.`attr_id`=`a`.`id` WHERE  `ga`.`id` IN ('62','67') [ RunTime:0.000452s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:13:26+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490209495581.jpg
+[运行时间：0.055465s] [吞吐率：18.03req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001617s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001183s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.000730s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.001885s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000754s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.001822s ]
+---------------------------------------------------------------
+[ 2020-08-13T00:13:26+08:00 ] 0.0.0.0 GET localhost/shop/index.php/index/flow/images/201703/thumb_img/0_thumb_G_1490203982198.jpg
+[运行时间：0.068611s] [吞吐率：14.57req/s] [内存消耗：2,525.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'flow',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Webstorm-8eca410e=04526ef6-adf0-4d93-bb13-46e3905d1068; pgv_pvi=7221936128; __gads=ID=b1212375c27b912c:T=1586869645:S=ALNI_MZYuTOaaBcDo4BiLlNlOJNjz0Pgfw; UM_distinctid=1717d2942a858c-00f116fb452871-514f291a-1fa400-1717d2942a927b; Hm_lvt_afc2b8bbe5afca7b1c77c05445eadd98=1587091294,1587111279,1587169185,1587266304; CNZZDATA1261742514=504053808-1586942326-http%253A%252F%252Flocalhost%252F%7C1587262752; Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1588648817; __utma=111872281.1211606754.1591885490.1591885490.1591885490.1; __utmz=111872281.1591885490.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); bdshare_firstime=1591885513160; CNZZDATA2467102=cnzz_eid%3D370380495-1591885516-http%253A%252F%252Flocalhost%252F%26ntime%3D1591885516; Phpstorm-60319ca5=b23f1a5a-3b84-497c-93d1-ed05efad76d0; cart=a%3A2%3A%7Bs%3A8%3A%2240-62%2C67%22%3Bi%3A3%3Bs%3A8%3A%2240-63%2C67%22%3Bi%3A6%3B%7D; PHPSESSID=6pm77hd38a0ldgqkpdhjp736d2; username=V1BVXVs; password=BwYLAABT',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shop/index.php/index/flow/flow2.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  0 => 'thumb_img',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002078s ] mysql:host=127.0.0.1;dbname=tpshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001846s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 0 [ RunTime:0.001115s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 15 [ RunTime:0.000934s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 32 [ RunTime:0.000833s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 37 [ RunTime:0.001857s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `pid` = 54 [ RunTime:0.001240s ]

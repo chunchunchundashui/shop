@@ -14,7 +14,7 @@
   <script type="text/javascript" src="__index__/js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="__index__/js/jquery.json.js"></script>
   <script type="text/javascript" src="__index__/js/transport_jquery.js"></script>
-  
+
 </head>
 <body class="home_visual_body">
 
@@ -510,9 +510,9 @@
           <div ectype="homeBrand">
 
             <div class="brand-list" id="recommend_brands">
-                <!-- 处理换一批商品品牌 -->
-                  <!-- 引用的js放到了1558 -->
-                <!-- 结束换一批商品品牌 -->
+              <!-- 处理换一批商品品牌 -->
+              <!-- 引用的js放到了1558 -->
+              <!-- 结束换一批商品品牌 -->
               <a href="javascript:void(0);" ectype="changeBrand" class="refresh-btn"><i
                   class="iconfont icon-rotate-alt"></i><span>换一批</span></a>
             </div>
@@ -594,8 +594,8 @@
                       <?php foreach($v['newRecGoods'] as $k1 => $v1):?>
                       <li class="opacity_img">
                         <div class="product">
-                          <div class="p-img"><a href="#" target="_blank"><img src="__uploads__/<?php echo $v1['mid_thumb']?>" alt="" width="140" height="140"></a></div>
-                          <div class="p-name"><a href="#" title="<?php echo $v1['goods_name'];?>"><?php echo $v1['goods_name'];?></a></div>
+                          <div class="p-img"><a href="{:url('index/Goods/index', array('id'=>$v1['id']))}" target="_blank"><img src="__uploads__/<?php echo $v1['mid_thumb']?>" alt="" width="140" height="140"></a></div>
+                          <div class="p-name"><a href="{:url('index/Goods/index', array('id'=>$v1['id']))}" title="<?php echo $v1['goods_name'];?>"><?php echo $v1['goods_name'];?></a></div>
                           <div class="p-price">
                             <span class="shop-price"><em>￥</em><?php echo $v1['shop_price']?></span>
                             <span class="original-price"><em>￥</em><?php echo $v1['markte_price']?></span>
@@ -612,16 +612,16 @@
                   <div class="f-r-main" ectype="floor_cat_347">
                     <ul class="p-list">
                       <?php foreach($v1['bestGoods'] as $k2 => $v2):?>
-                        <li class="opacity_img">
-                          <div class="product">
-                            <div class="p-img"><a href="#" target="_blank"><img src="__uploads__/<?php echo $v2['mid_thumb']?>" alt="" width="140" height="140"></a></div>
-                            <div class="p-name"><a href="#" title="<?php echo $v2['goods_name'];?>"><?php echo $v2['goods_name'];?></a></div>
-                            <div class="p-price">
-                              <span class="shop-price"><em>￥</em><?php echo $v2['shop_price']?></span>
-                              <span class="original-price"><em>￥</em><?php echo $v2['markte_price']?></span>
-                            </div>
+                      <li class="opacity_img">
+                        <div class="product">
+                          <div class="p-img"><a href="{:url('index/Goods/index', array('id'=>$v2['id']))}" target="_blank"><img src="__uploads__/<?php echo $v2['mid_thumb']?>" alt="" width="140" height="140"></a></div>
+                          <div class="p-name"><a href="{:url('index/Goods/index', array('id'=>$v2['id']))}" title="<?php echo $v2['goods_name'];?>"><?php echo $v2['goods_name'];?></a></div>
+                          <div class="p-price">
+                            <span class="shop-price"><em>￥</em><?php echo $v2['shop_price']?></span>
+                            <span class="original-price"><em>￥</em><?php echo $v2['markte_price']?></span>
                           </div>
-                        </li>
+                        </div>
+                      </li>
                       <?php endforeach;?>
                     </ul>
                   </div>
@@ -660,7 +660,7 @@
           <ul>
             {volist name="indexGoodsRes" id='indexGoods'}
             <li class="opacity_img">
-              <a href="goods.php?id=620" target="_blank">
+              <a href="{:url('index/Goods/index', array('id'=>$indexGoods['id']))}" target="_blank">
                 <div class="p-img"><img src="__uploads__/{$indexGoods.mid_thumb}" alt="{$indexGoods.goods_name}"></div>
                 <div class="p-name" title="{$indexGoods.goods_name}">{$indexGoods.goods_name}</div>
                 <div class="p-price">

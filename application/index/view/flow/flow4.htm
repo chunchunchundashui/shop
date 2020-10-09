@@ -263,7 +263,7 @@
 <div class="header header-cart">
   <div class="w w1200">
     <div class="logo">
-      <div class="logoImg"><a href="index.php"><img src="__index__/img/logo.gif"/></a></div>
+      <div class="logoImg"><a href="/"><img src="__index__/img/logo.gif"/></a></div>
       <div class="tit">结算页</div>
     </div>
     <div class="cart-stepflex">
@@ -306,9 +306,26 @@
             <span id="mobile">{$orderInfo.phone}</span>
           </div>
         </div>
+        <style>
+          .paybtn{
+            width: 100px;
+            height: 40px;
+            background-color: orange;
+            color: #fff;
+            border-radius: 10px;
+            font-weight: bold;
+          }
+        </style>
         <!-- 支付按钮 -->
-        <!--<a href="flow.php?step=pdf&order=17" target="_blank" class="orderPrint ftx-05">保存订单并打印</a>&nbsp;&nbsp;-->
-        <!--<a href="index.php" target="_blank" class="orderPrint ftx-05">继续购物</a>-->
+        {if condition="$orderInfo['payment'] eq 1"}
+          {$payBtn}
+        {else /}
+            {if condition="$orderInfo['pay_status'] eq 0"}
+              <img id="ewm" width="100px" src="{:url('index/Flow/wxewm', array('outTradeNo' => $orderInfo['out_trade_no']),'')}" alt="">
+            {else /}
+              <img id="ewm" width="100px" src="http://shop.yccpanda.com/public/static/index/img/wxpay.png" alt="">
+            {/if}
+        {/if}
       </div>
     </div>
   </div>
@@ -350,6 +367,25 @@
 <script type="text/javascript" src="__index__/js/region.js"></script>
 
 <script type="text/javascript">
+  //微信支付异步获取支付状态更改二维码
+  var interval = setInterval("my_monitor()", 1000);
+  function my_monitor(){
+    var out_trade_no = {$orderInfo.out_trade_no};
+    $.ajax({
+      type: 'post',
+      url: "{:url('index/Flow/wxPayStatus')}",
+      data: {out_trade_no:out_trade_no},
+      dataType:'json',
+      success:function(res) {
+        if (res.pay_status == 1) {
+          $("#ewm").attr('src',"http://localhost/shop/index.php/static/index/img/wxpay.png");
+          window.clearInterval(interval)
+        }
+      }
+    })
+  }
+  //Ajax定时访问服务端，2秒一次
+
   $(function () {
     $(".p-mode-list .p-mode-item").click(function () {
       var onlinepay_type = $(this).attr('flag');

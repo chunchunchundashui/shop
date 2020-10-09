@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7278cd78-ca16-43fc-86aa-7ffe9ef0e2d0" name="个人项目">
+        <fileTransfer rootFolder="/www/wwwroot/yccpanda.com" accessType="SFTP" host="122.51.158.157" port="22" sshConfigId="feafe2a3-2fe4-4ce0-8b96-75c30e5faa94" sshConfig="root@122.51.158.157:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="c6326ace-8e24-442b-9aec-ddb9f1f81eb2" name="47.114.140.224">
+        <fileTransfer accessType="SFTP" host="47.114.140.224" port="22" sshConfigId="21a4d7a4-f132-4283-b794-d2bc41169dd1" sshConfig="root@47.114.140.224:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
